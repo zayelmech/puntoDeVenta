@@ -3,7 +3,7 @@ import controlP5.*;
 ControlP5 cp5; 
 Textfield buscar, outUnidad,outCantidad;
 Button signoMas,signoMenos;
-Table table;
+Table table,tableSearch;
 int id;
 String name,species; 
 
@@ -108,29 +108,56 @@ void functionBuscar(){
   if(longitudPalabras>1){
     //println("Buscando..");
   if(!(palabras.equals(palabraAnterior)) || buscarClicked==false){
+     tableSearch = new Table();
+  
+     tableSearch.addColumn("points");
+     tableSearch.addColumn("wordFind");
+     tableSearch.addColumn("rowIndex");
+    
+  
+    int indexRow=0;
     for(TableRow row : table.rows()){
       
+      String checadorOriginal=row.getString("species");      
       String checador=row.getString("species").toLowerCase();
       println("Comparando "+ palabras.toLowerCase() +" con:"+  checador);
       char[] a =checador.toCharArray();
-      char[] b =palabras.toCharArray();
-      int points=0;
+      char[] b =palabras.toLowerCase().toCharArray();
+      int points=10;
       for(int i=0;i<palabras.length();i++){
         for(int j=0;j<checador.length();j++){
           if(a[j]==b[i]){
            points++;
-          } 
+          }
+          
         }
       }
+        TableRow result = table.findRow( checadorOriginal, "species");
+      //println(result.getString("species"));//imprime el texto de la columna
       println("this line has "+points+" points");
+        
+      TableRow newRowJack = tableSearch.addRow();
+
+      newRowJack.setInt("points",points);
+      newRowJack.setString("wordFind",result.getString("species") );
+      newRowJack.setInt("rowIndex",indexRow);
+      indexRow++;
+  
     }
-   
+      tableSearch.sortReverse("points");
+      for (TableRow rowX : tableSearch.rows()) {
+      
+          int id2 = rowX.getInt("points");
+          String species2 = rowX.getString("wordFind");
+          int name2 = rowX.getInt("rowIndex");
+    
+         println("points:"+id2+" wordFind:"+species2 + " Index:"+name2);
+      }
     buscarClicked=true;
     palabraAnterior=palabras;
   }
  }
 }
-
 
 
 void functionMas(){
