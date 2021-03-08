@@ -97,9 +97,7 @@ void draw(){
   textSize(30);
   text("XUB MAIZ", 10,25); 
   fill(#00641E);
-  if(buscar.isFocus()){
-    functionBuscar();
-  }
+
 }
 void functionBuscar(){
 
@@ -125,6 +123,10 @@ void functionBuscar(){
       char[] b =palabras.toLowerCase().toCharArray();
       int points=10;
       for(int i=0;i<palabras.length();i++){
+        
+        //String dobleChar=""+ b[i]+b[i+1];
+      //  println("Wachate este cumbion: "+ dobleChar);
+        
         for(int j=0;j<checador.length();j++){
           if(a[j]==b[i]){
            points++;
@@ -159,6 +161,11 @@ void functionBuscar(){
  }
 }
 
+void keyPressed(){
+  if(buscar.isFocus()){
+    functionBuscar();
+  }
+}
 
 void functionMas(){
   int cantidad= int(outCantidad.getText()) +1;
