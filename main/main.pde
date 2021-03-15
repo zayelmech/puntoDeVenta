@@ -112,16 +112,25 @@ for (TableRow row : table.rows()) {
 }
 
 void draw(){
-  
+  background(0,50,100);
   textSize(30);
   text("XUB MAIZ", 10,25); 
   fill(#00641E);
+if(  buscar.getText().length() <=1){
+  println("HOLAMUNDO");
+  primerResultado.hide();
+  segundoResultado.hide();
+  tercerResultado.hide();
+  
+}
+
 
 }
 void functionBuscar(){
   primerResultado.show();
   segundoResultado.show();
   tercerResultado.show();
+  
   String palabras=buscar.getText();
   int longitudPalabras= palabras.length();
   if(longitudPalabras>1){
