@@ -1,8 +1,9 @@
 import controlP5.*;
+import java.util.*;
 
 ControlP5 cp5; 
 Textfield buscar, outUnidad,outCantidad;
-Button signoMas,signoMenos;
+Button signoMas,signoMenos,primerResultado,segundoResultado,tercerResultado;
 Table table,tableSearch;
 int id;
 String name,species; 
@@ -23,13 +24,31 @@ void setup(){
   buscar = cp5.addTextfield("Buscar",width/2 - widthBuscar,posYsearch,widthBuscar,30)
                    .setFont(createFont("arial",20))
                    .setAutoClear(false);
+                   
   
   float posElementBefore[] = buscar.getPosition();
   int posNextX=int(posElementBefore[0]+float(buscar.getWidth()));
   
+  primerResultado = cp5.addButton("Result_1")
+                  .setFont(createFont("arial",20))
+                  .setPosition(width/2 - widthBuscar,posYsearch+30)
+                  .setSize(widthBuscar,30)
+                  .hide(); 
+  segundoResultado = cp5.addButton("Result_2")
+                  .setFont(createFont("arial",20))
+                  .setPosition(width/2 - widthBuscar,posYsearch+60)
+                  .setSize(widthBuscar,30)
+                  .hide(); 
+  tercerResultado = cp5.addButton("Result_3")
+                  .setFont(createFont("arial",20))
+                  .setPosition(width/2 - widthBuscar,posYsearch+90)
+                  .setSize(widthBuscar,30)
+                  .hide(); 
+                  
   outUnidad = cp5.addTextfield("Unidad", posNextX + separacion,posYsearch,widthTextSmall,30)
                    .setFont(createFont("arial",20))
                    .setAutoClear(false);
+                   
                    
         posElementBefore = outUnidad.getPosition();
         posNextX=int(posElementBefore[0]+float(outUnidad.getWidth()));
@@ -100,7 +119,9 @@ void draw(){
 
 }
 void functionBuscar(){
-
+  primerResultado.show();
+  segundoResultado.show();
+  tercerResultado.show();
   String palabras=buscar.getText();
   int longitudPalabras= palabras.length();
   if(longitudPalabras>1){
@@ -147,14 +168,21 @@ void functionBuscar(){
   
     }
       tableSearch.sortReverse("points");
+      String arreglo[]={"","","",""};
+      int indice=0;
       for (TableRow rowX : tableSearch.rows()) {
-      
+          
           int id2 = rowX.getInt("points");
           String species2 = rowX.getString("wordFind");
           int name2 = rowX.getInt("rowIndex");
-    
+          arreglo[indice]=species2;
+          indice++;
+          
          println("points:"+id2+" wordFind:"+species2 + " Index:"+name2);
       }
+      primerResultado.setLabel(arreglo[0]);
+      segundoResultado.setLabel(arreglo[1]);
+      tercerResultado.setLabel(arreglo[2]);
     buscarClicked=true;
     palabraAnterior=palabras;
   }
@@ -165,6 +193,24 @@ void keyPressed(){
   if(buscar.isFocus()){
     functionBuscar();
   }
+}
+
+void dropdown(int n) {
+  /* request the selected item based on index n */
+  println(n, cp5.get(ScrollableList.class, "dropdown").getItem(n));
+  
+  /* here an item is stored as a Map  with the following key-value pairs:
+   * name, the given name of the item
+   * text, the given text of the item by default the same as name
+   * value, the given value of the item, can be changed by using .getItem(n).put("value", "abc"); a value here is of type Object therefore can be anything
+   * color, the given color of the item, how to change, see below
+   * view, a customizable view, is of type CDrawable 
+   */
+  
+   CColor c = new CColor();
+  c.setBackground(color(255,0,0));
+  cp5.get(ScrollableList.class, "dropdown").getItem(n).put("color", c);
+  
 }
 
 void functionMas(){
