@@ -2,14 +2,14 @@ import controlP5.*;
 import java.util.*;
 
 ControlP5 cp5; 
-Textfield buscar, outUnidad,outCantidad;
+Textfield buscar, outUnidad,outCantidad,outPiezas,outPresentacion;
 Button signoMas,signoMenos,primerResultado,segundoResultado,tercerResultado,botonAgregar,botonSalvarCSV;
 Table table,tableSearch,Ticket;
 int id;
 String name,species; 
 
 
-int widthBuscar=250;
+int widthBuscar=300;
 int widthTextSmall=40;
 int separacion=20;
 int posYsearch=50;
@@ -30,6 +30,15 @@ void setup(){
     
   
   cp5 = new ControlP5(this);
+  
+  outPresentacion=cp5.addTextfield("presentacion",20,200,70,30)
+                   .setFont(createFont("arial",14))
+                   .setAutoClear(false);
+                   
+  outPiezas=cp5.addTextfield("pzs",20,posYsearch,40,30)
+                   .setFont(createFont("arial",20))
+                   .setAutoClear(false);
+  
   buscar = cp5.addTextfield("Buscar",width/2 - widthBuscar,posYsearch,widthBuscar,30)
                    .setFont(createFont("arial",20))
                    .setAutoClear(false);
@@ -355,7 +364,7 @@ println("ID:"+id2 +" | "+nameProduct +" | "+ unidad + "| $"+price+"PRESENTACION:
 buscar.setText(nameProduct);
 outUnidad.setText(unidad);
 ocultarBotonesDesplegables();
-
+outPresentacion.setText(presentacion);
 }
 
 void segundoBoton(){
@@ -370,6 +379,7 @@ println("ID:"+id2 +" | "+nameProduct +" | "+ unidad + "| $"+price+"PRESENTACION:
 buscar.setText(nameProduct);
 outUnidad.setText(unidad);
 ocultarBotonesDesplegables();
+outPresentacion.setText(presentacion);
 
 }
 
@@ -385,28 +395,39 @@ println("ID:"+id2 +" | "+nameProduct +" | "+ unidad + "| $"+price+"PRESENTACION:
 buscar.setText(nameProduct);
 outUnidad.setText(unidad);
 ocultarBotonesDesplegables();
+outPresentacion.setText(presentacion);
 
 }
 
 void echaleOtro(){
 //wachense esta poderosa función 
+  int productPzOption=int(outPiezas.getText());
   String productName=buscar.getText();
   String productUnit=outUnidad.getText();
   float productCantidad=float(outCantidad.getText())+0;
   float productPrice= table.findRow(productName,"PRODUCTO").getInt("PRECIO UNITARIO");
   float productPresent=table.findRow(productName,"PRODUCTO").getFloat("PRESENTACION");
   float subtotal= (productCantidad*productPrice)/productPresent;
-  println("Agregando... " + productName +" | "+ productUnit +" | "+ productCantidad +" | "+productPrice +" | "+subtotal);
+  println("Agregando... " + productPzOption+"x"+productName +" | "+ productUnit +" | "+ productCantidad +" | "+productPrice +" | "+subtotal);
   
     TableRow newRowJack = Ticket.addRow();
-  
+  if(productCantidad>0){
       newRowJack.setString("Producto",productName);
       newRowJack.setString("Unidad",productUnit);
       newRowJack.setFloat("Cantidad",productCantidad);
       newRowJack.setFloat("Precio unitario",productPrice);
       newRowJack.setFloat("Total",subtotal);
+  }else{
+    String cadenaN=productPzOption+"x "+productName;
+      newRowJack.setString("Producto",cadenaN);
+      newRowJack.setString("Unidad",productUnit);
+      newRowJack.setString("Cantidad"," ");
+      newRowJack.setFloat("Precio unitario",productPrice);
+      newRowJack.setFloat("Total",0);
+  }
       
       buscar.setText("");
+      outPiezas.setText("");
       outUnidad.setText("");
       outCantidad.setText("");
 }
