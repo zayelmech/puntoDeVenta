@@ -214,14 +214,14 @@ ID,PRODUCTO,UNIDAD,PRESENTACION,PRECIO UNITARIO
 140213,Humus de garbanzo,grs,250,60
 140214,"Tallarines chile poblano, hierbas, betabel, curcuma, espirulina, huitlacoche o tomate ",grs,100,35
 140215,Lasagna de espirulina o curcuma 8 laminas ,,,40
-150216,Pechuga de pavo natural,grs,250,90
-150217,Pechuga de pavo horneada,grs,250,90
-150218,Pavo estilo italiano,grs,250,85
-150219,Pierna de cerdo ahumada,grs,250,75
+150216,Pechuga de pavo natural(jamon),grs,250,90
+150217,Pechuga de pavo horneada(jamon),grs,250,90
+150218,Pavo estilo italiano(jamon),grs,250,85
+150219,Pierna de cerdo ahumada(jamon),grs,250,75
 150220,Jamon serrano 100gr,grs,100,80
 150221,Jamon serrano 190gr,grs,190,150
-150222,Lomo con almendras,grs,250,85
-150223,Roast beef ,grs,250,105
+150222,Lomo con almendras(jamon),grs,250,85
+150223,Roast beef (jamon),grs,250,105
 150224,Jamon de conejo,,,90
 150225,Salami madurado,,,95
 150226,Salami natural,,,90
