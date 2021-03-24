@@ -3,10 +3,10 @@ import java.util.*;
 
 ControlP5 cp5; 
 Textfield buscar, outUnidad, outCantidad, outPrice, outPiezas, outPresentacion, outSubtotal;
-Button signoMas, signoMenos, primerResultado, segundoResultado, tercerResultado, botonAgregar, botonSalvarCSV;
+Button signoMas, signoMenos, primerResultado, segundoResultado, tercerResultado, botonAgregar, botonSalvarCSV, botonCargarTxt;
 Textarea notasArea, productArea, unidadArea, cantidadArea, precioArea, subtotalArea;
 
-Table table, tableSearch, Ticket;
+Table table, tableSearch, Ticket, ticketHeader;
 int id;
 String name, species; 
 
@@ -32,6 +32,25 @@ void setup() {
   Ticket.addColumn("Cantidad");
   Ticket.addColumn("Precio unitario");
   Ticket.addColumn("Total");
+
+  ticketHeader =new Table();
+
+  TableRow dateRow = ticketHeader.addRow();
+  dateRow.setString(0, "25 marzo de 2021");
+  TableRow nameRow = ticketHeader.addRow();
+  nameRow.setString(0, "Nombre:");
+  nameRow.setString(1, "Cliente");
+  TableRow adressRow = ticketHeader.addRow();
+  adressRow.setString(0, "Direccion:");
+  adressRow.setString(1, "Oax");
+  TableRow phoneRow = ticketHeader.addRow();
+  phoneRow.setString(0, "Telefono:");
+  phoneRow.setString(1, "951--");
+  phoneRow.setString(3, "Forma de pago");
+  phoneRow.setString(4, "Efectivo");
+  saveTable(ticketHeader, "/header.csv");
+
+
 
 
   notasArea = cp5.addTextarea("txt_notas")
@@ -202,12 +221,30 @@ void setup() {
     .setFont(createFont("arial", 16))
     .setPosition(posNextX-10, 595-30)
     .setSize(120, 30);
+
+  botonCargarTxt = cp5.addButton("loadTxt")
+    .setFont(createFont("arial", 16))
+    .setPosition(posNextX-10, 595-70)
+    .setSize(120, 30);
   /*
     .setColorBackground(color(#16557c))
    .setColorForeground(color(#2caaf8));
    ;*/
+  //fromTxtToCsv
 
-
+  botonCargarTxt.addCallback(new CallbackListener() {
+    public void controlEvent(CallbackEvent theEvent) {
+      switch(theEvent.getAction()) {
+        case(ControlP5.ACTION_PRESSED): 
+        fromTxtToCsv(); 
+        break;
+        case(ControlP5.ACTION_RELEASED): 
+        println("stop"); 
+        break;
+      }
+    }
+  }
+  );
   botonSalvarCSV.addCallback(new CallbackListener() {
     public void controlEvent(CallbackEvent theEvent) {
       switch(theEvent.getAction()) {
@@ -310,14 +347,14 @@ void setup() {
 
   table = loadTable("./dataB.csv", "header");
   println(table.getRowCount() + " total rows in table");
-  for (TableRow row : table.rows()) {
-
-    id = row.getInt("ID");
-    species = row.getString("PRODUCTO");
-    name = row.getString("UNIDAD");
-
-    println(name + " (" + species + ") has an ID of " + id);
-  }
+  /*for (TableRow row : table.rows()) {
+   
+   id = row.getInt("ID");
+   species = row.getString("PRODUCTO");
+   name = row.getString("UNIDAD");
+   
+   println(name + " (" + species + ") has an ID of " + id);
+   }*/
 }
 
 void draw() {
@@ -353,16 +390,16 @@ void draw() {
   text("CANTID", initialX+1+3*separacion+2*anchoColum1+anchoColum2, initialY+altura-separacion);
   text("$ C/U", initialX+5+4*separacion+3*anchoColum1+anchoColum2, initialY+altura-separacion);
   text("$ SUBT", initialX+5+5*separacion+4*anchoColum1+anchoColum2, initialY+altura-separacion);
-  
+
   textSize(12);
   //textFont(arial)
   text("coded by zayelmech ©", width/2 -100, height-15);
-  
+
   //buscar.getText().length() >1
   if (keyPressed  ) {
     //  println(key);
     if (buscar.isFocus() && keyCode!=BACKSPACE) {
-      functionBuscar();
+      functionBuscar("default");
     }
     if (outCantidad.isFocus()) {
       calcularSubtotal();
@@ -372,9 +409,13 @@ void draw() {
     ocultarBotonesDesplegables();
   }
 }
-void functionBuscar() {
-
-  String palabras=buscar.getText();
+String functionBuscar(String wordToSearch) {
+  String palabras;
+  if (wordToSearch=="default") {
+    palabras=buscar.getText();
+  } else {
+    palabras=wordToSearch;
+  }
   int longitudPalabras= palabras.length();
   if (longitudPalabras>1) {
 
@@ -385,53 +426,39 @@ void functionBuscar() {
     tableSearch.addColumn("wordFind");
     tableSearch.addColumn("rowIndex");
 
+    String palabrasMinus=palabras.replace("ó", "o");
+    palabrasMinus=palabras.replace("á", "a");
+    palabrasMinus=palabras.replace("é", "e");
+    palabrasMinus=palabras.replace("í", "i");
+    palabrasMinus=palabras.replace("ú", "u");
+
+    palabrasMinus=palabrasMinus.replace("(", " ");
+    palabrasMinus=palabrasMinus.replace(")", " ");
+    palabrasMinus=palabrasMinus.replace(",", " ");
+    palabrasMinus=palabrasMinus.replace("  ", " ");
+
+    String[] palabrasSeparadas = split(palabrasMinus, ' ');
+    println("New Line: "+palabrasSeparadas.length);
+    for (int ind=0; ind< palabrasSeparadas.length; ind++) {
+      print("\tword #"+ind+": " +palabrasSeparadas[ind]);
+    }
+    println("");
+    char[] b =palabrasMinus.toLowerCase().toCharArray();
 
     int indexRow=0;
     for (TableRow row : table.rows()) {
 
       String checadorOriginal=row.getString("PRODUCTO")+"";      
-      String checadorEspecial = checadorOriginal.replace("ñ", "w");
-      String checador = checadorEspecial.toLowerCase();
-      //String hola= "Piña coladañ";
-      //println("Hola sin ñ: "+ hola.replace("ñ","n"));
-      String palabrasMinus=palabras.replace("ñ", "w");
-      
-       palabrasMinus=palabrasMinus.replace("(", " ");
-       palabrasMinus=palabrasMinus.replace(")", " ");
-      
-      //println("Comparando "+ palabras.toLowerCase() +" con:"+  checador);
+      String checador = checadorOriginal.toLowerCase();
       char[] a =checador.toCharArray();
-
-      char[] b =palabrasMinus.toLowerCase().toCharArray();
       int points=10;
 
-      //println("ascii: "+int(b[0]));
-      //experimental condition
       if (a[0]==b[0] && a[1]==b[1] ) {
         points=points+5;
       }
-      /*
-      for(int i=0;i<palabras.length();i++){
-       
-       for(int j=0;j<checador.length();j++){
-       if(a[j]==b[i]){
-       points++;
-       }
-       
-       
-       }
-       }
-       
-       for(int i=0;i<(palabras.length()-1);i++){
-       for(int j=0;j<(checador.length()-1);j++){
-       if(b[i]==a[j] && b[i+1]==a[j+1] ){
-       points=points+20;
-       }
-       }
-       }
-       */
-      if (palabras.length()>=3) {
-        for (int i=0; i<(palabras.length()-2); i++) {
+
+      if (palabrasMinus.length()>=3) {
+        for (int i=0; i<(palabrasMinus.length()-2); i++) {
           for (int j=0; j<(checador.length()-2); j++) {
             if (b[i]==a[j] && b[i+1]==a[j+1]&& b[i+2]==a[j+2] ) {
               points=points+2;
@@ -441,22 +468,41 @@ void functionBuscar() {
       }
 
 
+      for (int ind=0; ind< palabrasSeparadas.length; ind++) {
+        //print("\tword #"+ind+": " +palabrasSeparadas[ind]);
+        if (palabrasSeparadas[ind].length()>2) {
+          String[] m2 = match(checador, palabrasSeparadas[ind].toLowerCase());
+          if (m2 != null) {  // If not null, then a match was found
 
-      String[] m2 = match(checador, palabrasMinus.toLowerCase());
-      if (m2 != null) {  // If not null, then a match was found
-        // This will print to the console, since a match was found.
-        println("Found a match of: " +palabrasMinus.toLowerCase()+" in '" + checador+"'");
-        points=points+15;
-      } else {
-        // println("No match found in '" + checadorOriginal + "'");
+            println("Found a match of: " +palabrasSeparadas[ind].toLowerCase()+" in '" + checador+"'");
+            /*
+             float mc=checador.length();
+             float dinero=palabrasMinus.length();
+             float matchRatio=dinero/mc;
+             points += int(matchRatio*15.0);
+             */
+            points += 4;
+          } else {
+            if (palabrasSeparadas[ind].toLowerCase()=="jabón") {
+              println("ese mi polo"+" in '" + checador+"'");
+            }
+          }
+        }
       }
 
-
+      /*
+      String[] m2 = match(checador, palabrasMinus.toLowerCase());
+       if (m2 != null) {  // If not null, then a match was found
+       println("Found a match of: " +palabrasMinus.toLowerCase()+" in '" + checador+"'");
+       float mc=checador.length();
+       float dinero=palabrasMinus.length();
+       float matchRatio=dinero/mc;
+       points += int(matchRatio*15.0);
+       } else {
+       // println("No match found in '" + checadorOriginal + "'");
+       }
+       */
       TableRow result = table.findRow( checadorOriginal, "PRODUCTO");
-
-
-      // println("this line has "+points+" points");
-
       TableRow newRowJack = tableSearch.addRow();
 
       newRowJack.setInt("points", points);
@@ -503,6 +549,7 @@ void functionBuscar() {
     segundoResultado.hide();
     tercerResultado.hide();
   }
+  return arreglo[0];
 }
 
 void keyPressed() {
@@ -514,11 +561,9 @@ void keyPressed() {
     }
   } else if (keyCode==TAB) {
     println("TAB");//ENTER
-  } 
-  else if (keyCode==BACKSPACE) {
+  } else if (keyCode==BACKSPACE) {
     println("DELETE");//ENTER
-  } 
-  else {
+  } else {
     println("OTRA entrada");
   }
 }
@@ -542,7 +587,7 @@ void primerBoton() {
   String unidad = filaParaAgregar.getString("UNIDAD");
   int price = filaParaAgregar.getInt("PRECIO UNITARIO");
   String presentacion = filaParaAgregar.getString("PRESENTACION");
-  println("ID:"+id2 +" | "+nameProduct +" | "+ unidad + "| $"+price+"PRESENTACION: "+presentacion);
+  println("ID:"+id2 +" | "+nameProduct +" | "+ unidad + "| $"+price+" | PRESENTACION: "+presentacion);
   buscar.setText(nameProduct);
   outUnidad.setText(unidad);
   ocultarBotonesDesplegables();
@@ -606,23 +651,23 @@ void echaleOtro() {
       newRowJack.setFloat("Precio unitario", productPrice);
       newRowJack.setFloat("Total", subtotal);
       String productReplace=productName;
-      if (productName.length()>100)
-        productReplace=productName.substring(0, 100);
+      if (productName.length()>40)
+        productReplace=productName.substring(0,40);
       String rowTable[]={"", productReplace, productUnit, str(productCantidad), str(productPrice), str(subtotal) };
       for (int indice=0; indice<6; indice++) {
         reglonProducto[indice] += rowTable[indice] +"\n";
       }
     } else {
-      String cadenaN=productPzOption+"x "+productName;
+      String cadenaN=productPzOption+"pzs "+productName;
       newRowJack.setString("Producto", cadenaN);
       newRowJack.setString("Unidad", productUnit);
       newRowJack.setString("Cantidad", " ");
       newRowJack.setFloat("Precio unitario", productPrice);
       newRowJack.setFloat("Total", 0);
       String productReplace=productName;
-      if (productName.length()>100)
-        productReplace=productName.substring(0, 100);
-      String rowTable[]={productPzOption+"x", productReplace, productUnit, str(productCantidad), str(productPrice), str(subtotal) };
+      if (productName.length()>40)
+        productReplace=productName.substring(0, 40);
+      String rowTable[]={productPzOption+"pzs", productReplace, productUnit, str(productCantidad), str(productPrice), str(subtotal) };
       for (int indice=0; indice<6; indice++) {
 
         reglonProducto[indice] += rowTable[indice] +"\n";
@@ -651,17 +696,30 @@ void guardandoTicket() {
   int x=int(random(0, 2031));
   saveTable(Ticket, "/new"+x+".csv");
   println("Listo! csv guardada");
+  notasArea.setText("");
+  productArea.setText("");
+  unidadArea.setText("");
+  cantidadArea.setText("");
+  precioArea.setText("");
+  subtotalArea.setText("");
+  Ticket.clearRows();
 }
+void fromTxtToCsv() {
 
-/*
-void dropdown(int n) {
- 
- println(n, cp5.get(ScrollableList.class, "dropdown").getItem(n));
- CColor c = new CColor();
- c.setBackground(color(255,0,0));
- cp5.get(ScrollableList.class, "dropdown").getItem(n).put("color", c);
- }
- */
+
+  String[] lines = loadStrings("/prueba.txt");
+  println("there are " + lines.length + " lines");
+  for (int i = 0; i < lines.length; i++) {
+    String embeces= functionBuscar(lines[i]);
+    TableRow filaParaAgregar= table.findRow(embeces, "PRODUCTO");
+    String productName=filaParaAgregar.getString("PRODUCTO");
+    String unidad = filaParaAgregar.getString("UNIDAD");
+    int price = filaParaAgregar.getInt("PRECIO UNITARIO");
+    lines[i] ='"'+ productName +'"'+","+ '"'+ lines[i] +'"'+ ","+unidad+",,"+price;
+    println(lines[i]);
+  }
+  saveStrings("/ticket_auto.csv", lines);
+}
 void functionMas() {
 
   int productPresent=int(outPresentacion.getText());

@@ -14,10 +14,10 @@ ID,PRODUCTO,UNIDAD,PRESENTACION,PRECIO UNITARIO
 10013,Limon,kg,1,35
 10014,Pomelo,pz,1,12
 10015,Platano tabasco,kg,1,30
-10016,Platano morado o piña,kg,1,25
+10016,Platano morado o piÃ±a,kg,1,25
 10017,Platano macho,kg,1,25
 10018,Pepino,kg,1,30
-10019,Piña miel,pz,1,40
+10019,PiÃ±a miel,pz,1,40
 10020,Jamaica criolla,grs,100,35
 10021,Melon,pz,1,40
 10022,Chabacano (ciruela roja),grs,100,38
@@ -70,7 +70,7 @@ ID,PRODUCTO,UNIDAD,PRESENTACION,PRECIO UNITARIO
 40069,Planta de romero 15cm aprox.,pz,1,35
 40070,Manzanilla rollo,rollo,1,20
 40071,Eneldo rollo,rollo,1,20
-40072,Salvia rollo,rollo,1,20
+40072,Salvia rollo (no disponible),rollo,1,20
 40073,Hierbabuena rollo,rollo,1,15
 40074,Hierbasanta rollo,rollo,1,15
 40075,Epazote rollito,rollo,1,15
@@ -87,16 +87,16 @@ ID,PRODUCTO,UNIDAD,PRESENTACION,PRECIO UNITARIO
 50086,Te limon,grs,50,20
 50087,Cold Brew,ml,376,65
 50088,Pulpa de mango congelada,grs,500,45
-50089,Pulpa de piña congelada,grs,500,45
+50089,Pulpa de piÃ±a congelada,grs,500,45
 60090,Kefir de leche 500mL,ml,500,35
 60091,Kefir de leche 1L,litro,1,70
 60092,Kefir de agua (bulgaros de agua) natural,ml,500,35
 60093,Yogurt de coco zahini,ml,450,149
 60094,Kombucha,ml,500,65
-60095,Nanche,ml,500,65
-60096,Maracuya,ml,500,65
-60097,Ciruela pasa,ml,500,65
-60098,Arandanos y poleo,ml,500,65
+60095,Nanche (unstock),ml,500,65
+60096,Maracuya (unstock),ml,500,65
+60097,Ciruela pasa (unstock),ml,500,65
+60098,Arandanos y poleo (unstock),ml,500,65
 60099,Vinagre de manzana,ml,250,65
 60100,Panela,grs,700,65
 60101,Panela granulada,kg,1,90
@@ -142,15 +142,15 @@ ID,PRODUCTO,UNIDAD,PRESENTACION,PRECIO UNITARIO
 90141,Gud Avena litro S/A,litro,1,48
 90142,Gud Coco litro S/A,litro,1,50
 90143,Gud Quinoa litro,litro,1,45
-90144,"YUBAN 210grs (Piña,Jengibre y cardamomo, *Mango -maracuya*fresa -chia*fresa -jamaica*guanabana*zapote negro con naranja *manzana-nuez)",grs,210,75
+90144,"YUBAN 210grs (PiÃ±a,Jengibre y cardamomo, *Mango -maracuya*fresa -chia*fresa -jamaica*guanabana*zapote negro con naranja *manzana-nuez)",grs,210,75
 90145,"Tipico cultivando amor (Membrillo, zarzamora, manzana, durazno)",grs,300,75
-90146,"Mermeladas ECOSTA (Mango-Tamarindo, jamaica, camote -piña , Piña-maracuya, Piña-coco)",pz,1,0
-100147,"Muesli (piña, fresa, mango o mix) ",grs,500,165
+90146,"Mermeladas ECOSTA (Mango-Tamarindo, jamaica, camote -piÃ±a , PiÃ±a-maracuya, PiÃ±a-coco)",pz,1,0
+100147,"Muesli (piÃ±a, fresa, mango o mix) ",grs,500,165
 100148,Mango deshidratado natural o chile 30grs,grs,30,30
 100149,Mango deshidratado natural o chile 100grs ,grs,100,100
 100150,Fresa deshidratada natural,grs,30,45
 100151,Nuez en mitades ,grs,100,45
-100152,Nuez garapiñada,grs,100,55
+100152,Nuez garapiÃ±ada,grs,100,55
 100153,Chicharo con sal,grs,100,35
 100154,Maiz con sal o maiz con chile ,grs,100,35
 100155,Cacahuate horneado,grs,100,25
@@ -164,8 +164,8 @@ ID,PRODUCTO,UNIDAD,PRESENTACION,PRECIO UNITARIO
 100163,Alegria natural,pz,1,7
 100164,Churritos de amaranto,grs,90,19.5
 100165,Jengibre organico cristalizado ,grs,55,75
-100166,Cigarris artesanales paquete de 5 pzs,pz,5,45
-100167,Premio para perro,grs,100,62.5
+100166,Cigarris artesanales paquete de 5 pzs (unstock),pz,5,45
+100167,Premio para perro (unstock),grs,100,62.5
 110168,Salsa Ajvar de pimiento y berenjena 190gr,grs,190,75
 110169,Salsa Ajvar de pimiento y berenjena 285gr,grs,285,110
 110170,Berenjena ahumada untable,grs,190,145
@@ -192,21 +192,21 @@ ID,PRODUCTO,UNIDAD,PRESENTACION,PRECIO UNITARIO
 120191,Ghee 125ml,ml,125,85
 120192,"Cerveza artesanal capucha (brow, session PA, poleo/Pericon, Jengibre Panela)",pz,1,50
 120193,Cerveza artesanal traspatio (Porter inglesa o Belguan Dark Strong Ale),pz,1,50
-120194,Cerveza artesanal la Juquileña Negra del alma (Stout),pz,1,50
-130195,"Barra de chocolate artesanal 60% cacao (Vainilla, Rosita de cacao, Pinole)",grs,50,75
-130196,Barra de chocolate artesanal 80% cacao (Nibs de cacao),grs,50,85
-130197,Barra de cacao jaguar. Mezcla de cacao fermentado con pataxte de la chinantla Oaxaqueña. 80% cacao,grs,50,90
+120194,Cerveza artesanal la JuquileÃ±a Negra del alma (Stout),pz,1,50
+130195,Barra de chocolate artesanal 60% cacao,grs,50,75
+130196,Barra de chocolate artesanal 80% cacao (Nibs de cacao o Sal de mar),grs,50,85
+130197,Barra de cacao jaguar. Mezcla de cacao fermentado con pataxte de la chinantla OaxaqueÃ±a. 80% cacao,grs,50,90
 130198,Tablillas para preparar chocolate Dulce,grs,250,70
 130199,Tablillas para preparar chocolate Semiamargo(rosita de cacao o cardamomo),grs,250,80
 130200,Tablillas para preparar chocolate  Chocolate amargo,grs,250,110
-130201,Cacao garapiñado ,grs,150,95
+130201,Cacao garapiÃ±ado ,grs,150,95
 130202,Mix de cacao (cacao fermentado y cacao jaguar),grs,200,110
-130203,"Barra de chocolate artesanal MAMA PACHA (Vainilla y nibs de cacao, mango, mora azul)",grs,70,85
+130203,Barra de chocolate artesanal MAMA PACHA,grs,70,85
 140204,Albondigas de avena y okara ,pz,16,90
-140205,Falafel,grs,300,85
+140205,Falafel (no disponible),grs,300,85
 140206,"Hamburguesas de lentejas, amaranto y arroz integral. Libres de gluten, sabores Espinaca Betabel y Zanahoria. Paq de 4 unidades de 90 grs.",pz,1,90
 140207,"Chorizos veganos. Hechos de semillas de girasol, ajonjoli y pepitas de calabaza, chile guajillo y arroz integral",grs,150,70
-140208,"Quesos veganos semiduros, hechos de papa, levadura nutricional, aceite de oliva…Sabores Curcuma y pimenton",grs,200,70
+140208,"Quesos veganos semiduros, hechos de papa, levadura nutricional, aceite de olivaâ€¦Sabores Curcuma y pimenton",grs,200,70
 140209,Queso untable de almendra o nuez de la india.,grs,250,85
 140210,Queso botanero de almendra ,grs,250,88
 140211,"Yogurt vegano de coco zahini natural, mango o zarzamora",ml,450,149
@@ -260,9 +260,9 @@ ID,PRODUCTO,UNIDAD,PRESENTACION,PRECIO UNITARIO
 170259,Cafe Bolsa 1kg,kg,1,200
 170260,Cafe Natural de 500grs,grs,500,250
 170261,Cafe Honey 500grs,grs,500,250
-170262,"Fruto de niebla café, Talea de castro Bolsa 250grs",grs,250,70
-170263,"Fruto de niebla café, Talea de castro Bolsa 500grs",grs,500,110
-170264,"Fruto de niebla café, Talea de castro Bolsa 1kg",kg,1,200
+170262,"Fruto de niebla cafÃ©, Talea de castro Bolsa 250grs",grs,250,70
+170263,"Fruto de niebla cafÃ©, Talea de castro Bolsa 500grs",grs,500,110
+170264,"Fruto de niebla cafÃ©, Talea de castro Bolsa 1kg",kg,1,200
 170265,Harina de amaranto,grs,200,48
 170266,"Harina de amaranto, avena y ajonjoli",grs,200,48
 170267,"Harina de amaranto, avena y almendra",grs,200,48
@@ -296,8 +296,36 @@ ID,PRODUCTO,UNIDAD,PRESENTACION,PRECIO UNITARIO
 200295,LABIOS Balsamo labial hidratante con miel,grs,5,45
 200296,Cepillo coporal anticelulitis grande,pz,1,170
 200297,Cepillo coporal anticelulitis chico,pz,1,100
-200298,Sales de baño aromaticas de rosas,grs,100,100
+200298,Sales de baÃ±o aromaticas de rosas,grs,100,100
 200299,Gel antibacterial con dosificador ,ml,500,75
 200300,Gel antibacterial 1L,litro,1,100
 200301,Gel antibacterial 0.5L,litro,0.5,55
-3000,"1kg de Fresa, 200grs de zarzamora, 100grs de Mora Azul",pqt,1,200
+25032101,Durazno,kg,1,40
+25032102,Barra de chocolate MAMA PACHA Vainilla y nibs de cacao,grs,70,85
+25032103,Barra de chocolate MAMA PACHA Mango,grs,70,85
+25032104,Barra de chocolate MAMA PACHA Mora azul,grs,70,85
+25032105,Barra de chocolate MAMA PACHA Soconusco,grs,70,85
+25032106,Barra de chocolate MAMA PACHA Almendras y sal de mar,grs,70,85
+25032107,Chocolate untable la perdicion ,grs,130,65
+25032108,Barra de chocolate artesanal 60% cacao sabor Vainilla,grs,50,75
+25032109,Barra de chocolate artesanal 60% cacao sabor Rosita de cacao,grs,50,75
+25032110,Barra de chocolate artesanal 60% cacao sabor Pinole,grs,50,75
+25032111,Barra de chocolate artesanal 60% cacao sabor Nueve lunas,grs,50,75
+25032112,Barra de chocolate artesanal 60% cacao sabor Almendras,grs,50,75
+25032113,Barra de chocolate artesanal 60% cacao sabor Mezcal,grs,50,75
+25032114,Barra de chocolate artesanal 60% cacao sabor Cardamomo,grs,50,75
+200001,"Pasta rellena: Sorrentinos (orden x8) Espinacas, queso chiapas y nueces",pqt,1,80
+200002,"Pasta rellena: Sorrentinos (orden x8) Quelites, requeson y almendras",pqt,1,80
+200003,Pasta rellena: Sorrentinos (orden x8) Carne a la bolonesa,pqt,1,80
+200004,Pasta rellena: Ravioles(orden x9) Setas al ajillo,pqt,1,80
+200005,Pasta rellena: Ravioles(orden x9) Queso azul y sofrito de tomate,pqt,1,80
+200006,Pasta fresca: fettuccini,grs,125,40
+200007,Pasta rellena + salsa de tomate + queso rallado Combo,pqt,1,125
+200008,Pasta rellena + pesto + queso rallado Combo,pqt,1,145
+200009,Fettucini + salsa de tomate + queso rallado Combo,pqt,1,85
+200010,Fettucini + pesto + queso rallado Combo,pqt,1,97
+200011,empanadas (orden x6) Carne estilo argentino,pqt,1,150
+200012,"empanadas (orden x6) elote tierno, bechamel y queso",pqt,1,150
+200013,empanadas (orden x6) salteado de espinacas con queso,pqt,1,150
+200014,Pizza (orden x2) Salsa de tomate y mozzarella,pqt,1,125
+250321115,Naranja,,1,17
