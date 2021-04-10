@@ -8,9 +8,9 @@ Textarea notasArea, productArea, unidadArea, cantidadArea, precioArea, subtotalA
 
 Table table, tableSearch, Ticket, ticketHeader;
 int id;
-String name, species; 
+String name, species,productDescription= ""; 
 
-
+int numeroPedido =1;
 int widthBuscar=300;
 int widthTextSmall=40;
 int separacion=20;
@@ -32,24 +32,24 @@ void setup() {
   Ticket.addColumn("Cantidad");
   Ticket.addColumn("Precio unitario");
   Ticket.addColumn("Total");
-
+  /*
   ticketHeader =new Table();
-
-  TableRow dateRow = ticketHeader.addRow();
-  dateRow.setString(0, "25 marzo de 2021");
-  TableRow nameRow = ticketHeader.addRow();
-  nameRow.setString(0, "Nombre:");
-  nameRow.setString(1, "Cliente");
-  TableRow adressRow = ticketHeader.addRow();
-  adressRow.setString(0, "Direccion:");
-  adressRow.setString(1, "Oax");
-  TableRow phoneRow = ticketHeader.addRow();
-  phoneRow.setString(0, "Telefono:");
-  phoneRow.setString(1, "951--");
-  phoneRow.setString(3, "Forma de pago");
-  phoneRow.setString(4, "Efectivo");
-  saveTable(ticketHeader, "/header.csv");
-
+   
+   TableRow dateRow = ticketHeader.addRow();
+   dateRow.setString(0, "25 marzo de 2021");
+   TableRow nameRow = ticketHeader.addRow();
+   nameRow.setString(0, "Nombre:");
+   nameRow.setString(1, "Cliente");
+   TableRow adressRow = ticketHeader.addRow();
+   adressRow.setString(0, "Direccion:");
+   adressRow.setString(1, "Oax");
+   TableRow phoneRow = ticketHeader.addRow();
+   phoneRow.setString(0, "Telefono:");
+   phoneRow.setString(1, "951--");
+   phoneRow.setString(3, "Forma de pago");
+   phoneRow.setString(4, "Efectivo");
+   saveTable(ticketHeader, "/header.csv");
+   */
 
 
 
@@ -222,29 +222,29 @@ void setup() {
     .setPosition(posNextX-10, 595-30)
     .setSize(120, 30);
 
-  botonCargarTxt = cp5.addButton("loadTxt")
-    .setFont(createFont("arial", 16))
-    .setPosition(posNextX-10, 595-70)
-    .setSize(120, 30);
+  /*botonCargarTxt = cp5.addButton("loadTxt")
+   .setFont(createFont("arial", 16))
+   .setPosition(posNextX-10, 595-70)
+   .setSize(120, 30);*/
   /*
     .setColorBackground(color(#16557c))
    .setColorForeground(color(#2caaf8));
    ;*/
   //fromTxtToCsv
 
-  botonCargarTxt.addCallback(new CallbackListener() {
-    public void controlEvent(CallbackEvent theEvent) {
-      switch(theEvent.getAction()) {
-        case(ControlP5.ACTION_PRESSED): 
-        fromTxtToCsv(); 
-        break;
-        case(ControlP5.ACTION_RELEASED): 
-        println("stop"); 
-        break;
-      }
-    }
-  }
-  );
+  /*botonCargarTxt.addCallback(new CallbackListener() {
+   public void controlEvent(CallbackEvent theEvent) {
+   switch(theEvent.getAction()) {
+   case(ControlP5.ACTION_PRESSED): 
+   fromTxtToCsv(); 
+   break;
+   case(ControlP5.ACTION_RELEASED): 
+   println("stop"); 
+   break;
+   }
+   }
+   }
+   );*/
   botonSalvarCSV.addCallback(new CallbackListener() {
     public void controlEvent(CallbackEvent theEvent) {
       switch(theEvent.getAction()) {
@@ -303,17 +303,34 @@ void setup() {
 
   primerResultado.addCallback(new CallbackListener() {
     public void controlEvent(CallbackEvent theEvent) {
+      //println(theEvent.getController().getName());
+      /*println(theEvent.getAction());
+       if(theEvent.getAction()==5){
+       cambiarWidth();
+       }*/
       switch(theEvent.getAction()) {
         case(ControlP5.ACTION_PRESSED): 
         primerBoton(); 
         break;
         case(ControlP5.ACTION_RELEASED): 
         println("stop"); 
+        productDescription= " ";
+        break;
+        case(ControlP5.ACTION_MOVE): 
+        println("primerResultado is Focus");
+        println(arreglo[0]);
+        productDescription=arreglo[0];
+        break;
+        case(ControlP5.ACTION_LEAVE): 
+        println("primerResultado was Focus"); 
+        primerResultado.setWidth(widthBuscar);
         break;
       }
     }
   }
   );
+
+
   segundoResultado.addCallback(new CallbackListener() {
     public void controlEvent(CallbackEvent theEvent) {
       switch(theEvent.getAction()) {
@@ -322,6 +339,12 @@ void setup() {
         break;
         case(ControlP5.ACTION_RELEASED): 
         println("stop"); 
+        productDescription= " ";
+        break;
+        case(ControlP5.ACTION_MOVE): 
+        println("segundoResultado is Focus");
+        println(arreglo[1]);
+        productDescription=arreglo[1];
         break;
       }
     }
@@ -335,6 +358,12 @@ void setup() {
         break;
         case(ControlP5.ACTION_RELEASED): 
         println("stop"); 
+        productDescription= " ";
+        break;
+        case(ControlP5.ACTION_MOVE): 
+        println("tercerResultado is Focus");
+        println(arreglo[2]);
+        productDescription=arreglo[2];
         break;
       }
     }
@@ -357,7 +386,10 @@ void setup() {
    }*/
 }
 
+
 void draw() {
+
+
   background(#42b9b0);
   fill(248, 121, 43);
   noStroke();
@@ -393,7 +425,7 @@ void draw() {
 
   textSize(12);
   //textFont(arial)
-  text("coded by zayelmech ©", width/2 -100, height-15);
+  text("coded by imecatro.com ©", width/2 -100, height-15);
 
   //buscar.getText().length() >1
   if (keyPressed  ) {
@@ -408,6 +440,16 @@ void draw() {
   if (buscar.getText().length()<1 ) {
     ocultarBotonesDesplegables();
   }
+  
+
+   fill(255);
+   textSize(20);
+   text("Description: " + productDescription,40,height-50 );
+
+}
+//en draw
+void cambiarWidth() {
+  primerResultado.setSize(100, 30);
 }
 String functionBuscar(String wordToSearch) {
   String palabras;
@@ -632,15 +674,17 @@ void echaleOtro() {
 
   String productName=buscar.getText();
   if (productName.length()>=2) {
-    int productPzOption=int(outPiezas.getText()); 
+    int productPzOption=int(outPiezas.getText())+0; 
     String productUnit=outUnidad.getText();
-    float productCantidad=float(outCantidad.getText())+0;
-    float productPrice=float(outPrice.getText());
-    float productPresent=float(outPresentacion.getText());
-    float subtotal= (productCantidad*productPrice)/productPresent;
+    float productCantidad=float(outCantidad.getText())+0.0;
+    float productPrice=float(outPrice.getText())+0.0;
+    ;
+    float productPresent=float(outPresentacion.getText())+0.0;
+    ;
+    float subtotal= (productCantidad*productPrice)/productPresent+0.0;
+    ;
     println("Agregando... " + productPzOption+"x"+productName +" | "+ productUnit +" | "+ productCantidad +" | "+productPrice +" | "+subtotal);
 
-    //Textarea notasArea, productArea, unidadArea, cantidadArea, precioArea, subtotalArea;
     String reglonProducto[]={notasArea.getText(), productArea.getText(), unidadArea.getText(), cantidadArea.getText(), precioArea.getText(), subtotalArea.getText()};// =  productPzOption +productName
 
     TableRow newRowJack = Ticket.addRow();
@@ -652,7 +696,7 @@ void echaleOtro() {
       newRowJack.setFloat("Total", subtotal);
       String productReplace=productName;
       if (productName.length()>40)
-        productReplace=productName.substring(0,40);
+        productReplace=productName.substring(0, 40);
       String rowTable[]={"", productReplace, productUnit, str(productCantidad), str(productPrice), str(subtotal) };
       for (int indice=0; indice<6; indice++) {
         reglonProducto[indice] += rowTable[indice] +"\n";
@@ -693,8 +737,12 @@ void echaleOtro() {
 }
 
 void guardandoTicket() {
-  int x=int(random(0, 2031));
-  saveTable(Ticket, "/new"+x+".csv");
+
+  int s = second();  // Values from 0 - 59
+  int m = minute();  // Values from 0 - 59
+  int h = hour();    // Values from 0 - 23
+  saveTable(Ticket, "/pedido-"+numeroPedido+"-"+h+"-"+m+"-"+s+".csv");
+  numeroPedido++;
   println("Listo! csv guardada");
   notasArea.setText("");
   productArea.setText("");
