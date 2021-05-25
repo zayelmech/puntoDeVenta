@@ -3,15 +3,16 @@ import java.util.*;
 
 ControlP5 cp5; 
 Textfield buscar, outUnidad, outCantidad, outPrice, outPiezas, outPresentacion, outSubtotal;
-Button signoMas, signoMenos, primerResultado, segundoResultado, tercerResultado, botonAgregar, botonSalvarCSV, botonCargarTxt;
-Textarea notasArea, productArea, unidadArea, cantidadArea, precioArea, subtotalArea;
+Button signoMas2, signoMenos2, signoMas, signoMenos, primerResultado, segundoResultado, tercerResultado, botonAgregar, botonSalvarCSV, botonCargarTxt;
+//Textarea notasArea, productArea, unidadArea, cantidadArea, precioArea, subtotalArea;
+Button plusMidKg, plusQuaKg,subMidKg,subQuaKg; 
 
 Table table, tableSearch, Ticket, ticketHeader;
-int id;
-String name, species,productDescription= ""; 
+int id, producto=0;
+String name, species, productDescription= ""; 
 
 int numeroPedido =1;
-int widthBuscar=300;
+int widthBuscar=370;
 int widthTextSmall=40;
 int separacion=20;
 int posYsearch=50;
@@ -21,6 +22,11 @@ String palabraAnterior;
 boolean buscarClicked=false;
 
 String arreglo[]={"", "", "", "", ""};
+CallbackListener cb;
+
+ProductLine px1[]= new ProductLine[50];
+;
+
 void setup() {
 
 
@@ -50,81 +56,90 @@ void setup() {
    phoneRow.setString(4, "Efectivo");
    saveTable(ticketHeader, "/header.csv");
    */
+  cb = new CallbackListener() {
+    public void controlEvent(CallbackEvent theEvent) {
+      switch(theEvent.getAction()) {
+        case(ControlP5.ACTION_PRESSED):
+        //info.n = 1;
+        //info.label.setText(theEvent.getController().getInfo());
+        //cursor(HAND);
+        println(theEvent.getController().getInfo());
+        functionMas(0,theEvent.getController().getValue()); 
+        break;
+        case(ControlP5.ACTION_RELEASED):
+        println("adios");
+        break;
+      }
+    }
+  };
 
-
-
+  /*
   notasArea = cp5.addTextarea("txt_notas")
-    .setPosition(200, 195)
-    .setSize(80, 400)
-    .setFont(createFont("arial", 12))
-    .setLineHeight(14)
-    .setColor(color(32))
-    .setColorBackground(color(240))  
-    .setColorForeground(color(255, 100));
-  productArea = cp5.addTextarea("txt_producto")
-    .setPosition(285, 195)
-    .setSize(240, 400)
-    .setFont(createFont("arial", 12))
-    .setLineHeight(14)
-    .setColor(color(32))
-    .setColorBackground(color(240))  
-    .setColorForeground(color(255, 100));
-
-  unidadArea = cp5.addTextarea("txt_unidad")
-    .setPosition(290+240, 195)
-    .setSize(80, 400)
-    .setFont(createFont("arial", 12))
-    .setLineHeight(14)
-    .setColor(color(32))
-    .setColorBackground(color(240))  
-    .setColorForeground(color(255, 100));
-
-  cantidadArea = cp5.addTextarea("txt_cantidad")
-    .setPosition(530+85, 195)
-    .setSize(80, 400)
-    .setFont(createFont("arial", 12))
-    .setLineHeight(14)
-    .setColor(color(32))
-    .setColorBackground(color(240))  
-    .setColorForeground(color(255, 100));
-  precioArea= cp5.addTextarea("txt_precio")
-    .setPosition(700, 195)
-    .setSize(80, 400)
-    .setFont(createFont("arial", 12))
-    .setLineHeight(14)
-    .setColor(color(32))
-    .setColorBackground(color(240))  
-    .setColorForeground(color(255, 100));
-  subtotalArea= cp5.addTextarea("txt_subtotal")
-    .setPosition(785, 195)
-    .setSize(80, 400)
-    .setFont(createFont("arial", 12))
-    .setLineHeight(14)
-    .setColor(color(32))
-    .setColorBackground(color(240))  
-    .setColorForeground(color(255, 100));
+   .setPosition(200, 195)
+   .setSize(80, 400)
+   .setFont(createFont("arial", 12))
+   .setLineHeight(14)
+   .setColor(color(32))
+   .setColorBackground(color(240))  
+   .setColorForeground(color(255, 100))
+   .hide();
+   
+   */
   //Flujo normal
+//plusMidKg, plusQuaKg,subMidKg,subQuaKg; 
+  
+  plusMidKg = cp5.addButton("+ 1/2kg")
+    .setFont(createFont("arial", 14))
+    .setPosition(width/2 +80, 110 )
+    .setSize(75, 25)
+    .setValue(0.5);
+  
+  plusMidKg.addCallback(cb);
+  
+  plusQuaKg = cp5.addButton("+ 1/4kg")
+    .setFont(createFont("arial", 14))
+    .setPosition(width/2 , 110 )
+    .setSize(75, 25)  
+    .setValue(0.25);
+    
+  plusQuaKg.addCallback(cb);
 
-  outPresentacion=cp5.addTextfield("Presentacion", width/2 -40-70, 90, 70, 30)
+  signoMenos2 = cp5.addButton("- ")
+    .setFont(createFont("arial", 20))
+    .setPosition(width/2 -40- 101-35, 90 )
+    .setSize(35, 30)
+    .hide(); 
+
+  outPresentacion=cp5.addTextfield("Presentacion", width/2 -40-70-35, 90, 70, 30)
     .setFont(createFont("arial", 20))
     .setAutoClear(false)
     .setColor(color(#16557c))
     .setColorBackground(color(255))
-    .setColorForeground(color(255));
+    .setColorForeground(color(255))
+    .hide();
+
+
+  signoMas2 = cp5.addButton(" +")
+    .setFont(createFont("arial", 20))
+    .setPosition(width/2 -40-35, 90)
+    .setSize(35, 30)
+    .hide();
 
   outPiezas=cp5.addTextfield("pzs", 20, posYsearch, 40, 30)
     .setFont(createFont("arial", 20))
     .setAutoClear(false)
     .setColor(color(#16557c))
     .setColorBackground(color(255))
-    .setColorForeground(color(255));
+    .setColorForeground(color(255))
+    .setColorCursor(color(#A0A0A0));
 
   buscar = cp5.addTextfield("Buscar", width/2 - widthBuscar-40, posYsearch, widthBuscar, 30)
     .setFont(createFont("arial", 20))
     .setAutoClear(false)
     .setColor(color(#16557c))
     .setColorBackground(color(255))
-    .setColorForeground(color(255));
+    .setColorForeground(color(255))
+    .setColorCursor(color(#A0A0A0));
 
 
   float posElementBefore[] = buscar.getPosition();
@@ -157,7 +172,8 @@ void setup() {
     .setAutoClear(false)
     .setColor(color(#16557c))
     .setColorBackground(color(255))
-    .setColorForeground(color(255));
+    .setColorForeground(color(255))
+    .setColorCursor(color(#A0A0A0));
 
 
   posElementBefore = outUnidad.getPosition();
@@ -177,7 +193,8 @@ void setup() {
     .setAutoClear(false)
     .setColor(color(#16557c))
     .setColorBackground(color(255))
-    .setColorForeground(color(255));
+    .setColorForeground(color(255))
+    .setColorCursor(color(#A0A0A0));
 
   posElementBefore = outCantidad.getPosition();
   posNextX=int(posElementBefore[0]+float(outCantidad.getWidth()));
@@ -195,7 +212,8 @@ void setup() {
     .setAutoClear(false)
     .setColor(color(#16557c))
     .setColorBackground(color(255))
-    .setColorForeground(color(255));
+    .setColorForeground(color(255))
+    .setColorCursor(color(#A0A0A0));
 
   posElementBefore = outPrice.getPosition();
   posNextX=int(posElementBefore[0]+float(outPrice.getWidth()));
@@ -205,7 +223,8 @@ void setup() {
     .setAutoClear(false)
     .setColor(color(#16557c))
     .setColorBackground(color(255))
-    .setColorForeground(color(255));
+    .setColorForeground(color(255))
+    .setColorCursor(color(#A0A0A0));
 
   posElementBefore = outSubtotal.getPosition();
   posNextX=int(posElementBefore[0]+float(outSubtotal.getWidth()));
@@ -276,7 +295,7 @@ void setup() {
     public void controlEvent(CallbackEvent theEvent) {
       switch(theEvent.getAction()) {
         case(ControlP5.ACTION_PRESSED): 
-        functionMenos(); 
+        functionMenos(0); 
         break;
         case(ControlP5.ACTION_RELEASED): 
         println("stop"); 
@@ -291,7 +310,7 @@ void setup() {
     public void controlEvent(CallbackEvent theEvent) {
       switch(theEvent.getAction()) {
         case(ControlP5.ACTION_PRESSED): 
-        functionMas(); 
+        functionMas(0,1); 
         break;
         case(ControlP5.ACTION_RELEASED): 
         println("stop"); 
@@ -301,6 +320,34 @@ void setup() {
   }
   );
 
+  signoMenos2.addCallback(new CallbackListener() {
+    public void controlEvent(CallbackEvent theEvent) {
+      switch(theEvent.getAction()) {
+        case(ControlP5.ACTION_PRESSED): 
+        functionMenos(1); 
+        break;
+        case(ControlP5.ACTION_RELEASED): 
+        println("stop"); 
+        break;
+      }
+    }
+  }
+  );
+
+
+  signoMas2.addCallback(new CallbackListener() {
+    public void controlEvent(CallbackEvent theEvent) {
+      switch(theEvent.getAction()) {
+        case(ControlP5.ACTION_PRESSED): 
+        functionMas(1,0); 
+        break;
+        case(ControlP5.ACTION_RELEASED): 
+        println("stop"); 
+        break;
+      }
+    }
+  }
+  );
   primerResultado.addCallback(new CallbackListener() {
     public void controlEvent(CallbackEvent theEvent) {
       //println(theEvent.getController().getName());
@@ -310,7 +357,7 @@ void setup() {
        }*/
       switch(theEvent.getAction()) {
         case(ControlP5.ACTION_PRESSED): 
-        primerBoton(); 
+        productoSeleccionado(arreglo[0]); 
         break;
         case(ControlP5.ACTION_RELEASED): 
         println("stop"); 
@@ -335,7 +382,7 @@ void setup() {
     public void controlEvent(CallbackEvent theEvent) {
       switch(theEvent.getAction()) {
         case(ControlP5.ACTION_PRESSED): 
-        segundoBoton(); 
+        productoSeleccionado(arreglo[1]); 
         break;
         case(ControlP5.ACTION_RELEASED): 
         println("stop"); 
@@ -354,7 +401,7 @@ void setup() {
     public void controlEvent(CallbackEvent theEvent) {
       switch(theEvent.getAction()) {
         case(ControlP5.ACTION_PRESSED): 
-        tercerBoton(); 
+        productoSeleccionado(arreglo[2]); 
         break;
         case(ControlP5.ACTION_RELEASED): 
         println("stop"); 
@@ -386,8 +433,21 @@ void setup() {
    }*/
 }
 
-
+int sombra=0;
+int mode=1;
 void draw() {
+  sombra=sombra+mode;
+
+  if (sombra >220)
+  {
+    sombra=220;
+    mode=-1;
+  }
+  if (sombra<100) {
+    sombra=100;
+
+    mode=1;
+  }
 
 
   background(#42b9b0);
@@ -407,17 +467,17 @@ void draw() {
 
   fill(#f87a2c);
   noStroke();
-  rect(initialX, initialY, anchoColum1, altura);//0
-  rect(initialX+separacion+anchoColum1, initialY, anchoColum2, altura);//1
+  rect(initialX, initialY, anchoColum1 +5+ anchoColum2, altura);//1
   rect(initialX+2*separacion+anchoColum1+anchoColum2, initialY, 80, altura);//2
   rect(initialX+3*separacion+2*anchoColum1+anchoColum2, initialY, 80, altura);//3
   rect(initialX+4*separacion+3*anchoColum1+anchoColum2, initialY, 80, altura);//4
   rect(initialX+5*separacion+4*anchoColum1+anchoColum2, initialY, 80, altura);//5
+  fill(sombra);//220
+  rect(initialX, initialY+35, 665, 400);
 
   fill(255);
   textSize(20);
-  text("NOTA", initialX+5, initialY+altura-separacion);
-  text("PRODUCTO", initialX+5+separacion+anchoColum1, initialY+altura-separacion);
+  text("PRODUCTO", initialX+5, initialY+altura-separacion);
   text("UNIDAD", initialX+5+separacion+anchoColum1+anchoColum2, initialY+altura-separacion);
   text("CANTID", initialX+1+3*separacion+2*anchoColum1+anchoColum2, initialY+altura-separacion);
   text("$ C/U", initialX+5+4*separacion+3*anchoColum1+anchoColum2, initialY+altura-separacion);
@@ -427,30 +487,34 @@ void draw() {
   //textFont(arial)
   text("coded by imecatro.com ©", width/2 -100, height-15);
 
+  if (!buscar.isFocus()) {
+    primerResultado.hide();
+    segundoResultado.hide();
+    tercerResultado.hide();
+  }
+
   //buscar.getText().length() >1
   if (keyPressed  ) {
     //  println(key);
     if (buscar.isFocus() && keyCode!=BACKSPACE) {
       functionBuscar("default");
     }
-    if (outCantidad.isFocus()) {
+    if (outCantidad.isFocus() || outPrice.isFocus() ) {
       calcularSubtotal();
     }
   }
+
   if (buscar.getText().length()<1 ) {
     ocultarBotonesDesplegables();
   }
-  
 
-   fill(255);
-   textSize(20);
-   text("Description: " + productDescription,40,height-50 );
 
+  fill(255);
+  textSize(20);
+  text("Description: " + productDescription, 40, height-50 );
 }
 //en draw
-void cambiarWidth() {
-  primerResultado.setSize(100, 30);
-}
+
 String functionBuscar(String wordToSearch) {
   String palabras;
   if (wordToSearch=="default") {
@@ -512,17 +576,18 @@ String functionBuscar(String wordToSearch) {
 
       for (int ind=0; ind< palabrasSeparadas.length; ind++) {
         //print("\tword #"+ind+": " +palabrasSeparadas[ind]);
+        String[] match2=null;
         if (palabrasSeparadas[ind].length()>2) {
-          String[] m2 = match(checador, palabrasSeparadas[ind].toLowerCase());
-          if (m2 != null) {  // If not null, then a match was found
+          try {
+            String[] m2 = match(checador, palabrasSeparadas[ind].toLowerCase());
+            match2=m2;
+          }
+          catch(Exception e) {
+            e.printStackTrace();
+          }
+          if (match2 != null) {  // If not null, then a match was found
 
             println("Found a match of: " +palabrasSeparadas[ind].toLowerCase()+" in '" + checador+"'");
-            /*
-             float mc=checador.length();
-             float dinero=palabrasMinus.length();
-             float matchRatio=dinero/mc;
-             points += int(matchRatio*15.0);
-             */
             points += 4;
           } else {
             if (palabrasSeparadas[ind].toLowerCase()=="jabón") {
@@ -610,10 +675,16 @@ void keyPressed() {
   }
 }
 void calcularSubtotal() {
-  float productCantidad=float(outCantidad.getText())+0;
+
+  float productCantidad=float(outCantidad.getText());
   float productPrice=float(outPrice.getText());
-  float productPresent=float(outPresentacion.getText());
-  float subtotal= (productCantidad*productPrice)/productPresent;
+  //float productPresent=float(outPresentacion.getText());
+  float subtotal;
+  if ( !outCantidad.getText().isEmpty() && !outPrice.getText().isEmpty()) {
+    subtotal= (productCantidad*productPrice)+0.0;//productPresent;
+  } else {
+    subtotal =0;
+  }
   outSubtotal.setText(str(subtotal));
 }
 
@@ -622,8 +693,10 @@ void ocultarBotonesDesplegables() {
   segundoResultado.hide();
   tercerResultado.hide();
 }
-void primerBoton() {
-  TableRow filaParaAgregar= table.findRow(arreglo[0], "PRODUCTO");
+
+void productoSeleccionado(String producto) {
+
+  TableRow filaParaAgregar= table.findRow(producto, "PRODUCTO");
   int id2 = filaParaAgregar.getInt("ID");
   String nameProduct = filaParaAgregar.getString("PRODUCTO");
   String unidad = filaParaAgregar.getString("UNIDAD");
@@ -632,99 +705,55 @@ void primerBoton() {
   println("ID:"+id2 +" | "+nameProduct +" | "+ unidad + "| $"+price+" | PRESENTACION: "+presentacion);
   buscar.setText(nameProduct);
   outUnidad.setText(unidad);
-  ocultarBotonesDesplegables();
+
+  if (presentacion.isEmpty()) {
+    signoMas2.hide();
+    signoMenos2.hide();
+    outPresentacion.hide();
+  } else {
+    signoMas2.show();
+    signoMenos2.show();
+    outPresentacion.show();
+  }
   outPresentacion.setText(presentacion);
   outPrice.setText(str(price));
-}
-
-void segundoBoton() {
-  TableRow filaParaAgregar= table.findRow(arreglo[1], "PRODUCTO");
-  int id2 = filaParaAgregar.getInt("ID");
-  String nameProduct = filaParaAgregar.getString("PRODUCTO");
-  String unidad = filaParaAgregar.getString("UNIDAD");
-  int price = filaParaAgregar.getInt("PRECIO UNITARIO");        
-  String presentacion = filaParaAgregar.getString("PRESENTACION");
-  println("ID:"+id2 +" | "+nameProduct +" | "+ unidad + "| $"+price+"PRESENTACION: "+presentacion);
-
-  buscar.setText(nameProduct);
-  outUnidad.setText(unidad);
   ocultarBotonesDesplegables();
-  outPresentacion.setText(presentacion);
-  outPrice.setText(str(price));
+  outCantidad.setText("0");
+  outSubtotal.setText("0");
 }
 
-void tercerBoton() {
-  TableRow filaParaAgregar= table.findRow(arreglo[2], "PRODUCTO");
-
-  int id2 = filaParaAgregar.getInt("ID");
-  String nameProduct = filaParaAgregar.getString("PRODUCTO");
-  String unidad = filaParaAgregar.getString("UNIDAD");
-  int price = filaParaAgregar.getInt("PRECIO UNITARIO");        
-  String presentacion = filaParaAgregar.getString("PRESENTACION");
-  println("ID:"+id2 +" | "+nameProduct +" | "+ unidad + "| $"+price+"PRESENTACION: "+presentacion);
-  buscar.setText(nameProduct);
-  outUnidad.setText(unidad);
-  ocultarBotonesDesplegables();
-  outPresentacion.setText(presentacion);
-  outPrice.setText(str(price));
-}
 
 void echaleOtro() {
   //wachense esta poderosa función 
 
   String productName=buscar.getText();
-  if (productName.length()>=2) {
+  if (!productName.isEmpty()) {
     int productPzOption=int(outPiezas.getText())+0; 
     String productUnit=outUnidad.getText();
     float productCantidad=float(outCantidad.getText())+0.0;
     float productPrice=float(outPrice.getText())+0.0;
-    ;
-    float productPresent=float(outPresentacion.getText())+0.0;
-    ;
-    float subtotal= (productCantidad*productPrice)/productPresent+0.0;
-    ;
-    println("Agregando... " + productPzOption+"x"+productName +" | "+ productUnit +" | "+ productCantidad +" | "+productPrice +" | "+subtotal);
-
-    String reglonProducto[]={notasArea.getText(), productArea.getText(), unidadArea.getText(), cantidadArea.getText(), precioArea.getText(), subtotalArea.getText()};// =  productPzOption +productName
+    // float productPresent=1.0;//float(outPresentacion.getText())+0.0;
+    float subtotal=float(outSubtotal.getText());///productPresent+0.0;
 
     TableRow newRowJack = Ticket.addRow();
-    if (productCantidad>0) {
-      newRowJack.setString("Producto", productName);
-      newRowJack.setString("Unidad", productUnit);
-      newRowJack.setFloat("Cantidad", productCantidad);
-      newRowJack.setFloat("Precio unitario", productPrice);
-      newRowJack.setFloat("Total", subtotal);
-      String productReplace=productName;
-      if (productName.length()>40)
-        productReplace=productName.substring(0, 40);
-      String rowTable[]={"", productReplace, productUnit, str(productCantidad), str(productPrice), str(subtotal) };
-      for (int indice=0; indice<6; indice++) {
-        reglonProducto[indice] += rowTable[indice] +"\n";
-      }
-    } else {
-      String cadenaN=productPzOption+"pzs "+productName;
-      newRowJack.setString("Producto", cadenaN);
-      newRowJack.setString("Unidad", productUnit);
-      newRowJack.setString("Cantidad", " ");
-      newRowJack.setFloat("Precio unitario", productPrice);
-      newRowJack.setFloat("Total", 0);
-      String productReplace=productName;
-      if (productName.length()>40)
-        productReplace=productName.substring(0, 40);
-      String rowTable[]={productPzOption+"pzs", productReplace, productUnit, str(productCantidad), str(productPrice), str(subtotal) };
-      for (int indice=0; indice<6; indice++) {
+    if (productCantidad==0) {
+      productName=productPzOption+"pzs "+productName;
+    } 
+    newRowJack.setString("Producto", productName);
+    newRowJack.setString("Unidad", productUnit);
+    newRowJack.setFloat("Cantidad", productCantidad);
+    newRowJack.setFloat("Precio unitario", productPrice);
+    newRowJack.setFloat("Total", subtotal);
 
-        reglonProducto[indice] += rowTable[indice] +"\n";
-      }
-    }
-    // notasArea, productArea, unidadArea, cantidadArea, precioArea, subtotalArea;
+    String reglonProducto[]={productName, productUnit, str(productCantidad), str(productPrice), str(subtotal) };
 
-    notasArea.setText(reglonProducto[0]);
-    productArea.setText(reglonProducto[1]);
-    unidadArea.setText(reglonProducto[2]);
-    cantidadArea.setText(reglonProducto[3]);
-    precioArea.setText(reglonProducto[4]);
-    subtotalArea.setText(reglonProducto[5]);
+    println("Agregando... No."+producto+ " --" + productPzOption+"x"+productName +" | "+ productUnit +" | "+ productCantidad +" | "+productPrice +" | "+subtotal);
+    println(reglonProducto);
+
+    //String newProduct[] = {reglonProducto[0], reglonProducto[1], reglonProducto[2], reglonProducto[3], reglonProducto[4]};
+    px1[producto]= new ProductLine(producto, reglonProducto);
+    callbackOf(producto);
+    producto++;
 
     buscar.setText("");
     outPiezas.setText("");
@@ -744,12 +773,21 @@ void guardandoTicket() {
   saveTable(Ticket, "/pedido-"+numeroPedido+"-"+h+"-"+m+"-"+s+".csv");
   numeroPedido++;
   println("Listo! csv guardada");
-  notasArea.setText("");
-  productArea.setText("");
-  unidadArea.setText("");
-  cantidadArea.setText("");
-  precioArea.setText("");
-  subtotalArea.setText("");
+
+  for (int i=0; i<50; i++) {
+    try {
+     // if (!cp5.get(Textfield.class, "CamB"+i).getText().isEmpty())
+     // {
+        px1[i].remover(i);
+      //}
+    }
+    catch(Exception e) {
+      e.printStackTrace();
+    }
+  }
+  producto =0;
+  //notasArea.setText("");
+
   Ticket.clearRows();
 }
 void fromTxtToCsv() {
@@ -768,34 +806,236 @@ void fromTxtToCsv() {
   }
   saveStrings("/ticket_auto.csv", lines);
 }
-void functionMas() {
+void functionMas(int mode,float value) {
 
-  int productPresent=int(outPresentacion.getText());
-  int cantidad=0;
-  if (productPresent>0) {
-    cantidad= int(outCantidad.getText()) +productPresent;
-  } else {
-    cantidad= int(outCantidad.getText()) +1;
-  }
+  float sumando=1.0;
+  String unit = outUnidad.getText();
+  String productPresent= outPresentacion.getText();
+  String salida[]={"", ""};
 
-  outCantidad.setText(str(cantidad));
-  calcularSubtotal();
-  //println("productos "+cantidad);
-}
-
-void functionMenos() {
-
-  int cantidad2= int(outCantidad.getText());
-  int productPresent=int(outPresentacion.getText());
-  if (cantidad2>0) {
-    if (productPresent>0) {
-      cantidad2= cantidad2 -productPresent;
-    } else {
-      cantidad2=cantidad2-1;
+  if (!productPresent.isEmpty()) {
+    try {
+      salida=split(productPresent, ' ' );
+      println("datos: " + salida[0] +" / "+ salida[1] +" / "+unit );
+    }
+    catch(Exception e) {
+      e.printStackTrace();
     }
   }
 
-  outCantidad.setText(str(cantidad2));
+  switch(mode) {
+  case 0: 
+    sumando=value;     
+    break;
+
+  case 1:
+    if (salida[1].equals("grs") && unit.equals("kg") ) {
+      sumando = float(salida[0])/1000;
+    } 
+    else if(!salida[1].equals("grs") && unit.equals("kg")){
+      sumando = value;
+    }
+    else {
+      sumando =1.0;
+    }
+    break;
+  }
+
+  float cantidad;
+  float cantidadActual;
+  if (outCantidad.getText().isEmpty()) {
+    cantidadActual=0;
+  } else {
+    cantidadActual=float(outCantidad.getText());
+  }
+
+  cantidad= cantidadActual + sumando;
+  int x = str(cantidad).length();
+  if (x>4) {
+    outCantidad.setText(str(cantidad).substring(0, 4));
+  } else {
+    outCantidad.setText(str(cantidad));
+  }
+
+  calcularSubtotal();
+}
+
+void functionMenos(int mode ) {
+  float  sumando=1.0;
+  String unit = outUnidad.getText();
+  String productPresent= outPresentacion.getText();
+  String salida[]={"", ""};
+
+  if (!productPresent.isEmpty()) {
+    try {
+      salida=split(productPresent, ' ' );
+      println("datos: " + salida[0] +" / "+ salida[1] +" / "+unit );
+    }
+    catch(Exception e) {
+      e.printStackTrace();
+    }
+  }
+
+  switch(mode) {
+  case 0: 
+    sumando=1.0;     
+    break;
+
+  case 1:
+
+    if (salida[1].equals("grs") && unit.equals("kg")) {
+      sumando = float(salida[0])/1000;
+      println("sirviendo al pueblo " + sumando);
+    } else {
+      sumando =1.0;
+    }
+    break;
+  }
+
+  float cantidad;
+  float cantidadActual;
+  if (outCantidad.getText().isEmpty()) {
+    cantidadActual=0;
+  } else {
+    cantidadActual=float(outCantidad.getText());
+  }
+
+  cantidad= cantidadActual - sumando;
+  if (cantidad < 0) {
+    cantidad=0;
+  }
+
+  int x = str(cantidad).length();
+  if (x>4) {
+    outCantidad.setText(str(cantidad).substring(0, 4));
+  } else {
+    outCantidad.setText(str(cantidad));
+  }
   calcularSubtotal();
   //println("productos "+cantidad2);
+}
+
+
+class ProductLine {
+  //5 textInput
+  Textfield campo1, campo2, campo3, campo4, campo5;
+  Button borrar;
+  // CallbackListener cb;
+  int nPedido;
+  int hField=20;
+  int xInicial=200;
+  int yInicial =195;
+
+  //.setPosition(200, 195)
+  //.setSize(80, 400)
+
+  ProductLine(int nPedido, String[] atributos) {
+
+    int axisY=  yInicial + (hField+1)*nPedido  ;
+
+    campo1 = cp5.addTextfield("CamA"+nPedido, xInicial, axisY, 325, hField)
+      .setFont(createFont("arial", 14))
+      .setAutoClear(false)
+      .setColor(color(#16557c))
+      .setColorBackground(color(255))
+      .setColorForeground(color(255))
+      .setColorCursor(color(#A0A0A0))
+      .setText(atributos[0]);
+
+    campo2 = cp5.addTextfield("CamB"+nPedido, xInicial+330, axisY, 80, hField)
+      .setFont(createFont("arial", 14))
+      .setAutoClear(false)
+      .setColor(color(#16557c))
+      .setColorBackground(color(255))
+      .setColorForeground(color(255))
+      .setColorCursor(color(#A0A0A0))
+      .setText(atributos[1]);
+
+    campo3 = cp5.addTextfield("CamC"+nPedido, xInicial+415, axisY, 80, hField)
+      .setFont(createFont("arial", 14))
+      .setAutoClear(false)
+      .setColor(color(#16557c))
+      .setColorBackground(color(255))
+      .setColorForeground(color(255))
+      .setColorCursor(color(#A0A0A0))
+      .setText(atributos[2]);
+
+    campo4 = cp5.addTextfield("CamD"+nPedido, xInicial+500, axisY, 80, hField)
+      .setFont(createFont("arial", 14))
+      .setAutoClear(false)
+      .setColor(color(#16557c))
+      .setColorBackground(color(255))
+      .setColorForeground(color(255))
+      .setColorCursor(color(#A0A0A0))
+      .setText(atributos[3]);
+
+    campo5 = cp5.addTextfield("CamE"+nPedido, xInicial+585, axisY, 80, hField)
+      .setFont(createFont("arial", 14))
+      .setAutoClear(false)
+      .setColor(color(#16557c))
+      .setColorBackground(color(255))
+      .setColorForeground(color(255))
+      .setColorCursor(color(#A0A0A0))
+      .setText(atributos[4]);
+
+    campo1.getCaptionLabel().setVisible(false);
+    campo2.getCaptionLabel().setVisible(false);
+    campo3.getCaptionLabel().setVisible(false);
+    campo4.getCaptionLabel().setVisible(false);
+    campo5.getCaptionLabel().setVisible(false);
+    /*
+    borrar = cp5.addButton("X"+nPedido)
+     .setFont(createFont("arial", 18))
+     .setPosition(xInicial+585+85, axisY)
+     .setSize(25, hField)
+     .setValue(nPedido)
+     ;*/
+    //borrar.setLabel("X");
+
+    //px1[int(borrar.getValue())].borrarProducto(int(borrar.getValue()));
+    //+borrar.getValue());
+    //callbackOf(nPedido);
+
+    //borrar.addCallback(cb);
+    //borrar.setLabel("X");
+  }
+  /*
+  void borrarProducto(int productLine) {
+   println("Removiendo objeto..."+ productLine);
+   cp5.get(Textfield.class, "CamA"+productLine).clear();
+   }*/
+
+  void remover(int indice) {
+    //println("Objetos vacios"+indice);
+    cp5.get(Textfield.class, "CamA"+indice).remove();
+    cp5.get(Textfield.class, "CamB"+indice).remove();
+    cp5.get(Textfield.class, "CamC"+indice).remove();
+    cp5.get(Textfield.class, "CamD"+indice).remove();
+    cp5.get(Textfield.class, "CamE"+indice).remove();
+    cp5.get(Button.class, "X"+indice).remove();
+  }
+}
+
+void callbackOf(int n) {
+  //limpiar fila de textos
+  //remover ultima fila 
+  //recorrer los datos hacia arriba
+
+  //cp5.get(Textfield.class, "CamC"+n).clear();
+
+  //cp5.get(Textfield.class, "CamC"+n).remove();
+  /*
+  cp5.get(Button.class, "X"+n).addCallback(new CallbackListener() {
+   public void controlEvent(CallbackEvent theEvent) {
+   switch(theEvent.getAction()) {
+   case(ControlP5.ACTION_PRESSED): 
+   println("thinking..");
+   break;
+   case(ControlP5.ACTION_RELEASED): 
+   println("stop"); 
+   break;
+   }
+   }
+   }
+   );*/
 }
