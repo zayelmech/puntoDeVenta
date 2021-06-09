@@ -1,11 +1,19 @@
+/* 
+ Code by: Abdiel Carreño 
+ Github: zayelmech
+ Web: www.imecatro.com
+ version:1.0
+ Año: 2021
+ */
+
 import controlP5.*;
 import java.util.*;
 
 ControlP5 cp5; 
-Textfield buscar, outUnidad, outCantidad, outPrice, outPiezas, outPresentacion, outSubtotal;
+Textfield cliente, buscar, outUnidad, outCantidad, outPrice, outPiezas, outPresentacion, outSubtotal;
 Button signoMas2, signoMenos2, signoMas, signoMenos, primerResultado, segundoResultado, tercerResultado, botonAgregar, botonSalvarCSV, botonCargarTxt;
 //Textarea notasArea, productArea, unidadArea, cantidadArea, precioArea, subtotalArea;
-Button plusMidKg, plusQuaKg,subMidKg,subQuaKg; 
+Button plusMidKg, plusQuaKg, subMidKg, subQuaKg; 
 
 Table table, tableSearch, Ticket, ticketHeader;
 int id, producto=0;
@@ -24,8 +32,9 @@ boolean buscarClicked=false;
 String arreglo[]={"", "", "", "", ""};
 CallbackListener cb;
 
-ProductLine px1[]= new ProductLine[50];
-;
+
+//ProductLine px1[]= new ProductLine[50];
+ProductLine lineOfProduct;
 
 void setup() {
 
@@ -64,7 +73,7 @@ void setup() {
         //info.label.setText(theEvent.getController().getInfo());
         //cursor(HAND);
         println(theEvent.getController().getInfo());
-        functionMas(0,theEvent.getController().getValue()); 
+        functionMas(0, theEvent.getController().getValue()); 
         break;
         case(ControlP5.ACTION_RELEASED):
         println("adios");
@@ -72,7 +81,7 @@ void setup() {
       }
     }
   };
-
+  //borrar.addListener(cb);
   /*
   notasArea = cp5.addTextarea("txt_notas")
    .setPosition(200, 195)
@@ -86,22 +95,30 @@ void setup() {
    
    */
   //Flujo normal
-//plusMidKg, plusQuaKg,subMidKg,subQuaKg; 
-  
+  //plusMidKg, plusQuaKg,subMidKg,subQuaKg; 
+  cliente =cp5.addTextfield("Cliente", width/2 -widthBuscar-120, 160, 150, 30)
+    .setFont(createFont("arial", 20))
+    .setAutoClear(false)
+    .setColor(color(#16557c))
+    .setColorBackground(color(255))
+    .setColorForeground(color(255))
+    .setColorCursor(color(#A0A0A0));
+  ;
+
   plusMidKg = cp5.addButton("+ 1/2kg")
     .setFont(createFont("arial", 14))
     .setPosition(width/2 +80, 110 )
     .setSize(75, 25)
     .setValue(0.5);
-  
+
   plusMidKg.addCallback(cb);
-  
+
   plusQuaKg = cp5.addButton("+ 1/4kg")
     .setFont(createFont("arial", 14))
-    .setPosition(width/2 , 110 )
+    .setPosition(width/2, 110 )
     .setSize(75, 25)  
     .setValue(0.25);
-    
+
   plusQuaKg.addCallback(cb);
 
   signoMenos2 = cp5.addButton("- ")
@@ -310,7 +327,7 @@ void setup() {
     public void controlEvent(CallbackEvent theEvent) {
       switch(theEvent.getAction()) {
         case(ControlP5.ACTION_PRESSED): 
-        functionMas(0,1); 
+        functionMas(0, 1); 
         break;
         case(ControlP5.ACTION_RELEASED): 
         println("stop"); 
@@ -339,7 +356,7 @@ void setup() {
     public void controlEvent(CallbackEvent theEvent) {
       switch(theEvent.getAction()) {
         case(ControlP5.ACTION_PRESSED): 
-        functionMas(1,0); 
+        functionMas(1, 0); 
         break;
         case(ControlP5.ACTION_RELEASED): 
         println("stop"); 
@@ -631,19 +648,20 @@ String functionBuscar(String wordToSearch) {
         println("points:"+id2+" words Array:"+species2 + " Index:"+name2);
       }
     }
+    int maxChars= primerResultado.getWidth()/14;
 
-    if (arreglo[0].length()>22) {
-      primerResultado.setLabel(arreglo[0].substring(0, 22));
+    if (arreglo[0].length()>=maxChars) {
+      primerResultado.setLabel(arreglo[0].substring(0, maxChars));
     } else {
       primerResultado.setLabel(arreglo[0]);
     }  
-    if (arreglo[1].length()>22) {
-      segundoResultado.setLabel(arreglo[1].substring(0, 22));
+    if (arreglo[1].length()>=maxChars) {
+      segundoResultado.setLabel(arreglo[1].substring(0, maxChars));
     } else {
       segundoResultado.setLabel(arreglo[1]);
     }
-    if (arreglo[2].length()>22) {
-      tercerResultado.setLabel(arreglo[2].substring(0, 22));
+    if (arreglo[2].length()>=maxChars) {
+      tercerResultado.setLabel(arreglo[2].substring(0, maxChars));
     } else {
       tercerResultado.setLabel(arreglo[2]);
     }
@@ -700,11 +718,17 @@ void productoSeleccionado(String producto) {
   int id2 = filaParaAgregar.getInt("ID");
   String nameProduct = filaParaAgregar.getString("PRODUCTO");
   String unidad = filaParaAgregar.getString("UNIDAD");
-  int price = filaParaAgregar.getInt("PRECIO UNITARIO");
+  float price = filaParaAgregar.getFloat("PRECIO UNITARIO");
   String presentacion = filaParaAgregar.getString("PRESENTACION");
   println("ID:"+id2 +" | "+nameProduct +" | "+ unidad + "| $"+price+" | PRESENTACION: "+presentacion);
   buscar.setText(nameProduct);
   outUnidad.setText(unidad);
+
+  if (unidad.equals("pz")) {
+    outPiezas.hide();
+  } else {
+    outPiezas.show();
+  }
 
   if (presentacion.isEmpty()) {
     signoMas2.hide();
@@ -734,6 +758,7 @@ void echaleOtro() {
     float productPrice=float(outPrice.getText())+0.0;
     // float productPresent=1.0;//float(outPresentacion.getText())+0.0;
     float subtotal=float(outSubtotal.getText());///productPresent+0.0;
+    //juntar nombre y presentacion 
 
     TableRow newRowJack = Ticket.addRow();
     if (productCantidad==0) {
@@ -751,8 +776,9 @@ void echaleOtro() {
     println(reglonProducto);
 
     //String newProduct[] = {reglonProducto[0], reglonProducto[1], reglonProducto[2], reglonProducto[3], reglonProducto[4]};
-    px1[producto]= new ProductLine(producto, reglonProducto);
-    callbackOf(producto);
+    lineOfProduct= new ProductLine(producto, reglonProducto);
+    //callbackOf(producto);
+    //cp5.get(Button.class, "X"+producto).addCallback(cb);
     producto++;
 
     buscar.setText("");
@@ -770,15 +796,18 @@ void guardandoTicket() {
   int s = second();  // Values from 0 - 59
   int m = minute();  // Values from 0 - 59
   int h = hour();    // Values from 0 - 23
-  saveTable(Ticket, "/pedido-"+numeroPedido+"-"+h+"-"+m+"-"+s+".csv");
+  String nameClient = cliente.getText()+"_Xub";
+  cliente.setText("");
+  saveTable(Ticket, "/order_"+numeroPedido+"_"+nameClient+".csv");
   numeroPedido++;
   println("Listo! csv guardada");
 
-  for (int i=0; i<50; i++) {
+  for (int i=0; i<producto; i++) {
     try {
-     // if (!cp5.get(Textfield.class, "CamB"+i).getText().isEmpty())
-     // {
-        px1[i].remover(i);
+      // if (!cp5.get(Textfield.class, "CamB"+i).getText().isEmpty())
+      // {
+      lineOfProduct.remover(i);
+
       //}
     }
     catch(Exception e) {
@@ -806,7 +835,7 @@ void fromTxtToCsv() {
   }
   saveStrings("/ticket_auto.csv", lines);
 }
-void functionMas(int mode,float value) {
+void functionMas(int mode, float value) {
 
   float sumando=1.0;
   String unit = outUnidad.getText();
@@ -831,11 +860,9 @@ void functionMas(int mode,float value) {
   case 1:
     if (salida[1].equals("grs") && unit.equals("kg") ) {
       sumando = float(salida[0])/1000;
-    } 
-    else if(!salida[1].equals("grs") && unit.equals("kg")){
+    } else if (!salida[1].equals("grs") && unit.equals("kg")) {
       sumando = value;
-    }
-    else {
+    } else {
       sumando =1.0;
     }
     break;
@@ -920,11 +947,28 @@ class ProductLine {
   //5 textInput
   Textfield campo1, campo2, campo3, campo4, campo5;
   Button borrar;
-  // CallbackListener cb;
+
+  //  CallbackListener xyz =new CallbackListener() {
+  //    public void controlEvent(CallbackEvent theEvent) {
+  //      switch(theEvent.getAction()) {
+  //        case(ControlP5.ACTION_PRESSED):
+  //        //info.n = 1;
+  //        //info.label.setText(theEvent.getController().getInfo());
+  //        //cursor(HAND);
+  //        println(theEvent.getController().getInfo());
+  //        //functionMas(0,theEvent.getController().getValue()); 
+  //        break;
+  //        case(ControlP5.ACTION_RELEASED):
+  //        println("adios");
+  //        break;
+  //      }
+  //    }
+  //  };
   int nPedido;
   int hField=20;
   int xInicial=200;
   int yInicial =195;
+
 
   //.setPosition(200, 195)
   //.setSize(80, 400)
@@ -932,6 +976,7 @@ class ProductLine {
   ProductLine(int nPedido, String[] atributos) {
 
     int axisY=  yInicial + (hField+1)*nPedido  ;
+
 
     campo1 = cp5.addTextfield("CamA"+nPedido, xInicial, axisY, 325, hField)
       .setFont(createFont("arial", 14))
@@ -983,14 +1028,19 @@ class ProductLine {
     campo3.getCaptionLabel().setVisible(false);
     campo4.getCaptionLabel().setVisible(false);
     campo5.getCaptionLabel().setVisible(false);
-    /*
+
     borrar = cp5.addButton("X"+nPedido)
-     .setFont(createFont("arial", 18))
-     .setPosition(xInicial+585+85, axisY)
-     .setSize(25, hField)
-     .setValue(nPedido)
-     ;*/
-    //borrar.setLabel("X");
+      .setFont(createFont("arial", 18))
+      .setPosition(xInicial+585+85, axisY)
+      .setSize(25, hField)
+      .setValue(nPedido)
+      ;
+
+    //cp5.get(Button.class, "X"+nPedido).addCallback(xyz);
+    //cp5.get(Button.class, "X"+nPedido).setLabel("X");
+
+
+    borrar.setLabel("X");
 
     //px1[int(borrar.getValue())].borrarProducto(int(borrar.getValue()));
     //+borrar.getValue());

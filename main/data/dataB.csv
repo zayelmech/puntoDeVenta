@@ -1,15 +1,17 @@
 ID,PRODUCTO,UNIDAD,CANTIDAD,PRECIO UNITARIO,PRESENTACION
-1000, Sal de hormiga chicatana,bote,1,10,25 grs
+1000,Sal de hormiga chicatana,bote,1,10,25 grs
 1001,Aceite Virgen  de coco,kg,1,190,
 1002,Ciruela,kg,1,40,
-1003,Chabacano  rojo o amarillo,kg,1,38,
+1003,Chabacano  rojo ,kg,1,38,
 1004,Durazno,kg,1,50,
 1005,Pera de leche,kg,1,40,
 1006,Pitaya,kg,1,60,
 1007,Jiotilla,kg,1,80,250 grs
+10071,Maracuya Tradicional,kg,1,55,
 1008,Maracuya (largo),kg,1,35,
 1009,Fresa,kg,1,120,
 1010,Mora azul,kg,1,250,100 grs
+1910,Mix de frutos rojos,kg,1,260,250 grs
 1011,Zarzamora,kg,1,150,250 grs
 1012,Frambuesas,kg,1,400,150 grs
 1013,Higo fresco,kg,1,120,
@@ -34,9 +36,9 @@ ID,PRODUCTO,UNIDAD,CANTIDAD,PRECIO UNITARIO,PRESENTACION
 1032,Naranja,kg,1,17,
 1033,Lichi,kg,1,50,
 1034,Elotes rojos 4 piezas,paq,1,25,
-1035,Col morada,pz,1,40,
+1035,Col morada,pz,1,50,
 1036,Col verde (unstock),pz,1,35,
-1037,Tomate,kg,1,25,
+1037,Tomate,kg,1,30,
 1038,Tomate Riñon,kg,1,40,
 1039,Pimiento morron ,kg,1,55,
 1040,Tomate cherry,kg,1,117,300 grs
@@ -137,9 +139,10 @@ ID,PRODUCTO,UNIDAD,CANTIDAD,PRECIO UNITARIO,PRESENTACION
 1135,Palitos de pan de masa madre,bolsa,1,30,
 1136,Galletas de avena y chocolate,bolsa,1,35,5 pzs
 1137,Galletas de menta,bolsa,1,45,5 pzs
+1937,Brownie de chocolate,pz,1,35,
 1138,Pan de trigo,pz,1,50,850 grs
 1139,Pan de trigo integral,pz,1,50,850 grs
-1140,baguette frances,pz,1,25,
+1140,baguette frances,pz,1,30,350 grs
 1141,"Pan de trigo: ajo,cebolla, hierbas",pz,1,60,860 grs
 1142,Pan de trigo integral: multigrano,pz,1,65,960 grs
 1143,Pan de trigo integral: avena/linaza,pz,1,65,950 grs
@@ -148,7 +151,12 @@ ID,PRODUCTO,UNIDAD,CANTIDAD,PRECIO UNITARIO,PRESENTACION
 1146,Pan sin gluten: multigrano,pz,1,90,950 grs
 1147,Pan sin gluten: avena y linaza,pz,1,90,870 grs
 1148,Huevo natural docena ,pz,1,48,
-1149,Cono de huevo,pz,1,120,30 pza
+11481,Conchitas de amaranto,pz,1,22,2 pzs
+11482,Galletas sin gluten de ajonjoli,paq,1,22,4 pzs
+11483,Galletas sin azucar de manzana o frutos secos,paq,1,22,4 pzs
+11484,Galletas de avena,paq,1,22,4 pzs
+11485,Alegrias redondas de chocolate,pz,1,18,
+1149,Cono de huevo,pz,1,120,30 pzs
 1150,Queso fresco chico,pz,1,25,
 1151,Quesillo ,kg,1,120,
 1152,Queso panela,pz,1,60,500 grs
@@ -165,8 +173,9 @@ ID,PRODUCTO,UNIDAD,CANTIDAD,PRECIO UNITARIO,PRESENTACION
 1163,Mantequilla 1kg,kg,1,200,
 1164,Nata de leche de vaca ,kg,1,320,250 grs
 1165,Yogurt natural S/A,bote,1,100,960 ml
-1166,Carne de conejo (entero),kg,1,150,
 1167,Codorniz (paq 3 piezas),paq,1,170,
+1166,Carne de conejo (entero),kg,1,150,
+11681,Carne de borrego molida,paq,1,260,
 1168,Carne de borrego,paq,1,160,
 1169,Sazonador para carnes (especias y hierbas finas),pz,1,55,60 grs
 1170,Te Alegria,bolsa,1,60,250 grs
@@ -406,5 +415,7 @@ ID,PRODUCTO,UNIDAD,CANTIDAD,PRECIO UNITARIO,PRESENTACION
 1404,Gel antibacterial con dosificador ,ml,500,75,500 ml
 1405,Gel antibacterial 1L,litro,1,100,
 1406,Gel antibacterial 0.5L,ml,500,55,0.5 litro
-1407,Paquete 1kg de Fresa + 250 gr de Zarzamora + 100 grs mora azul,paq,1,200,
-1408,Envio,servicio,1,1,
+1407,Paquete  500grs de Fresa + 500grs de Zarzamora + 500grs mora azul,paq,1,210,
+1408,Envio,servicio,1,35,
+1409,Paquete 250grs de Totopo + 500grs pasta de frijol + 1 queso fresco + 100ml salsa,paq,1,85,
+1410,Yogurt de coco,litro,1,240,500 ml
