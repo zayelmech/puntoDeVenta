@@ -3,16 +3,18 @@ ID,PRODUCTO,UNIDAD,CANTIDAD,PRECIO UNITARIO,PRESENTACION
 1001,Aceite Virgen  de coco,kg,1,190,
 1002,Ciruela,kg,1,40,
 1003,Chabacano  rojo ,kg,1,38,
+11003,Rambutan,kg,1,60,
+11004,Tuna Verde,kg,1,35,
 1004,Durazno,kg,1,50,
-1005,Pera de leche,kg,1,40,
-1006,Pitaya,kg,1,60,
+1005,Pera,kg,1,40,
+1006,Pitaya,kg,1,50,
 1007,Jiotilla,kg,1,80,250 grs
 10071,Maracuya Tradicional,kg,1,55,
 1008,Maracuya (largo),kg,1,35,
 1009,Fresa,kg,1,120,
 1010,Mora azul,kg,1,250,100 grs
-1910,Mix de frutos rojos,kg,1,260,250 grs
-1011,Zarzamora,kg,1,150,250 grs
+1910,Mix de frutos rojos,kg,1,280,250 grs
+1011,Zarzamora,kg,1,200,250 grs
 1012,Frambuesas,kg,1,400,150 grs
 1013,Higo fresco,kg,1,120,
 1014,Mamey,kg,1,45,
@@ -22,14 +24,14 @@ ID,PRODUCTO,UNIDAD,CANTIDAD,PRECIO UNITARIO,PRESENTACION
 1018,Guayaba,kg,1,40,
 1019,Sandia,kg,1,15,
 1020,Papaya,kg,1,25,
-1021,Limon,kg,1,35,
+1021,Limon,kg,1,30,
 1022,Pomelo,pz,1,15,
 1023,Platano tabasco,kg,1,25,
-1024,Platano morado o pi�a,kg,1,25,
+1024,Platano morado o piña,kg,1,25,
 1025,Platano macho,kg,1,25,
 1026,Platano peron,kg,1,30,
 1027,Pepino,kg,1,30,
-1028,Pi�a miel,pz,1,35,
+1028,Piña miel,pz,1,35,
 1029,Jamaica criolla,kg,1,350,100 grs
 1030,Melon,pz,1,35,
 1031,Tamarindo (pulpa),kg,1,50,500 grs
@@ -37,9 +39,10 @@ ID,PRODUCTO,UNIDAD,CANTIDAD,PRECIO UNITARIO,PRESENTACION
 1033,Lichi,kg,1,50,
 1034,Elotes rojos 4 piezas,paq,1,25,
 1035,Col morada,pz,1,50,
-1036,Col verde (unstock),pz,1,35,
+1036,Col verde,pz,1,35,
+11036,Hongo silvestre,kg,1,220,
 1037,Tomate,kg,1,30,
-1038,Tomate Ri�on,kg,1,40,
+1038,Tomate Riñon,kg,1,40,
 1039,Pimiento morron ,kg,1,55,
 1040,Tomate cherry,kg,1,117,300 grs
 1041,Berenjena,kg,1,55,
@@ -59,8 +62,8 @@ ID,PRODUCTO,UNIDAD,CANTIDAD,PRECIO UNITARIO,PRESENTACION
 1055,Coliflor,pz,1,35,
 1056,Esparragos,kg,1,300,200 grs
 1057,Papa morada,kg,1,35,
-1058,Papa chiquita rosa sin tierra,kg,1,40,
 1059,Calabacita criolla,kg,1,45,
+11059,Calabacita Italiana,kg,1,30,
 1060,Col de bruselas,kg,1,120,
 1061,Zanahoria,kg,1,35,
 1062,Diente de leon,rollo,1,30,
@@ -113,7 +116,7 @@ ID,PRODUCTO,UNIDAD,CANTIDAD,PRECIO UNITARIO,PRESENTACION
 1109,Cold Brew,pz,1,65,376 ml
 1110,Cold Brew Latte,pz,1,65,376 ml
 1111,Pulpa de mango congelada,kg,1,90,500 grs
-1112,Pulpa de pi�a congelada,kg,1,90,500 grs
+1112,Pulpa de piña congelada,kg,1,90,500 grs
 1113,Kefir de leche o agua 500ml,pz,1,35,500 ml
 1114,Kefir de leche 1L,litro,1,70,
 1115,Kefir de agua (bulgaros de agua),litro,1,70,500 ml
@@ -126,8 +129,8 @@ ID,PRODUCTO,UNIDAD,CANTIDAD,PRECIO UNITARIO,PRESENTACION
 1122,Kombucha Arandanos y poleo,pz,1,65,500 ml
 1123,Vinagre de manzana,pz,1,65,250 ml
 1124,Panela 700 grs,pz,1,65,700 grs
-1125,Panela envuelta en ca�a 3.2 kg,pz,1,160,
-1126,Panela envuelta en ca�a 300 grs,pz,1,80,
+1125,Panela envuelta en caña 3.2 kg,pz,1,160,
+1126,Panela envuelta en caña 300 grs,pz,1,80,
 1127,Panela granulada,kg,1,100,250 grs
 1128,Azucar mascabada,kg,1,90,
 1129,Stevia en hojas 50 grs,pz,1,65,50 grs
@@ -179,7 +182,7 @@ ID,PRODUCTO,UNIDAD,CANTIDAD,PRECIO UNITARIO,PRESENTACION
 1168,Carne de borrego,paq,1,160,
 1169,Sazonador para carnes (especias y hierbas finas),pz,1,55,60 grs
 1170,Te Alegria,bolsa,1,60,250 grs
-1171,Te so�ador,bolsa,1,60,
+1171,Te soñador,bolsa,1,60,
 1172,Te Gripa,bolsa,1,60,
 1173,Te Panza,bolsa,1,60,
 1174,Te trimentra,bolsa,1,60,
@@ -191,7 +194,7 @@ ID,PRODUCTO,UNIDAD,CANTIDAD,PRECIO UNITARIO,PRESENTACION
 1180,Gud Avena litro S/A,litro,1,48,
 1181,Gud Coco litro S/A,litro,1,50,
 1182,Gud Quinoa litro,litro,1,45,
-1183,"Mermelada YUBAN 210grs (Pi�a,Jengibre y cardamomo )",pz,1,75,210 grs
+1183,"Mermelada YUBAN 210grs (Piña,Jengibre y cardamomo )",pz,1,75,210 grs
 1184,Mermelada YUBAN 210grs (Mango - maracuya),pz,1,75,210 grs
 1185,Mermelada YUBAN 210grs (Fresa - chia),pz,1,75,210 grs
 1186,Mermelada YUBAN 210grs (Fresa - jamaica),pz,1,75,210 grs
@@ -203,24 +206,24 @@ ID,PRODUCTO,UNIDAD,CANTIDAD,PRECIO UNITARIO,PRESENTACION
 1192,Mermelada Tipico cultivando amor : manzana,pz,1,75,300 grs
 1193,Mermelada Tipico cultivando amor : durazno,pz,1,75,300 grs
 1194,Mermelada ECOSTA : jamaica,pz,1,75,
-1195,Mermelada ECOSTA : camote - pi�a,pz,1,75,
+1195,Mermelada ECOSTA : camote - piña,pz,1,75,
 1196,Mermelada ECOSTA : maracuya,pz,1,75,
 1197,Mermelada ECOSTA : papaya,pz,1,75,
 1198,Mermelada ECOSTA : mango criollo,pz,1,75,
 1199,Mermelada ECOSTA : mango tamarindo,pz,1,75,
-1200,Mermelada ECOSTA : pi�a coco,pz,1,75,
+1200,Mermelada ECOSTA : piña coco,pz,1,75,
 1201,Mermelada LA PERDICION : Fresa,pz,1,80,300 grs
 1202,Mermelada Limon o Ajo,pz,1,50,500 grs
-1203,Muesli : pi�a ,kg,1,330,500 grs
+1203,Muesli : piña ,kg,1,330,500 grs
 1204,Muesli : fresa,kg,1,330,500 grs
 1205,Muesli : mango,kg,1,330,500 grs
 1206,Muesli : mix,kg,1,330,500 grs
-1207,Mango o pi�a deshidratado natural o chile 30grs,pz,1,30,30 grs
-1208,Mango o pi�a deshidratado natural o chile 100grs,pz,1,100,100 grs
+1207,Mango o piña deshidratado natural o chile 30grs,pz,1,30,30 grs
+1208,Mango o piña deshidratado natural o chile 100grs,pz,1,100,100 grs
 1209,Fresa deshidratada natural,pz,1,45,30 grs
 1210,Barras de granola,barra,1,18,
 1211,Nuez en mitades ,pz,1,45,100 grs
-1212,Nuez garapi�ada,pz,1,55,100 grs
+1212,Nuez garapiñada,pz,1,55,100 grs
 1213,Chicharo con sal,pz,1,35,100 grs
 1214,Maiz con sal o maiz con chile ,pz,1,35,100 grs
 1215,Cacahuate horneado,pz,1,25,100 grs
@@ -273,7 +276,7 @@ ID,PRODUCTO,UNIDAD,CANTIDAD,PRECIO UNITARIO,PRESENTACION
 1262,Cerveza artesanal capucha : Jengibre Panel,pz,1,50,
 1263,Cerveza artesanal capucha : Blonde,pz,1,50,
 1264,Cerveza artesanal traspatio : Porter inglesa ,pz,1,50,
-1265,Cerveza artesanal la Juquile�a Negra del alma (Stout),pz,1,50,
+1265,Cerveza artesanal la Juquileña Negra del alma (Stout),pz,1,50,
 1266,Barra de chocolate artesanal 60% cacao sabor Rosita de cacao,barra,1,75,50 grs
 1267,Barra de chocolate artesanal 60% cacao sabor Pinole,barra,1,75,50 grs
 1268,Barra de chocolate artesanal 60% cacao sabor Nueve lunas,barra,1,75,50 grs
@@ -286,7 +289,7 @@ ID,PRODUCTO,UNIDAD,CANTIDAD,PRECIO UNITARIO,PRESENTACION
 1275,Tablillas para preparar chocolate Dulce,pz,1,70,250 grs
 1276,Tablillas para preparar chocolate Semiamargo,pz,1,80,250 grs
 1277,Tablillas para preparar chocolate  Chocolate amargo,pz,1,110,250 grs
-1278,Cacao garapi�ado ,pz,1,95,150 grs
+1278,Cacao garapiñado ,pz,1,95,150 grs
 1279,Mix de cacao (cacao fermentado y cacao jaguar),pz,1,110,200 grs
 1280,Barra de chocolate MAMA PACHA Vainilla y nibs de cacao,barra,1,85,70 grs
 1281,Barra de chocolate MAMA PACHA Mango,barra,1,85,70 grs
@@ -311,17 +314,17 @@ ID,PRODUCTO,UNIDAD,CANTIDAD,PRECIO UNITARIO,PRESENTACION
 1300,Lasagna de espirulina 8 laminas ,paq,1,40,
 1301,Lasagna de curcuma 8 laminas ,paq,1,40,
 1302,Pechuga de pavo natural(jamon),pz,1,90,250 grs
-1303,Pechuga de pavo horneada(jamon),pz,1,90,250 grs
+1303,Pechuga de pavo horneada(jamon),pz,1,95,250 grs
 1304,Pavo estilo italiano(jamon),pz,1,85,250 grs
-1305,Pierna de cerdo ahumada(jamon),pz,1,75,250 grs
+1305,Pierna de cerdo ahumada(jamon),pz,1,85,250 grs
 1306,Jamon serrano 100gr,pz,1,80,100 grs
 1307,Jamon serrano 190gr,pz,1,150,190 grs
 1308,Lomo con almendras(jamon),pz,1,85,250 grs
 1309,Roast beef (jamon),pz,1,105,250 grs
-1310,Jamon de conejo,0,1,90,
-1311,Salami madurado,0,1,95,
-1312,Salami natural,0,1,90,
-1313,Salami pamplona,0,1,90,
+1310,Jamon de conejo,pz,1,90,
+1311,Salami madurado,pz,1,95,
+1312,Salami natural,pz,1,90,
+1313,Salami pamplona,pz,1,90,
 1314,Tocino con grasa ,pz,1,80,250 grs
 1315,Tocino sin grasa,pz,1,80,250 grs
 1316,Queso manchego con jamon serrano,pz,1,90,250 grs
@@ -330,8 +333,9 @@ ID,PRODUCTO,UNIDAD,CANTIDAD,PRECIO UNITARIO,PRESENTACION
 1319,Queso manchego con chipotle,pz,1,90,250 grs
 1320,Queso gouda,pz,1,90,250 grs
 1321,Provolone a las finas hierbas,pz,1,85,250 grs
-1322,salchicha al curry 4 piezas 433grs,pz,1,140,433 grs
-1323,Chorizo argentino,pz,1,95,350 grs
+11321,Chorizo español,pz,1,80,500 grs
+1323,Chorizo argentino,pz,1,80,500 grs
+11323,Chistorra,pz,1,85,250 grs
 1324,Miel multifloral 300ml,bote,1,65,300 ml
 1325,Miel multifloral 500ml,bote,1,100,0.5 litro
 1326,Miel multifloral 1L,bote,1,190,
@@ -411,11 +415,12 @@ ID,PRODUCTO,UNIDAD,CANTIDAD,PRECIO UNITARIO,PRESENTACION
 1400,LABIOS Balsamo labial hidratante con miel,grs,5,45,5 grs
 1401,Cepillo coporal anticelulitis grande,pz,1,170,
 1402,Cepillo coporal anticelulitis chico,pz,1,100,
-1403,Sales de ba�o aromaticas de rosas,grs,100,100,100 grs
+1403,Sales de baño aromaticas de rosas,grs,100,100,100 grs
 1404,Gel antibacterial con dosificador ,ml,500,75,500 ml
 1405,Gel antibacterial 1L,litro,1,100,
 1406,Gel antibacterial 0.5L,ml,500,55,0.5 litro
-1407,Paquete  500grs de Fresa + 500grs de Zarzamora + 500grs mora azul,paq,1,210,
+1407,Paquete  500grs de Fresa + 500grs mora azul,paq,1,160,
+11407,Paquete Mango + Maracuya  + Limon + Piña,paq,1,120,
 1408,Envio,servicio,1,35,
 1409,Paquete 250grs de Totopo + 500grs pasta de frijol + 1 queso fresco + 100ml salsa,paq,1,85,
 1410,Yogurt de coco,litro,1,240,500 ml
