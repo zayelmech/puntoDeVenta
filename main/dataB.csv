@@ -2,7 +2,7 @@ ID,PRODUCTO,UNIDAD,CANTIDAD,PRECIO UNITARIO,PRESENTACION
 1000,Sal de hormiga chicatana,bote,1,10,25 grs
 1001,Aceite Virgen  de coco,kg,1,190,
 1002,Ciruela,kg,1,40,
-1003,Chabacano  rojo ,kg,1,38,
+1003,Chabacano  rojo o amarillo,kg,1,38,
 11003,Rambutan,kg,1,60,
 11004,Tuna Verde,kg,1,35,
 1004,Durazno,kg,1,50,
@@ -15,7 +15,8 @@ ID,PRODUCTO,UNIDAD,CANTIDAD,PRECIO UNITARIO,PRESENTACION
 1010,Mora azul,kg,1,250,100 grs
 1910,Mix de frutos rojos,kg,1,280,250 grs
 1011,Zarzamora,kg,1,200,250 grs
-1012,Frambuesas,kg,1,400,150 grs
+10121,Frambuesas 250grs,kg,1,300,250 grs
+1012,Frambuesas Kg,kg,1,260,
 1013,Higo fresco,kg,1,120,
 1014,Mamey,kg,1,45,
 1015,Mango ataulfo ,kg,1,40,
@@ -39,7 +40,8 @@ ID,PRODUCTO,UNIDAD,CANTIDAD,PRECIO UNITARIO,PRESENTACION
 1033,Lichi,kg,1,50,
 1034,Elotes rojos 4 piezas,paq,1,25,
 1035,Col morada,pz,1,50,
-1036,Col verde,pz,1,35,
+1036,Col verde,pz,1,30,
+11037,Ajo Criollo ,rollo,1,30,8 pzs
 11036,Hongo silvestre,kg,1,220,
 1037,Tomate,kg,1,30,
 1038,Tomate Riñon,kg,1,40,
@@ -62,7 +64,7 @@ ID,PRODUCTO,UNIDAD,CANTIDAD,PRECIO UNITARIO,PRESENTACION
 1055,Coliflor,pz,1,35,
 1056,Esparragos,kg,1,300,200 grs
 1057,Papa morada,kg,1,35,
-1059,Calabacita criolla,kg,1,45,
+1059,Calabacita criolla,kg,1,50,
 11059,Calabacita Italiana,kg,1,30,
 1060,Col de bruselas,kg,1,120,
 1061,Zanahoria,kg,1,35,
@@ -83,12 +85,12 @@ ID,PRODUCTO,UNIDAD,CANTIDAD,PRECIO UNITARIO,PRESENTACION
 1076,Cilantro,rollo,1,20,
 1077,Albahaca,grs,1,30,
 1078,lavanda,rollo,1,25,
-1079,Jengibre organico 250g,kg,1,120,250 grs
-1080,Jengibre organico 1kg,kg,1,100,
-1081,Curcuma 250g,kg,1,140,250 grs
-1082,Curcuma fresca 1kg,kg,1,120,
-1083,Jengibre en polvo frasco,kg,1,700,70 grs
-1084,Curcuma molida en frasco,kg,1,700,70 grs
+1079,Jengibre organico 200g,kg,1,150,200 grs
+1080,Jengibre organico 1kg,kg,1,150,
+1081,Curcuma 200g,kg,1,200,200 grs
+1082,Curcuma fresca 1kg,kg,1,200,
+1083,Jengibre en polvo frasco,pz,1,100,70 grs
+1084,Curcuma molida en frasco,pz,1,100,70 grs
 1085,Romero deshidratado  (rinde 1 litro),pz,1,30,
 1086,Romero fresco rollito,rollo,1,30,
 1087,Planta de romero,pz,1,35,
@@ -177,15 +179,16 @@ ID,PRODUCTO,UNIDAD,CANTIDAD,PRECIO UNITARIO,PRESENTACION
 1164,Nata de leche de vaca ,kg,1,320,250 grs
 1165,Yogurt natural S/A,bote,1,100,960 ml
 1167,Codorniz (paq 3 piezas),paq,1,170,
-1166,Carne de conejo (entero),kg,1,150,
+11661,Carne de conejo molida,kg,1,260,500 grs
+1166,Carne de conejo (entero),kg,1,150,1.2 kg a 2 kg
 11681,Carne de borrego molida,paq,1,260,
 1168,Carne de borrego,paq,1,160,
 1169,Sazonador para carnes (especias y hierbas finas),pz,1,55,60 grs
-1170,Te Alegria,bolsa,1,60,250 grs
-1171,Te soñador,bolsa,1,60,
-1172,Te Gripa,bolsa,1,60,
-1173,Te Panza,bolsa,1,60,
-1174,Te trimentra,bolsa,1,60,
+1170,Te Alegria,bolsa,1,70,250 grs
+1171,Te soñador,bolsa,1,70,
+1172,Te Gripa,bolsa,1,70,
+1173,Te Panza,bolsa,1,70,
+1174,Te trimentra,bolsa,1,70,
 1175,Yogurt Bove natural litro,litro,1,65,
 1176,Bove entera litro,litro,1,35,
 1177,Bove deslactosada ,litro,1,36,
@@ -419,8 +422,13 @@ ID,PRODUCTO,UNIDAD,CANTIDAD,PRECIO UNITARIO,PRESENTACION
 1404,Gel antibacterial con dosificador ,ml,500,75,500 ml
 1405,Gel antibacterial 1L,litro,1,100,
 1406,Gel antibacterial 0.5L,ml,500,55,0.5 litro
-1407,Paquete  500grs de Fresa + 500grs mora azul,paq,1,160,
-11407,Paquete Mango + Maracuya  + Limon + Piña,paq,1,120,
+1407,Paquete  500grs de Fresa + 250grs mora azul + 250grs Frambuesa,paq,1,180,
 1408,Envio,servicio,1,35,
+14091,Frijol negro criollo molido,kg,1,80,500 grs
 1409,Paquete 250grs de Totopo + 500grs pasta de frijol + 1 queso fresco + 100ml salsa,paq,1,85,
-1410,Yogurt de coco,litro,1,240,500 ml
+1410,Yogurt de coco vegano,litro,1,240,500 ml
+1411,Promo de pulpa 3x90,paq,1,90,
+1412,Pollo entero con piel,kg,1,140,1600 grs
+1413,Pollo entero sin piel,kg,1,150,1500 grs
+1414,Medio Pollo con piel partido en piezas,pz,1,145,800 grs
+1415,Molida de pollo ,kg,1,250,500 grs

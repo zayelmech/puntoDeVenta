@@ -38,7 +38,6 @@ CallbackListener cb, cbList, cbDelete;
 
 ArrayList<ProductLine> lineOfProduct = new ArrayList<ProductLine>();
 
-Button deleteProduct[] =new Button[20];
 
 void setup() {
 
@@ -72,23 +71,7 @@ void setup() {
    phoneRow.setString(4, "Efectivo");
    saveTable(ticketHeader, "/header.csv");
    */
-  cbDelete =new CallbackListener() {
-    public void controlEvent(CallbackEvent theEvent) {
-      switch(theEvent.getAction()) {
-        case(ControlP5.ACTION_PRESSED):
-        //println(theEvent.getController().getInfo());
 
-        int lineToDelete= int(theEvent.getController().getValue());
-        //lineOfProduct[lineToDelete].removerLinea(lineToDelete);
-        lineOfProduct.get(lineToDelete).removerLinea(lineToDelete);
-        lineOfProduct.remove(lineToDelete);
-        break;
-        case(ControlP5.ACTION_RELEASED):
-        println("adios");
-        break;
-      }
-    }
-  };
 
   cb = new CallbackListener() {
     public void controlEvent(CallbackEvent theEvent) {
@@ -128,7 +111,7 @@ void setup() {
       }
     }
   };
-
+/*
   int hField=20;
   int xInicial=200;
   int yInicial =195;
@@ -142,11 +125,12 @@ void setup() {
       .setPosition(xInicial+585+85, axisY)
       .setSize(25, hField)
       .setValue(i)
+      .setId(i)
       .setLabel("X")
       .hide()
       .addCallback(cbDelete);
   }
-
+*/
   //deleteProduct[producto]
 
   //Flujo normal
@@ -397,6 +381,8 @@ void setup() {
    
    println(name + " (" + species + ") has an ID of " + id);
    }*/
+
+ // selectInput("Select a file to process:", "fileSelected");
 }
 
 int sombra=0;
@@ -405,6 +391,7 @@ int timeOld=millis();
 float xCircle=0;
 float yCircle=0;
 void draw() {
+
   sombra=sombra+mode;
 
   if (sombra >220)
@@ -741,7 +728,8 @@ void echaleOtro() {
 
     //String newProduct[] = {reglonProducto[0], reglonProducto[1], reglonProducto[2], reglonProducto[3], reglonProducto[4]};
     lineOfProduct.add(new ProductLine(producto, reglonProducto));
-    lineOfProduct.get(producto).addEvent(producto);
+    
+
     //lineOfProduct[producto]= new ProductLine(producto, reglonProducto);
     //lineOfProduct[producto].addEvent(producto);
 
