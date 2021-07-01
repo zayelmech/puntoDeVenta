@@ -9,17 +9,6 @@ public class ProductLine {
   int hField=20;
   int xInicial=200;
   int yInicial =195;
-  
-  /*
-   = cp5.addButton("exper")
-   .setFont(createFont("arial",18))
-   .setPosition(23,23)
-   .setSize(25, 50)
-   .setValue(1)
-   .setId(1)
-   .setLabel("X")
-   .addCallback(cbExp);
-   */
 
   ProductLine(int nPedido, String[] atributos) {
     this.nPedido = nPedido;
@@ -32,8 +21,8 @@ public class ProductLine {
       .setColorBackground(color(255))
       .setColorForeground(color(255))
       .setColorCursor(color(#A0A0A0))
-      .setText(atributos[0]);
-
+      .setText(atributos[0])
+      ;
     campo2 = cp5.addTextfield("CamB"+nPedido, xInicial+330, axisY, 80, hField)
       .setFont(createFont("arial", 14))
       .setAutoClear(false)
@@ -86,7 +75,9 @@ public class ProductLine {
 
           lineOfProduct.get(lineToDelete).removerLinea(lineToDelete);
           try {
-            lineOfProduct.remove(Ticket.lastRowIndex());
+            if (Ticket.lastRowIndex()>=0) {
+              lineOfProduct.remove(Ticket.lastRowIndex());
+            }
           }
           catch(Exception e)
           {
@@ -99,30 +90,76 @@ public class ProductLine {
         }
       }
     };
-    
-    
+
+
     deleteProduct= cp5.addButton("X"+nPedido)
       .setFont(createFont("arial", 18))
       .setPosition(xInicial+585+85, axisY)
       .setSize(25, hField)
       .setValue(nPedido)
       .setId(nPedido)
-      .setLabel("X")
       .onPress(cbDelete);
-      
+
+    if (axisY>=595 || axisY<195  ) {
+      campo1.hide();
+      campo2.hide();
+      campo3.hide();
+      campo4.hide();
+      campo5.hide();
+      deleteProduct.hide();
+    } else {
+      campo1.show();
+      campo2.show();
+      campo3.show();
+      campo4.show();
+      campo5.show();
+      deleteProduct.show();
+    }
+    //.setLabel("X")
   }
   public void actualizar(int nPedido, String[] atributos) {
-    
+
     campo1.setText(atributos[0]);
     campo2.setText(atributos[1]);
     campo3.setText(atributos[2]);
     campo4.setText(atributos[3]);
     campo5.setText(atributos[4]);
     deleteProduct.setValue(nPedido);
+    this.nPedido = nPedido;
   }
   void addEvent(int nPedido) {
 
     //deleteProduct[nPedido].show();
+  }
+
+  public void scroll(int delta) {
+
+    int axisY=  yInicial + (hField+1)*this.nPedido  ;
+
+    float[] posVerticalAbsoluta={campo1.getPosition()[0], float(axisY)};
+    float[] posVerticalNew= {posVerticalAbsoluta[0], posVerticalAbsoluta[1]-delta*20};
+    if (posVerticalNew[1]>=595 || posVerticalNew[1]<195  ) {
+      campo1.hide();
+      campo2.hide();
+      campo3.hide();
+      campo4.hide();
+      campo5.hide();
+      deleteProduct.hide();
+    } else {
+      campo1.show();
+      campo2.show();
+      campo3.show();
+      campo4.show();
+      campo5.show();
+      deleteProduct.show();
+
+      campo1.setPosition(posVerticalNew);
+      campo2.setPosition(campo2.getPosition()[0], posVerticalNew[1]);
+      campo3.setPosition(campo3.getPosition()[0], posVerticalNew[1]);
+      campo4.setPosition(campo4.getPosition()[0], posVerticalNew[1]);
+      campo5.setPosition(campo5.getPosition()[0], posVerticalNew[1]);
+      deleteProduct.setPosition(deleteProduct.getPosition()[0], posVerticalNew[1]);
+    }
   }
 
   public void removerLinea(int indice) {
@@ -136,12 +173,11 @@ public class ProductLine {
     cp5.get(Textfield.class, "CamE"+Ticket.lastRowIndex()).remove();
     cp5.get(Button.class, "X"+Ticket.lastRowIndex()).remove();
 
+
     if (indice>=0) {
       Ticket.removeRow(indice);
-      println("Producto: "+indice +"fue eliminado del csv Ticket");
+      println("Producto: "+indice +" fue eliminado del csv Ticket");
     }    
-    //println("Numero de filas en el Ticket"+ Ticket.lastRowIndex());
-
     this.actualizarTodos();
   }
 
@@ -159,9 +195,10 @@ public class ProductLine {
   void actualizarTodos() {
     producto =0;
     for (TableRow row : Ticket.rows()) {
-      
+
       String reglonProducto[]={row.getString("Producto"), row.getString("Unidad"), row.getString("Cantidad"), row.getString("Precio unitario"), row.getString("Total") };
       lineOfProduct.get(producto).actualizar(producto, reglonProducto);
+
       producto++;
     }
   }

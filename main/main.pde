@@ -15,7 +15,7 @@ Button signoMas2, signoMenos2, signoMas, signoMenos, primerResultado, segundoRes
 //Textarea notasArea, productArea, unidadArea, cantidadArea, precioArea, subtotalArea;
 Button plusMidKg, plusQuaKg, subMidKg, subQuaKg; 
 
-Table table, tableSearch, Ticket, ticketHeader;
+Table table, tableSearch, Ticket, ticketHeader, clientesTable;
 int id, producto=0;
 String name, species, productDescription= ""; 
 
@@ -30,14 +30,10 @@ String palabraAnterior;
 boolean buscarClicked=false;
 
 String arreglo[]={"", "", "", "", ""};
-CallbackListener cb, cbList, cbDelete;
-
-
-
-//ProductLine lineOfProduct[]= new ProductLine[20];
+CallbackListener cb, cbList, cbPrueba;
 
 ArrayList<ProductLine> lineOfProduct = new ArrayList<ProductLine>();
-
+Slider sliderArea;
 
 void setup() {
 
@@ -51,7 +47,59 @@ void setup() {
   Ticket.addColumn("Precio unitario");
   Ticket.addColumn("Total");
 
+  try {
 
+    clientesTable = loadTable("./data/clientes.csv", "header");
+    println(clientesTable.getRowCount()+" Clientes registrados");
+  }
+  catch(Exception e) {
+    println(e);
+  }
+  BuscadorCSV buscadorClientes = new BuscadorCSV(clientesTable, "Nombre", 1);
+
+  buscadorClientes.setParametros(20, 250, 150, 30);
+
+  cbPrueba = new CallbackListener() {
+    public void controlEvent(CallbackEvent theEvent) {
+      println("Haciendo algo"+theEvent.getAction());
+
+      switch(theEvent.getAction()) {
+        case(ControlP5.ACTION_WHEEL):
+        //println(theEvent.getController().getInfo());
+        println("scrolling...");
+
+        for (int i=0; i<lineOfProduct.size(); i++) {
+          lineOfProduct.get(i).scroll(int(sliderArea.getValue()));
+        }
+        break;
+        case(ControlP5.ACTION_RELEASE):
+        for (int i=0; i<lineOfProduct.size(); i++) {
+          lineOfProduct.get(i).scroll(int(sliderArea.getValue()));
+        }
+
+        //lineOfProduct.get(0).scroll(int(sliderArea.getValue()));
+        break;
+        case(ControlP5.ACTION_EXIT):
+        println("adios");
+        break;
+      }
+    }
+  };
+  //170
+  sliderArea= cp5.addSlider("sliderTicks2")
+    .setPosition(175, 195)
+    .setSize(20, 400)
+    .setRange(100, 0) // values can range from big to small as well
+    .setValue(0)
+    .setScrollSensitivity(0.5)
+    .setHandleSize(20)
+    .setColorForeground(color(#16557c))
+    .setColorBackground(color(125))
+    .setSliderMode(Slider.FLEXIBLE)
+    .setLabelVisible(false)
+    .addCallback(cbPrueba)
+    .hide()
+    ;
 
   /*
   ticketHeader =new Table();
@@ -73,12 +121,13 @@ void setup() {
    */
 
 
+
   cb = new CallbackListener() {
     public void controlEvent(CallbackEvent theEvent) {
       switch(theEvent.getAction()) {
         case(ControlP5.ACTION_PRESSED):
 
-        //println(theEvent.getController().getInfo());
+        println(theEvent.getController().getInfo());
         if (theEvent.getController().getValue()>=0) {
           functionMas(0, theEvent.getController().getValue());
         } else {
@@ -111,26 +160,26 @@ void setup() {
       }
     }
   };
-/*
+  /*
   int hField=20;
-  int xInicial=200;
-  int yInicial =195;
-
-  for (int i=0; i<19; i++) {
-
-    int axisY=  yInicial + (hField+1)*i ;
-
-    deleteProduct[i] = cp5.addButton("X"+i)
-      .setFont(createFont("arial", 18))
-      .setPosition(xInicial+585+85, axisY)
-      .setSize(25, hField)
-      .setValue(i)
-      .setId(i)
-      .setLabel("X")
-      .hide()
-      .addCallback(cbDelete);
-  }
-*/
+   int xInicial=200;
+   int yInicial =195;
+   
+   for (int i=0; i<19; i++) {
+   
+   int axisY=  yInicial + (hField+1)*i ;
+   
+   deleteProduct[i] = cp5.addButton("X"+i)
+   .setFont(createFont("arial", 18))
+   .setPosition(xInicial+585+85, axisY)
+   .setSize(25, hField)
+   .setValue(i)
+   .setId(i)
+   .setLabel("X")
+   .hide()
+   .addCallback(cbDelete);
+   }
+   */
   //deleteProduct[producto]
 
   //Flujo normal
@@ -382,7 +431,7 @@ void setup() {
    println(name + " (" + species + ") has an ID of " + id);
    }*/
 
- // selectInput("Select a file to process:", "fileSelected");
+  // selectInput("Select a file to process:", "fileSelected");
 }
 
 int sombra=0;
@@ -564,18 +613,6 @@ String functionBuscar(String wordToSearch) {
         }
       }
 
-      /*
-      String[] m2 = match(checador, palabrasMinus.toLowerCase());
-       if (m2 != null) {  // If not null, then a match was found
-       println("Found a match of: " +palabrasMinus.toLowerCase()+" in '" + checador+"'");
-       float mc=checador.length();
-       float dinero=palabrasMinus.length();
-       float matchRatio=dinero/mc;
-       points += int(matchRatio*15.0);
-       } else {
-       // println("No match found in '" + checadorOriginal + "'");
-       }
-       */
       TableRow result = table.findRow( checadorOriginal, "PRODUCTO");
       TableRow newRowJack = tableSearch.addRow();
 
@@ -639,7 +676,7 @@ void keyPressed() {
   } else if (keyCode==BACKSPACE) {
     println("DELETE");//ENTER
   } else {
-    println("OTRA entrada");
+    println("OTRA entrada"+key);
   }
 }
 void calcularSubtotal() {
@@ -728,8 +765,26 @@ void echaleOtro() {
 
     //String newProduct[] = {reglonProducto[0], reglonProducto[1], reglonProducto[2], reglonProducto[3], reglonProducto[4]};
     lineOfProduct.add(new ProductLine(producto, reglonProducto));
-    
-
+    /*
+    for (int i=0; i<22; i++) {
+      lineOfProduct.add(new ProductLine(producto, reglonProducto));
+      producto++;
+    }
+    */
+    int excedente=0;
+    if (lineOfProduct.size()>20) {
+      sliderArea.show();
+      excedente=lineOfProduct.size()-20;
+    }
+    int alturaMax = sliderArea.getHeight();
+    int alturaMin = 20;
+    int alturaActual=20;
+    if (alturaMax-excedente*alturaMin >=alturaMin) {
+      alturaActual=alturaMax-excedente*alturaMin;
+    }
+    sliderArea.setHandleSize(alturaActual);
+    sliderArea.setRange(excedente, 0);
+    println(excedente+" Esto esta de sobra");
     //lineOfProduct[producto]= new ProductLine(producto, reglonProducto);
     //lineOfProduct[producto].addEvent(producto);
 
@@ -761,6 +816,7 @@ void guardandoTicket() {
   for (int i=0; i<lineOfProduct.size(); i++) {
     try {
       lineOfProduct.get(i).remover(i);
+      lineOfProduct.remove(i);
     }
     catch(Exception e) {
       e.printStackTrace();
