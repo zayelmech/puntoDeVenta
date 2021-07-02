@@ -74,15 +74,7 @@ public class ProductLine {
           int lineToDelete= int(theEvent.getController().getValue());
 
           lineOfProduct.get(lineToDelete).removerLinea(lineToDelete);
-          try {
-            if (Ticket.lastRowIndex()>=0) {
-              lineOfProduct.remove(Ticket.lastRowIndex());
-            }
-          }
-          catch(Exception e)
-          {
-            println(e);
-          }
+          
           break;
           case(ControlP5.ACTION_RELEASED):
           println("adios");
@@ -119,13 +111,17 @@ public class ProductLine {
   }
   public void actualizar(int nPedido, String[] atributos) {
 
+
+    
+    
+    
     campo1.setText(atributos[0]);
     campo2.setText(atributos[1]);
     campo3.setText(atributos[2]);
     campo4.setText(atributos[3]);
     campo5.setText(atributos[4]);
     deleteProduct.setValue(nPedido);
-    this.nPedido = nPedido;
+    
   }
   void addEvent(int nPedido) {
 
@@ -165,14 +161,14 @@ public class ProductLine {
   public void removerLinea(int indice) {
 
     //println("Numero de filas en el Ticket"+ Ticket.lastRowIndex());
-
+    
     cp5.get(Textfield.class, "CamA"+Ticket.lastRowIndex()).remove();
     cp5.get(Textfield.class, "CamB"+Ticket.lastRowIndex()).remove();
     cp5.get(Textfield.class, "CamC"+Ticket.lastRowIndex()).remove();
     cp5.get(Textfield.class, "CamD"+Ticket.lastRowIndex()).remove();
     cp5.get(Textfield.class, "CamE"+Ticket.lastRowIndex()).remove();
     cp5.get(Button.class, "X"+Ticket.lastRowIndex()).remove();
-
+      
 
     if (indice>=0) {
       Ticket.removeRow(indice);
@@ -189,17 +185,20 @@ public class ProductLine {
     cp5.get(Textfield.class, "CamD"+indice).remove();
     cp5.get(Textfield.class, "CamE"+indice).remove();
     cp5.get(Button.class, "X"+indice).remove();
-    //deleteProduct[indice].hide();
   }
 
   void actualizarTodos() {
     producto =0;
+    println("tamaño antes de borrar: "+lineOfProduct.size());
+    lineOfProduct.clear();
     for (TableRow row : Ticket.rows()) {
-
+      remover(producto);      
       String reglonProducto[]={row.getString("Producto"), row.getString("Unidad"), row.getString("Cantidad"), row.getString("Precio unitario"), row.getString("Total") };
-      lineOfProduct.get(producto).actualizar(producto, reglonProducto);
-
+      lineOfProduct.add(new ProductLine(producto, reglonProducto));
+      
       producto++;
     }
+    println("tamaño despues de borrar: "+lineOfProduct.size());
+
   }
 }

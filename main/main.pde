@@ -808,20 +808,27 @@ void guardandoTicket() {
   int m = minute();  // Values from 0 - 59
   int h = hour();    // Values from 0 - 23
   String nameClient = cliente.getText()+"_Xub";
+  
+  
+  
   cliente.setText("");
   saveTable(Ticket, "/order_"+numeroPedido+"_"+nameClient+".csv");
   numeroPedido++;
   println("Listo! csv guardada");
-
-  for (int i=0; i<lineOfProduct.size(); i++) {
+  println("Tamaño de objetos lineOfProduct = "+lineOfProduct.size());
+  println("Tamaño de ticket = "+Ticket.getRowCount());
+  
+  for (int i=0; i<Ticket.getRowCount(); i++) {
     try {
       lineOfProduct.get(i).remover(i);
-      lineOfProduct.remove(i);
+      
     }
     catch(Exception e) {
       e.printStackTrace();
     }
   }
+  lineOfProduct.clear();
+  
   producto =0;
   //notasArea.setText("");
 
