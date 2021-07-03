@@ -60,8 +60,8 @@ public class BuscadorCSV {
       .setColorBackground(color(255))
       .setColorForeground(color(255))
       .setColorCursor(color(#A0A0A0))
-      .addCallback(cbBusqueda)
-      .hide();
+      .addCallback(cbBusqueda);
+
   }
 
   public void buscarString(String wordsToFind) {

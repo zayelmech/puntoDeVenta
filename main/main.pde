@@ -10,7 +10,7 @@ import controlP5.*;
 import java.util.*;
 
 ControlP5 cp5; 
-Textfield cliente, buscar, outUnidad, outCantidad, outPrice, outPiezas, outPresentacion, outSubtotal;
+Textfield cliente, buscar, outUnidad, outCantidad, outPrice, outPiezas, outPresentacion, outSubtotal, productId;
 Button signoMas2, signoMenos2, signoMas, signoMenos, primerResultado, segundoResultado, tercerResultado, botonAgregar, botonSalvarCSV, botonCargarTxt;
 //Textarea notasArea, productArea, unidadArea, cantidadArea, precioArea, subtotalArea;
 Button plusMidKg, plusQuaKg, subMidKg, subQuaKg; 
@@ -35,17 +35,39 @@ CallbackListener cb, cbList, cbPrueba;
 ArrayList<ProductLine> lineOfProduct = new ArrayList<ProductLine>();
 Slider sliderArea;
 
+//String headerBase[] = {"Id", "Producto", "Unidad", "Cantidad", "Precio", "Clientes"};
+//ListaPedidos listaBase = new ListaPedidos(headerBase); 
+ListaPedidos listaBase;
+//  table = loadTable("./dataB.csv", "header");
+
 void setup() {
+listaBase  = new ListaPedidos("PedidosNuevos.csv");
+  /*
+
+   String datosNuevos[][] ={
+   {"123", "mayonesa", "kg", "0.5", "45", "Usuario1"}, 
+   {"123", "Mayoneza", "kg", "1.2", "45", "Usuario2"}
+   };
+   
+   //println(datosNuevos[0]);
+   
+   listaBase.agregarProducto(datosNuevos[0]);//cambiar metodo
+   listaBase.agregarProducto(datosNuevos[1]);//cambiar metodo
+   listaBase.guardarComo("PedidosNuevos");
+   */
 
 
   cp5 = new ControlP5(this);
 
   Ticket = new Table();
+  Ticket.addColumn("Id");
   Ticket.addColumn("Producto");
   Ticket.addColumn("Unidad");
   Ticket.addColumn("Cantidad");
   Ticket.addColumn("Precio unitario");
   Ticket.addColumn("Total");
+  Ticket.addColumn("Pzs");
+  
 
   try {
 
@@ -118,8 +140,8 @@ void setup() {
    phoneRow.setString(3, "Forma de pago");
    phoneRow.setString(4, "Efectivo");
    saveTable(ticketHeader, "/header.csv");
+   
    */
-
 
 
   cb = new CallbackListener() {
@@ -184,6 +206,15 @@ void setup() {
 
   //Flujo normal
   //plusMidKg, plusQuaKg,subMidKg,subQuaKg; 
+  productId=cp5.addTextfield("ID", width/2 -widthBuscar-120, 500, 150, 30)
+    .setFont(createFont("arial", 20))
+    .setAutoClear(false)
+    .setColor(color(#16557c))
+    .setColorBackground(color(255))
+    .setColorForeground(color(255))
+    .setColorCursor(color(#A0A0A0));
+  ;
+
   cliente =cp5.addTextfield("Cliente", width/2 -widthBuscar-120, 160, 150, 30)
     .setFont(createFont("arial", 20))
     .setAutoClear(false)
@@ -708,6 +739,7 @@ void productoSeleccionado(String producto) {
   float price = filaParaAgregar.getFloat("PRECIO UNITARIO");
   String presentacion = filaParaAgregar.getString("PRESENTACION");
   println("ID:"+id2 +" | "+nameProduct +" | "+ unidad + "| $"+price+" | PRESENTACION: "+presentacion);
+  productId.setText(str(id2));  
   buscar.setText(nameProduct);
   outUnidad.setText(unidad);
 
@@ -751,12 +783,15 @@ void echaleOtro() {
     if (productCantidad==0) {
       productName=productPzOption+"pzs "+productName;
     } 
+    
+    newRowJack.setString("Id", productId.getText());
     newRowJack.setString("Producto", productName);
     newRowJack.setString("Unidad", productUnit);
     newRowJack.setFloat("Cantidad", productCantidad);
     newRowJack.setFloat("Precio unitario", productPrice);
     newRowJack.setFloat("Total", subtotal);
-
+    newRowJack.setInt("Pzs",productPzOption);
+    
     String reglonProducto[]={productName, productUnit, str(productCantidad), str(productPrice), str(subtotal) };
 
 
@@ -767,10 +802,10 @@ void echaleOtro() {
     lineOfProduct.add(new ProductLine(producto, reglonProducto));
     /*
     for (int i=0; i<22; i++) {
-      lineOfProduct.add(new ProductLine(producto, reglonProducto));
-      producto++;
-    }
-    */
+     lineOfProduct.add(new ProductLine(producto, reglonProducto));
+     producto++;
+     }
+     */
     int excedente=0;
     if (lineOfProduct.size()>20) {
       sliderArea.show();
@@ -791,7 +826,7 @@ void echaleOtro() {
     //callbackOf(producto);
     //cp5.get(Button.class, "X"+producto).addCallback(cb);
     producto++;
-
+    productId.setText("");
     buscar.setText("");
     outPiezas.setText("");
     outUnidad.setText("");
@@ -807,28 +842,59 @@ void guardandoTicket() {
   int s = second();  // Values from 0 - 59
   int m = minute();  // Values from 0 - 59
   int h = hour();    // Values from 0 - 23
-  String nameClient = cliente.getText()+"_Xub";
-  
-  
-  
+  String nameClient = cliente.getText();
   cliente.setText("");
-  saveTable(Ticket, "/order_"+numeroPedido+"_"+nameClient+".csv");
+
+  if (nameClient.isEmpty()) {
+    nameClient ="User "+ int(random(1, 1000));
+  }
+  println("Agregando datos a la lista general");
+    
+
+  for (TableRow rowX : Ticket.rows()) {
+    //{"123", "mayonesa", "kg", "0.5", "45", "Usuario1","pzs"} Ejemplo
+    TableRow rowFromDB = table.findRow(rowX.getString("Id"),"ID");
+    String[] productoMas = {
+      rowX.getString("Id"), 
+      rowFromDB.getString("PRODUCTO"), 
+      rowX.getString("Unidad"), 
+      rowX.getString("Cantidad"), 
+      rowX.getString("Precio unitario"), 
+      nameClient,
+      rowX.getString("Pzs"),
+     
+  };
+    listaBase.agregarProducto(productoMas);
+  }
+  //println(datosNuevos[0]);
+
+
+  
+  listaBase.ordenarTabla(0);
+  listaBase.guardarComo("PedidosNuevos");
+
+
+  Table notaIndividual = Ticket;
+  
+  notaIndividual.removeColumn("Id");
+  notaIndividual.removeColumn("Pzs");
+  
+  saveTable(notaIndividual, "/order_"+numeroPedido+"_"+nameClient+"_Xub"+".csv");
   numeroPedido++;
   println("Listo! csv guardada");
   println("Tamaño de objetos lineOfProduct = "+lineOfProduct.size());
   println("Tamaño de ticket = "+Ticket.getRowCount());
-  
+
   for (int i=0; i<Ticket.getRowCount(); i++) {
     try {
       lineOfProduct.get(i).remover(i);
-      
     }
     catch(Exception e) {
       e.printStackTrace();
     }
   }
   lineOfProduct.clear();
-  
+
   producto =0;
   //notasArea.setText("");
 

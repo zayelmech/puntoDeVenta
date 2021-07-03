@@ -189,7 +189,6 @@ public class ProductLine {
 
   void actualizarTodos() {
     producto =0;
-    println("tamaño antes de borrar: "+lineOfProduct.size());
     lineOfProduct.clear();
     for (TableRow row : Ticket.rows()) {
       remover(producto);      
@@ -198,7 +197,6 @@ public class ProductLine {
       
       producto++;
     }
-    println("tamaño despues de borrar: "+lineOfProduct.size());
 
   }
 }
