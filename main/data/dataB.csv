@@ -12,11 +12,10 @@ ID,PRODUCTO,UNIDAD,CANTIDAD,PRECIO UNITARIO,PRESENTACION
 1010,Maracuya Tradicional,kg,1,55,
 1011,Maracuya (largo),kg,1,35,
 1012,Fresa,kg,1,120,
-1013,Mora azul,kg,1,250,100 grs
-1014,Mix de frutos rojos,kg,1,280,250 grs
+1013,Mora azul,kg,1,375,200 grs
+1014,Mix de frutos rojos,kg,1,320,250 grs
 1015,Zarzamora,kg,1,200,250 grs
 1016,Frambuesas 250grs,kg,1,300,250 grs
-1017,Frambuesas Kg,kg,1,260,
 1018,Higo fresco,kg,1,120,
 1019,Mamey,kg,1,45,
 1020,Mango ataulfo ,kg,1,40,
@@ -27,7 +26,7 @@ ID,PRODUCTO,UNIDAD,CANTIDAD,PRECIO UNITARIO,PRESENTACION
 1025,Papaya,kg,1,25,
 1026,Limon,kg,1,30,
 1027,Pomelo,pz,1,15,
-1028,Platano tabasco,kg,1,25,
+1028,Platano tabasco,kg,1,30,
 1029,Platano morado o piña,kg,1,25,
 1030,Platano macho,kg,1,25,
 1031,Platano peron,kg,1,30,
@@ -47,388 +46,406 @@ ID,PRODUCTO,UNIDAD,CANTIDAD,PRECIO UNITARIO,PRESENTACION
 1045,Tomate Riñon,kg,1,40,
 1046,Pimiento morron ,kg,1,55,
 1047,Tomate cherry,kg,1,117,300 grs
-1048,Berenjena,kg,1,55,
-1049,Chicharo en vaina,kg,1,40,
-1050,Haba en vaina,kg,1,40,
-1051,Camote amarillo,kg,1,40,
-1052,Chayote criollo,kg,1,45,
-1053,Nopalitos organicos,kg,1,67,300 grs
-1054,Aguacate maduro,kg,1,65,
-1055,Aguacate verde,kg,1,65,
-1056,Cebolla ,kg,1,35,
-1057,Ejote verde,kg,1,40,
-1058,Brocoli,pz,1,20,
-1059,Chile serrano,kg,1,60,250 grs
-1060,Miltomate (tomate verde),kg,1,35,
-1061,Hongo seta ,kg,1,160,
-1062,Coliflor,pz,1,35,
-1063,Esparragos,kg,1,300,200 grs
-1064,Papa morada,kg,1,35,
-1065,Calabacita criolla,kg,1,50,
-1066,Calabacita Italiana,kg,1,30,
-1067,Col de bruselas,kg,1,120,
-1068,Zanahoria,kg,1,35,
-1069,Diente de leon,rollo,1,30,
-1070,Berros rollo,rollo,1,25,
-1071,Mostaza rollo,rollo,1,25,
-1072,Verdolaga rollo,rollo,1,25,
-1073,Lechuga roja (unstock),pz,1,25,
-1074,Lechuga,pz,1,20,
-1075,Rabano rollo de 10 piezas,rollo,1,15,
-1076,Espinaca rollo,rollo,1,20,
-1077,Acelga rollo,rollo,1,25,
-1078,Apio,pz,1,25,
-1079,Kale o col rizada ,rollo,1,25,
-1080,Betabel pieza mediana,pz,1,15,
-1081,Perejil,rollo,1,20,
-1082,Arugula,kg,1,250,100 grs
-1083,Cilantro,rollo,1,20,
-1084,Albahaca,grs,1,30,
-1085,lavanda,rollo,1,25,
-1086,Jengibre organico 200g,kg,1,150,200 grs
-1087,Jengibre organico 1kg,kg,1,150,
-1088,Curcuma 200g,kg,1,200,200 grs
-1089,Curcuma fresca 1kg,kg,1,200,
-1090,Jengibre en polvo frasco,pz,1,100,70 grs
-1091,Curcuma molida en frasco,pz,1,100,70 grs
-1092,Romero deshidratado  (rinde 1 litro),pz,1,30,
-1093,Romero fresco rollito,rollo,1,30,
-1094,Planta de romero,pz,1,35,
-1095,Manzanilla rollo,rollo,1,20,
-1096,Eneldo rollito,rollo,1,25,
-1097,Salvia rollo ,rollo,1,20,
-1098,Hierbabuena rollo,rollo,1,15,
-1099,Hierbasanta rollo,rollo,1,15,
-1100,Epazote rollito,rollo,1,15,
-1101,Brotes de lenteja,paq,1,35,100 grs
-1102,Brotes de rabano ,paq,1,75,100 grs
-1103,Brotes de girasol,paq,1,60,100 grs
-1104,Brotes de chicharo,paq,1,75,100 grs
-1105,Brote de Mostaza,paq,1,35,100 grs
-1106,Brotes de alfalfa,paq,1,35,100 grs
-1107,Brotes de nabo,paq,1,35,100 grs
-1108,Masa Azul,kg,1,25,
-1109,Tortillas Azules,kg,1,25,
-1110,Tortillas Rojas,kg,1,25,
-1111,Tostadas de maiz blanco,paq,1,20,8 pzs
-1112,Tostadas de sabores,paq,1,25, 8pzs
-1113,Totopo para chilaquiles ,bolsa,1,25,250 grs
-1114,Tisana de ponche (rinde 1.5 L) (unstock),pz,1,40,60 grs
-1115,Te limon,rollo,1,20,
-1116,Cold Brew,pz,1,65,376 ml
-1117,Cold Brew Latte,pz,1,65,376 ml
-1118,Pulpa de mango congelada,kg,1,90,500 grs
-1119,Pulpa de piña congelada,kg,1,90,500 grs
-1120,Kefir de leche o agua 500ml,pz,1,35,500 ml
-1121,Kefir de leche 1L,litro,1,70,
-1122,Kefir de agua (bulgaros de agua),litro,1,70,500 ml
-1123,Yogurt de coco zahini,pz,1,149,450 ml
-1124,Cerveza de jengibre,pz,1,40,355 ml
-1125,Kombucha,pz,1,65,500 ml
-1126,Kombucha Nanche,pz,1,65,500 ml
-1127,Kombucha Maracuya,pz,1,65,500 ml
-1128,Kombucha Ciruela pasa,pz,1,65,500 ml
-1129,Kombucha Arandanos y poleo,pz,1,65,500 ml
-1130,Vinagre de manzana,pz,1,65,250 ml
-1131,Panela 700 grs,pz,1,65,700 grs
-1132,Panela envuelta en caña 3.2 kg,pz,1,160,
-1133,Panela envuelta en caña 300 grs,pz,1,80,
-1134,Panela granulada,kg,1,100,250 grs
-1135,Azucar mascabada,kg,1,90,
-1136,Stevia en hojas 50 grs,pz,1,65,50 grs
-1137,Pan de masa madre naturel integral o semillas,pz,1,50,513 grs
-1138,Pan vida dulce integral o semillas,pz,1,45,
-1139,Panque de naranja bajo en azucar,pz,1,120,
-1140,Panque de platano con nuez,pz,1,120,
-1141,Hogaza de ajo y cebolla ,pz,1,55,520 grs
-1142,Palitos de pan de masa madre,bolsa,1,30,
-1143,Galletas de avena y chocolate,bolsa,1,35,5 pzs
-1144,Galletas de menta,bolsa,1,45,5 pzs
-1145,Brownie de chocolate,pz,1,35,
-1146,Pan de trigo,pz,1,50,850 grs
-1147,Pan de trigo integral,pz,1,50,850 grs
-1148,baguette frances,pz,1,30,350 grs
-1149,"Pan de trigo: ajo,cebolla, hierbas",pz,1,60,860 grs
-1150,Pan de trigo integral: multigrano,pz,1,65,960 grs
-1151,Pan de trigo integral: avena/linaza,pz,1,65,950 grs
-1152,Pan de centeno integral: comino/cilantro,pz,1,75,850 grs
-1153,Pan de centeno integral: arandanos y nueces,pz,1,75,850 grs
-1154,Pan sin gluten: multigrano,pz,1,90,950 grs
-1155,Pan sin gluten: avena y linaza,pz,1,90,870 grs
-1156,Huevo natural docena ,pz,1,48,
-1157,Conchitas de amaranto,pz,1,22,2 pzs
-1158,Galletas sin gluten de ajonjoli,paq,1,22,4 pzs
-1159,Galletas sin azucar de manzana o frutos secos,paq,1,22,4 pzs
-1160,Galletas de avena,paq,1,22,4 pzs
-1161,Alegrias redondas de chocolate,pz,1,18,
-1162,Cono de huevo,pz,1,120,30 pzs
-1163,Queso fresco chico,pz,1,25,
-1164,Quesillo ,kg,1,120,
-1165,Queso panela,pz,1,60,500 grs
-1166,Queso botanero con chapulin y chipotle,pz,1,70,500 grs
-1167,Queso botanero con epazote (unstock),kg,1,0,
-1168,Requeson 250grs,kg,1,80,250 grs
-1169,Requeson 500grs,kg,1,80,500 grs
-1170,Requeson 1kg,kg,1,80,
-1171,Crema 250g,kg,1,80,250 grs
-1172,Crema 500g,kg,1,80,500 grs
-1173,Crema 1kg,kg,1,80,
-1174,Mantequilla 250g,kg,1,200,250 grs
-1175,Mantequilla 500g,kg,1,200,500 grs
-1176,Mantequilla 1kg,kg,1,200,
-1177,Nata de leche de vaca ,kg,1,320,250 grs
-1178,Yogurt natural S/A,bote,1,100,960 ml
-1179,Codorniz (paq 3 piezas),paq,1,170,
-1180,Carne de conejo molida,kg,1,260,500 grs
-1181,Carne de conejo (entero),kg,1,150,1.2 kg a 2 kg
-1182,Carne de borrego molida,paq,1,260,
-1183,Carne de borrego,paq,1,160,
-1184,Sazonador para carnes (especias y hierbas finas),pz,1,55,60 grs
-1185,Te Alegria,bolsa,1,70,250 grs
-1186,Te soñador,bolsa,1,70,
-1187,Te Gripa,bolsa,1,70,
-1188,Te Panza,bolsa,1,70,
-1189,Te trimentra,bolsa,1,70,
-1190,Yogurt Bove natural litro,litro,1,65,
-1191,Bove entera litro,litro,1,35,
-1192,Bove deslactosada ,litro,1,36,
-1193,Bove ligth litro,litro,1,38,
-1194,Gud Almendra litro S/A,litro,1,52,
-1195,Gud Avena litro S/A,litro,1,48,
-1196,Gud Coco litro S/A,litro,1,50,
-1197,Gud Quinoa litro,litro,1,45,
-1198,"Mermelada YUBAN 210grs (Piña,Jengibre y cardamomo )",pz,1,75,210 grs
-1199,Mermelada YUBAN 210grs (Mango - maracuya),pz,1,75,210 grs
-1200,Mermelada YUBAN 210grs (Fresa - chia),pz,1,75,210 grs
-1201,Mermelada YUBAN 210grs (Fresa - jamaica),pz,1,75,210 grs
-1202,Mermelada YUBAN 210grs (Guanabana),pz,1,75,210 grs
-1203,Mermelada YUBAN 210grs (Zapote negro con Naranja),pz,1,75,210 grs
-1204,Mermelada YUBAN 210grs (manzana - nuez),pz,1,75,210 grs
-1205,Mermelada Tipico cultivando amor : Membrillo,pz,1,75,300 grs
-1206,Mermelada Tipico cultivando amor : zarzamora,pz,1,75,300 grs
-1207,Mermelada Tipico cultivando amor : manzana,pz,1,75,300 grs
-1208,Mermelada Tipico cultivando amor : durazno,pz,1,75,300 grs
-1209,Mermelada ECOSTA : jamaica,pz,1,75,
-1210,Mermelada ECOSTA : camote - piña,pz,1,75,
-1211,Mermelada ECOSTA : maracuya,pz,1,75,
-1212,Mermelada ECOSTA : papaya,pz,1,75,
-1213,Mermelada ECOSTA : mango criollo,pz,1,75,
-1214,Mermelada ECOSTA : mango tamarindo,pz,1,75,
-1215,Mermelada ECOSTA : piña coco,pz,1,75,
-1216,Mermelada LA PERDICION : Fresa,pz,1,80,300 grs
-1217,Mermelada Limon o Ajo,pz,1,50,500 grs
-1218,Muesli : piña ,kg,1,330,500 grs
-1219,Muesli : fresa,kg,1,330,500 grs
-1220,Muesli : mango,kg,1,330,500 grs
-1221,Muesli : mix,kg,1,330,500 grs
-1222,Mango o piña deshidratado natural o chile 30grs,pz,1,30,30 grs
-1223,Mango o piña deshidratado natural o chile 100grs,pz,1,100,100 grs
-1224,Fresa deshidratada natural,pz,1,45,30 grs
-1225,Barras de granola,barra,1,18,
-1226,Nuez en mitades ,pz,1,45,100 grs
-1227,Nuez garapiñada,pz,1,55,100 grs
-1228,Chicharo con sal,pz,1,35,100 grs
-1229,Maiz con sal o maiz con chile ,pz,1,35,100 grs
-1230,Cacahuate horneado,pz,1,25,100 grs
-1231,Cacahuate con sal y limon,pz,1,25,100 grs
-1232,Garbanzos con chile,pz,1,25,100 grs
-1233,Semillas de calabaza tostadas al comal (unstock),pz,1,25,
-1234,Semilla de girasol,pz,1,35,200 grs
-1235,Semilla de chia criolla,pz,1,70,
-1236,Granola ,pz,1,60,250 grs
-1237,Mazapan artesanal fibonacci,pz,1,15,
-1238,Alegria natural,barra,1,7,
-1239,Churritos de amaranto,pz,1,19.5,90 grs
-1240,Jengibre organico cristalizado ,pz,1,75,55 grs
-1241,Cigarros artesanales paquete de 5 pzs (unstock),paq,1,45,5 pz
-1242,Sopa Instantanea,pz,1,65,90 grs
-1243,Premio para perro,pz,1,62.5,100 grs
-1244,Aciento de semillas 120 grs,pz,1,65,120 grs
-1245,Salsa Ajvar de pimiento y berenjena 190gr,pz,1,65,190 grs
-1246,Salsa Ajvar de pimiento y berenjena 285gr,pz,1,110,285 grs
-1247,Berenjena ahumada untable,pz,1,145,190 grs
-1248,Sal de 3 chiles endemicos,pz,1,35,
-1249,Crema de cacahuate Fibonacci ,bote,1,115,330 grs
-1250,Escabeche Djindjirindji,pz,1,45,190 grs
-1251,Mantequilla de almendras,pz,1,176,235 ml
-1252,Tahini (pasta de ajonjoli),pz,1,98,235 ml
-1253,Salsa macha de chile tabiche ,pz,1,85,115 grs
-1254,Salsa de cacahuate o chapulin ,pz,1,85,115 grs
-1255,Sal de gusanito de maguey (unstock),pz,1,35,25 grs
-1256,Mayonesa de limon / ajo o tocino,pz,1,45,500 grs
-1257,Salsa macha de chile de arbol sabor : cacahuate,pz,1,80,150 ml
-1258,Salsa macha de chile de arbol sabor : ajo,pz,1,80,150 ml
-1259,Salsa macha de chile de arbol sabor : arandanos picoso,pz,1,80,150 ml
-1260,Salsa macha de chile de arbol sabor : chapulin,pz,1,80,150 ml
-1261,Chiles en escabeche 500grs,kg,1,150,500 grs
-1262,Chiles en escabeche 1kg,kg,1,140,
-1263,Salsa botanera Tilanchii ,ml,150,45,150 ml
-1264,Duraznos en almibar 1kg,bote,1,140,1 kg
-1265,Duraznos en almibar 500grs,bote,1,70,500 grs
-1266,Sal de gusanito,grs,150,70,150 grs
-1267,Aceite de coco sin olor ,litro,1,200,
-1268,Aceite de coco con olor,litro,1,240,
-1269,Aceite de pepita de uva,ml,375,115,375 ml
-1270,Aceite de corozo con olor y sabor,litro,1,240,
-1271,"Aceite de oliva extra virgen macerados con : romeo, ajo Aguacte, chaya ",ml,150,75,150 ml
-1272,Ghee 250ml,ml,1,150,250 ml
-1273,Ghee 125ml,pz,1,85,125 ml
-1274,Cerveza artesanal capucha : Brow,pz,1,50,
-1275,Cerveza artesanal capucha : Session IPA,pz,1,50,
-1276,Cerveza artesanal capucha : poleo/Pericon,pz,1,50,
-1277,Cerveza artesanal capucha : Jengibre Panel,pz,1,50,
-1278,Cerveza artesanal capucha : Blonde,pz,1,50,
-1279,Cerveza artesanal traspatio : Porter inglesa ,pz,1,50,
-1280,Cerveza artesanal la Juquileña Negra del alma (Stout),pz,1,50,
-1281,Barra de chocolate artesanal 60% cacao sabor Rosita de cacao,barra,1,75,50 grs
-1282,Barra de chocolate artesanal 60% cacao sabor Pinole,barra,1,75,50 grs
-1283,Barra de chocolate artesanal 60% cacao sabor Nueve lunas,barra,1,75,50 grs
-1284,Barra de chocolate artesanal 60% cacao sabor Almendras,barra,1,75,50 grs
-1285,Barra de chocolate artesanal 60% cacao sabor Mezcal,barra,1,75,50 grs
-1286,Barra de chocolate artesanal 60% cacao sabor Cardamomo,barra,1,75,50 grs
-1287,Barra de chocolate artesanal 80% cacao sabor Nibs de cacao ,barra,1,85,50 grs
-1288,Barra de chocolate artesanal 80% cacao sabor Sal de mar,barra,1,85,50 grs
-1289,Barra de cacao jaguar,barra,1,90,50 grs
-1290,Tablillas para preparar chocolate Dulce,pz,1,70,250 grs
-1291,Tablillas para preparar chocolate Semiamargo,pz,1,80,250 grs
-1292,Tablillas para preparar chocolate  Chocolate amargo,pz,1,110,250 grs
-1293,Cacao garapiñado ,pz,1,95,150 grs
-1294,Mix de cacao (cacao fermentado y cacao jaguar),pz,1,110,200 grs
-1295,Barra de chocolate MAMA PACHA Vainilla y nibs de cacao,barra,1,85,70 grs
-1296,Barra de chocolate MAMA PACHA Mango,barra,1,85,70 grs
-1297,Barra de chocolate MAMA PACHA Mora azul,barra,1,85,70 grs
-1298,Barra de chocolate MAMA PACHA Soconusco,barra,1,85,70 grs
-1299,Barra de chocolate MAMA PACHA Almendras y sal de mar,barra,1,85,70 grs
-1300,Chocolate untable la perdicion ,bote,1,65,130 grs
-1301,Salchichas veganas 8pzs ,paq,1,120,350 grs
-1302,Albondigas de avena y okara  16pzs,paq,1,90,
-1303,Falafel 300 grs,paq,1,85,300 grs
-1304,"Hamburguesas de lentejas, amaranto y arroz integral",paq,1,90,
-1305,Chorizos veganos,pz,1,70,150 grs
-1306,Chorizo veganos Estilo Toluca,pz,1,70,150 grs
-1307,Queso vegano semiduro Curcuma,pz,1,70,200 grs
-1308,Queso vegano semiduro Pimenton,pz,1,70,200 grs
-1309,Queso untable de almendra o nuez de la india.,pz,1,85,250 grs
-1310,Queso botanero de almendra ,pz,1,88,250 grs
-1311,"Yogurt vegano de coco zahini natural, mango o zarzamora",pz,1,149,450 ml
-1312,Consome de verduras,pz,1,75,60 grs
-1313,Humus de garbanzo,pz,1,60,250 grs
-1314,"Tallarines chile poblano, hierbas, betabel, curcuma, espirulina, huitlacoche o tomate ",bolsa,1,35,100 grs
-1315,Lasagna de espirulina 8 laminas ,paq,1,40,
-1316,Lasagna de curcuma 8 laminas ,paq,1,40,
-1317,Pechuga de pavo natural(jamon),pz,1,90,250 grs
-1318,Pechuga de pavo horneada(jamon),pz,1,95,250 grs
-1319,Pavo estilo italiano(jamon),pz,1,85,250 grs
-1320,Pierna de cerdo ahumada(jamon),pz,1,85,250 grs
-1321,Jamon serrano 100gr,pz,1,80,100 grs
-1322,Jamon serrano 190gr,pz,1,150,190 grs
-1323,Lomo con almendras(jamon),pz,1,85,250 grs
-1324,Roast beef (jamon),pz,1,105,250 grs
-1325,Jamon de conejo,pz,1,90,
-1326,Salami madurado,pz,1,95,
-1327,Salami natural,pz,1,90,
-1328,Salami pamplona,pz,1,90,
-1329,Tocino con grasa ,pz,1,80,250 grs
-1330,Tocino sin grasa,pz,1,80,250 grs
-1331,Queso manchego con jamon serrano,pz,1,90,250 grs
-1332,Queso manchego con arandanos ,pz,1,90,250 grs
-1333,Queso manchego con chile de arbol,pz,1,90,250 grs
-1334,Queso manchego con chipotle,pz,1,90,250 grs
-1335,Queso gouda,pz,1,90,250 grs
-1336,Provolone a las finas hierbas,pz,1,85,250 grs
-1337,Chorizo español,pz,1,80,500 grs
-1338,Chorizo argentino,pz,1,80,500 grs
-1339,Chistorra,pz,1,85,250 grs
-1340,Miel multifloral 300ml,bote,1,65,300 ml
-1341,Miel multifloral 500ml,bote,1,100,0.5 litro
-1342,Miel multifloral 1L,bote,1,190,
-1343,Miel melipona en frasco,ml,70,140,70 ml
-1344,Jalea real (estimulante del sistema inmunologico),pz,1,180,20 ml
-1345,Gotero de estracto de propoleo,pz,1,130,30 ml
-1346,Granos de polen ,pz,1,75,80 grs
-1347,Gomitas de propoleo y miel 130grs,bote,1,70,130 grs
-1348,Miel de agave 120ml,ml,120,90,120 ml
-1349,Miel de agave 300ml,ml,300,155,300 ml
-1350,Miel de agave 500ml,ml,500,230,500 ml
-1351,"Fortimiel (jengibre, moringa y curcuma)",ml,350,135,350 ml
-1352,Miel con nuez o cacao,ml,460,120,460 ml
-1353,Preparado de miel ,ml,250,110,250 ml
-1354,Ajonjoli,grs,250,35,250 grs
-1355,Ajonjoli negro,grs,250,35,250 grs
-1356,Trigo,kg,1,30,
-1357,Frijol negro criollo,kg,1,40,
-1358,Frijol blanco ,kg,1,48,
-1359,Amaranto reventado 250 grs,bolsa,1,35,250 grs
-1360,Cafe convencional 500 grs EOC,bolsa,1,120,500 grs
-1361,Cafe convencional 1 kg EOC,bolsa,1,210,1 kg
-1362,Cafe Natural de 500grs EOC,bolsa,1,250,500 grs
-1363,Cafe Honey 500grs EOC,bolsa,1,250,500 grs
-1364,Fruto de niebla cafe Talea de castro Bolsa 250grs,bolsa,1,70,
-1365,Fruto de niebla cafe Talea de castro Bolsa 500grs,bolsa,1,110,
-1366,Fruto de niebla cafe Talea de castro Bolsa 1kg,bolsa,1,200,
-1367,Punta cometa Bolsa 500 grs,bolsa,1,120,500 grs
-1368,Punta cometa Bolsa 1 kg,bolsa,1,210,1 kg
-1369,Harina de trigo,pz,1,50,
-1370,Harina de amaranto,bolsa,1,48,200 grs
-1371,"Harina de amaranto, avena y ajonjoli",bolsa,1,48,200 grs
-1372,"Harina de amaranto, avena y almendra",bolsa,1,48,200 grs
-1373,"Harina de amaranto, avena y ajonjoli negro",bolsa,1,48,200 grs
-1374,"Harina de amaranto, avena y chocolate artesanal (champurrado)",bolsa,1,48,200 grs
-1375,Harina para hotcakes de calabaza y arroz ,bolsa,1,60,200 grs
-1376,Semillas de hortalizas/sobre Albahaca limon,pz,1,38,
-1377,Semillas de hortalizas/sobre arugula,pz,1,38,
-1378,Semillas de hortalizas/sobre Acelga de colores,pz,1,38,
-1379,Semillas de hortalizas/sobre mostaza,pz,1,38,
-1380,Semillas de hortalizas/sobre cebolla morada,pz,1,38,
-1381,Semillas de hortalizas/sobre betabel,pz,1,38,
-1382,Semillas de hortalizas/sobre perejil,pz,1,38,
-1383,Semillas de hortalizas/sobre espinaca,pz,1,38,
-1384,Semillas de hortalizas/sobre zanahoria,pz,1,38,
-1385,Semillas de hortalizas/sobre Ejote verde,pz,1,38,
-1386,Semillas de hortalizas/sobre Lechuga,pz,1,38,
-1387,"Pasta rellena: Sorrentinos (orden x8) Espinacas, queso chiapas y nueces",paq,1,80,
-1388,"Pasta rellena: Sorrentinos (orden x8) Quelites, requeson y almendras",paq,1,80,
-1389,Pasta rellena: Sorrentinos (orden x8) Carne a la bolonesa,paq,1,80,
-1390,Pasta rellena: Ravioles(orden x9) Setas al ajillo,paq,1,80,
-1391,Pasta rellena: Ravioles(orden x9) Queso azul y sofrito de tomate,paq,1,80,
-1392,Pasta fresca: fettuccini,grs,125,40,125 grs
-1393,Pasta rellena + salsa de tomate + queso rallado Combo,paq,1,125,
-1394,Pasta rellena + pesto + queso rallado Combo,paq,1,145,
-1395,Fettucini + salsa de tomate + queso rallado Combo,paq,1,85,
-1396,Fettucini + pesto + queso rallado Combo,paq,1,97,
-1397,empanadas (orden x6) Carne estilo argentino,paq,1,150,
-1398,"empanadas (orden x6) elote tierno, bechamel y queso",paq,1,150,
-1399,empanadas (orden x6) salteado de espinacas con queso,paq,1,150,
-1400,Pizza (orden x2) Salsa de tomate y mozzarella,paq,1,125,
-1401,Jabon organico ,pz,1,40,100 grs
-1402,Jabon con avena coloidal para bebe,pz,1,40,
-1403,"Jabon hidratante leche de coco, avena y miel",pz,1,40,
-1404,Jabon cicatrizante de tepezcohuite,pz,1,60,
-1405,Jabon exfoliante carbon activado,pz,1,60,
-1406,Jabon de romero,pz,1,80,
-1407,Jabon de calendula,pz,1,90,
-1408,Tonico facial rosas y colageno piel normal-sensible,ml,120,120,120 ml
-1409,Tonico facial romero y arbol de te piel mixta-grasa,ml,120,100,120 ml
-1410,Desmaquillante Agua micelar con hidrosol de rosas,ml,60,50,60 ml
-1411,Crema facil ligera piel mixta-grasa,grs,30,80,30 grs
-1412,Crema facil antiedad colageno y aceido hialuronico,grs,30,100,30 grs
-1413,Serum Aclarante con vitamina C,ml,30,350,30 ml
-1414,Serum Botox antiedad de Acido Hialuronico,ml,30,350,30 ml
-1415,Mascarilla en gel de Aloe Vera,grs,30,70,30 grs
-1416,LABIOS Balsamo labial hidratante con miel,grs,5,45,5 grs
-1417,Cepillo coporal anticelulitis grande,pz,1,170,
-1418,Cepillo coporal anticelulitis chico,pz,1,100,
-1419,Sales de baño aromaticas de rosas,grs,100,100,100 grs
-1420,Gel antibacterial con dosificador ,ml,500,75,500 ml
-1421,Gel antibacterial 1L,litro,1,100,
-1422,Gel antibacterial 0.5L,ml,500,55,0.5 litro
-1423,Paquete  500grs de Fresa + 250grs mora azul + 250grs Frambuesa,paq,1,180,
-1424,Envio,servicio,1,35,
-1425,Frijol negro criollo molido,kg,1,80,500 grs
-1426,Paquete 250grs de Totopo + 500grs pasta de frijol + 1 queso fresco + 100ml salsa,paq,1,85,
-1427,Yogurt de coco vegano,litro,1,240,500 ml
-1428,Promo de pulpa 3x90,paq,1,90,
-1429,Pollo entero con piel,kg,1,140,1600 grs
-1430,Pollo entero sin piel,kg,1,150,1500 grs
-1431,Medio Pollo con piel partido en piezas,pz,1,145,800 grs
-1432,Molida de pollo ,kg,1,250,500 grs
+1048,Miltomate (tomate verde),kg,1,35,
+1049,Papa morada,kg,1,35,
+1065,Chicharo en vaina,kg,1,40,
+1051,Haba en vaina,kg,1,40,
+1052,Camote amarillo,kg,1,40,
+1053,Chayote criollo,kg,1,45,
+1054,Nopalitos organicos,kg,1,67,300 grs
+1055,Aguacate maduro,kg,1,65,
+1056,Aguacate verde,kg,1,65,
+1057,Cebolla ,kg,1,35,
+1058,Ejote verde,kg,1,40,
+1059,Brocoli,pz,1,20,
+1060,Chile serrano,kg,1,60,250 grs
+1061,Berenjena,kg,1,55,
+1062,Hongo seta ,kg,1,160,
+1063,Coliflor,pz,1,40,
+1064,Esparragos,kg,1,300,200 grs
+1066,Calabacita criolla,kg,1,50,
+1067,Calabacita Italiana,kg,1,30,
+1068,Col de bruselas,kg,1,120,
+1069,Zanahoria,kg,1,35,
+1070,Diente de leon,rollo,1,30,
+1071,Berros rollo,rollo,1,25,
+1072,Mostaza rollo,rollo,1,25,
+1073,Verdolaga rollo,rollo,1,25,
+1074,Lechuga roja (unstock),pz,1,25,
+1075,Lechuga,pz,1,20,
+1076,Rabano rollo de 10 piezas,rollo,1,15,
+1077,Espinaca rollo,rollo,1,20,
+1078,Acelga rollo,rollo,1,25,
+1079,Apio,pz,1,25,
+1080,Kale o col rizada ,rollo,1,25,
+1081,Betabel pieza mediana,pz,1,15,
+1082,Perejil,rollo,1,20,
+1083,Arugula,kg,1,250,100 grs
+1084,Cilantro,rollo,1,20,
+1085,Albahaca,grs,1,30,
+1086,lavanda,rollo,1,25,
+1087,Jengibre organico 200g,kg,1,150,200 grs
+1088,Jengibre organico 1kg,kg,1,150,
+1089,Curcuma 200g,kg,1,200,200 grs
+1090,Curcuma fresca 1kg,kg,1,200,
+1091,Jengibre en polvo frasco,pz,1,100,70 grs
+1092,Curcuma molida en frasco,pz,1,100,70 grs
+1093,Romero deshidratado  (rinde 1 litro),pz,1,30,
+1094,Romero fresco rollito,rollo,1,30,
+1095,Planta de romero,pz,1,35,
+1096,Manzanilla rollo,rollo,1,20,
+1097,Eneldo rollito,rollo,1,25,
+1098,Salvia rollo ,rollo,1,20,
+1099,Hierbabuena rollo,rollo,1,15,
+1100,Hierbasanta rollo,rollo,1,15,
+1101,Epazote rollito,rollo,1,15,
+1102,Brotes de lenteja,paq,1,35,100 grs
+1103,Brotes de rabano ,paq,1,75,100 grs
+1104,Brotes de girasol,paq,1,60,100 grs
+1105,Brotes de chicharo,paq,1,75,100 grs
+1106,Brote de Mostaza,paq,1,35,100 grs
+1107,Brotes de alfalfa,paq,1,35,100 grs
+1108,Brotes de nabo,paq,1,35,100 grs
+1109,"Mix de 5 brotes (alfalfa, lenteja, mostaza, girasol y chicharo)",paq,1,65,100 grs
+1110,Masa Azul,kg,1,25,
+1111,Tortillas Azules,kg,1,25,
+1112,Tortillas Rojas,kg,1,25,
+1113,Tostadas de maiz blanco,paq,1,20,8 pzs
+1114,Tostadas de sabores,paq,1,25, 8pzs
+1115,Totopo para chilaquiles ,bolsa,1,25,250 grs
+1116,Tisana de ponche (rinde 1.5 L) (unstock),pz,1,40,60 grs
+1117,Te limon,rollo,1,20,
+1118,Cold Brew,pz,1,65,376 ml
+1119,Cold Brew Latte,pz,1,65,376 ml
+1120,Pulpa de mango congelada,kg,1,90,500 grs
+1121,Pulpa de piña congelada,kg,1,90,500 grs
+1122,Kefir de leche o agua 500ml,pz,1,35,500 ml
+1123,Kefir de leche 1L,litro,1,70,
+1124,Kefir de agua (bulgaros de agua),litro,1,70,500 ml
+1125,Yogurt de coco zahini,pz,1,149,450 ml
+1126,Cerveza de jengibre,pz,1,40,355 ml
+1127,Kombucha,pz,1,65,500 ml
+1128,Kombucha Nanche,pz,1,65,500 ml
+1129,Kombucha Maracuya,pz,1,65,500 ml
+1130,Kombucha Ciruela pasa,pz,1,65,500 ml
+1131,Kombucha Arandanos y poleo,pz,1,65,500 ml
+1132,Vinagre de manzana,pz,1,65,250 ml
+1133,Panela 700 grs,pz,1,65,700 grs
+1134,Panela envuelta en caña 3.2 kg,pz,1,160,
+1135,Panela envuelta en caña 300 grs,pz,1,80,
+1136,Panela granulada,kg,1,100,250 grs
+1137,Azucar mascabada,kg,1,90,
+1138,Stevia en hojas 50 grs,pz,1,65,50 grs
+1139,Pan de masa madre naturel integral o semillas,pz,1,50,513 grs
+1140,Pan vida dulce integral o semillas,pz,1,45,
+1141,Panque de naranja bajo en azucar,pz,1,120,
+1142,Panque de platano con nuez,pz,1,120,
+2618,Panque de jengibre,pz,1,35,
+1143,Hogaza de ajo y cebolla ,pz,1,55,520 grs
+1144,Palitos de pan de masa madre,bolsa,1,30,
+1145,Galletas de avena y chocolate,bolsa,1,35,5 pzs
+1146,Galletas de menta,bolsa,1,45,5 pzs
+1147,Brownie de chocolate,pz,1,35,
+1148,Pan de trigo,pz,1,50,850 grs
+1149,Pan de trigo integral,pz,1,50,850 grs
+1150,baguette frances,pz,1,30,350 grs
+1151,"Pan de trigo: ajo,cebolla, hierbas",pz,1,60,860 grs
+1152,Pan de trigo integral: multigrano,pz,1,65,960 grs
+1153,Pan de trigo integral: avena/linaza,pz,1,65,950 grs
+1154,Pan de centeno integral: comino/cilantro,pz,1,75,850 grs
+1155,Pan de centeno integral: arandanos y nueces,pz,1,75,850 grs
+1156,Pan sin gluten: multigrano,pz,1,90,950 grs
+1157,Pan sin gluten: avena y linaza,pz,1,90,870 grs
+1158,Huevo natural docena ,pz,1,48,
+1159,Conchitas de amaranto,pz,1,22,2 pzs
+1160,Galletas sin gluten de ajonjoli,paq,1,22,4 pzs
+1161,Galletas sin azucar de manzana o frutos secos,paq,1,22,4 pzs
+1162,Galletas de avena,paq,1,22,4 pzs
+1163,Alegrias redondas de chocolate,pz,1,18,
+1164,Cono de huevo,pz,1,120,30 pzs
+1165,Queso fresco chico,pz,1,25,
+1166,Quesillo ,kg,1,120,
+1167,Queso panela,pz,1,60,500 grs
+1168,Queso botanero con chapulin y chipotle,pz,1,70,500 grs
+1169,Queso botanero con epazote (unstock),kg,1,0,
+1170,Requeson 250grs,kg,1,80,250 grs
+1171,Requeson 500grs,kg,1,80,500 grs
+1172,Requeson 1kg,kg,1,80,
+1173,Crema 250g,kg,1,80,250 grs
+1174,Crema 500g,kg,1,80,500 grs
+1175,Crema 1kg,kg,1,80,
+1176,Mantequilla 250g,kg,1,200,250 grs
+1177,Mantequilla 500g,kg,1,200,500 grs
+1178,Mantequilla 1kg,kg,1,200,
+1179,Nata de leche de vaca ,kg,1,320,250 grs
+1180,Yogurt natural S/A,bote,1,100,960 ml
+1181,Codorniz (paq 3 piezas),paq,1,170,
+1182,Carne de conejo molida,kg,1,260,500 grs
+1183,Carne de conejo (entero),kg,1,150,1.2 kg a 2 kg
+1184,Carne de borrego molida,paq,1,260,
+1185,Carne de borrego,paq,1,160,
+1186,Sazonador para carnes (especias y hierbas finas),pz,1,55,60 grs
+1187,Te Alegria,bolsa,1,70,250 grs
+1188,Te soñador,bolsa,1,70,
+1189,Te Gripa,bolsa,1,70,
+1190,Te Panza,bolsa,1,70,
+1191,Te trimentra,bolsa,1,70,
+1192,Yogurt Bove natural litro,litro,1,65,
+1193,Bove entera litro,litro,1,38,
+1194,Bove deslactosada ,litro,1,40,
+1195,Bove ligth litro,litro,1,38,
+1196,Gud Almendra litro S/A,litro,1,52,
+1197,Gud Avena litro S/A,litro,1,49,
+1198,Gud Coco litro S/A,litro,1,52,
+1199,Gud Quinoa litro,litro,1,49,
+1200,"Mermelada YUBAN 210grs (Piña,Jengibre y cardamomo )",pz,1,75,210 grs
+1201,Mermelada YUBAN 210grs (Mango - maracuya),pz,1,75,210 grs
+1202,Mermelada YUBAN 210grs (Fresa - chia),pz,1,75,210 grs
+1203,Mermelada YUBAN 210grs (Fresa - jamaica),pz,1,75,210 grs
+1204,Mermelada YUBAN 210grs (Guanabana),pz,1,75,210 grs
+1205,Mermelada YUBAN 210grs (Zapote negro con Naranja),pz,1,75,210 grs
+1206,Mermelada YUBAN 210grs (manzana - nuez),pz,1,75,210 grs
+1207,Mermelada Tipico cultivando amor : Membrillo,pz,1,75,300 grs
+1208,Mermelada Tipico cultivando amor : zarzamora,pz,1,75,300 grs
+1209,Mermelada Tipico cultivando amor : manzana,pz,1,75,300 grs
+1210,Mermelada Tipico cultivando amor : durazno,pz,1,75,300 grs
+1211,Mermelada ECOSTA : jamaica,pz,1,75,
+1212,Mermelada ECOSTA : camote - piña,pz,1,75,
+1213,Mermelada ECOSTA : maracuya,pz,1,75,
+1214,Mermelada ECOSTA : papaya,pz,1,75,
+1215,Mermelada ECOSTA : mango criollo,pz,1,75,
+1216,Mermelada ECOSTA : mango tamarindo,pz,1,75,
+1217,Mermelada ECOSTA : piña coco,pz,1,75,
+1218,Mermelada LA PERDICION : Fresa,pz,1,80,300 grs
+1219,Mermelada Limon o Ajo,pz,1,50,500 grs
+1220,Muesli : piña ,kg,1,330,500 grs
+1221,Muesli : fresa,kg,1,330,500 grs
+1222,Muesli : mango,kg,1,330,500 grs
+1223,Muesli : mix,kg,1,330,500 grs
+1224,Mango o piña deshidratado natural o chile 30grs,pz,1,30,30 grs
+1225,Mango o piña deshidratado natural o chile 100grs,pz,1,100,100 grs
+1226,Fresa deshidratada natural,pz,1,45,30 grs
+1227,Barras de granola,barra,1,18,
+1228,Nuez en mitades ,pz,1,45,100 grs
+1229,Nuez garapiñada,pz,1,55,100 grs
+1230,Chicharo con sal,pz,1,35,100 grs
+1231,Maiz con sal o maiz con chile ,pz,1,35,100 grs
+1232,Cacahuate horneado,pz,1,25,100 grs
+1233,Cacahuate con sal y limon,pz,1,25,100 grs
+1234,Garbanzos con chile,pz,1,25,100 grs
+1235,Semillas de calabaza tostadas al comal (unstock),pz,1,25,
+1236,Semilla de girasol,pz,1,35,200 grs
+1237,Semilla de chia criolla,pz,1,70,
+1238,Granola ,pz,1,60,250 grs
+1239,Mazapan artesanal fibonacci,pz,1,15,
+1240,Alegria natural,barra,1,7,
+1241,Churritos de amaranto,pz,1,19.5,90 grs
+1242,Jengibre organico cristalizado ,pz,1,75,55 grs
+1243,Cigarros artesanales paquete de 5 pzs (unstock),paq,1,45,5 pz
+1244,Sopa Instantanea,pz,1,65,90 grs
+1245,Premio para perro,pz,1,62.5,100 grs
+1246,Aciento de semillas 120 grs,pz,1,65,120 grs
+1247,Salsa Ajvar de pimiento y berenjena 190gr,pz,1,65,190 grs
+1248,Salsa Ajvar de pimiento y berenjena 285gr,pz,1,110,285 grs
+1249,Berenjena ahumada untable,pz,1,145,190 grs
+1250,Sal de 3 chiles endemicos,pz,1,35,
+1251,Crema de cacahuate Fibonacci ,bote,1,115,330 grs
+1252,Escabeche Djindjirindji,pz,1,45,190 grs
+1253,Mantequilla de almendras,pz,1,176,235 ml
+1254,Tahini (pasta de ajonjoli),pz,1,98,235 ml
+1255,Salsa macha de chile tabiche ,pz,1,85,115 grs
+1256,Salsa de cacahuate o chapulin ,pz,1,85,115 grs
+1257,Sal de gusanito de maguey (unstock),pz,1,35,25 grs
+1258,Mayonesa de limon / ajo o tocino,pz,1,45,500 grs
+1259,Salsa macha de chile de arbol sabor : cacahuate,pz,1,80,150 ml
+1260,Salsa macha de chile de arbol sabor : ajo,pz,1,80,150 ml
+1261,Salsa macha de chile de arbol sabor : arandanos picoso,pz,1,80,150 ml
+1262,Salsa macha de chile de arbol sabor : chapulin,pz,1,80,150 ml
+1263,Chiles en escabeche 500grs,kg,1,150,500 grs
+1264,Chiles en escabeche 1kg,kg,1,140,
+1265,Salsa botanera Tilanchii ,ml,150,45,150 ml
+1266,Duraznos en almibar 1kg,bote,1,140,1 kg
+1267,Duraznos en almibar 500grs,bote,1,70,500 grs
+1268,Sal de gusanito,grs,150,70,150 grs
+1269,Aceite de coco sin olor ,litro,1,200,
+1270,Aceite de coco con olor,litro,1,240,
+1271,Aceite de pepita de uva,pz,1,90,375 ml
+1272,Aceite de corozo con olor y sabor,litro,1,240,
+1273,"Aceite de oliva extra virgen macerados con : romeo, ajo Aguacte, chaya ",ml,150,75,150 ml
+1274,Ghee 250ml,ml,1,150,250 ml
+1275,Ghee 125ml,pz,1,85,125 ml
+1276,Cerveza artesanal capucha : Brow,pz,1,50,
+1277,Cerveza artesanal capucha : Session IPA,pz,1,50,
+1278,Cerveza artesanal capucha : poleo/Pericon,pz,1,50,
+1279,Cerveza artesanal capucha : Jengibre Panel,pz,1,50,
+1280,Cerveza artesanal capucha : Blonde,pz,1,50,
+1281,Cerveza artesanal traspatio : Porter inglesa ,pz,1,50,
+1282,Cerveza artesanal la Juquileña Negra del alma (Stout),pz,1,50,
+1283,Barra de chocolate artesanal 60% cacao sabor Rosita de cacao,barra,1,75,50 grs
+1284,Barra de chocolate artesanal 60% cacao sabor Pinole,barra,1,75,50 grs
+1285,Barra de chocolate artesanal 60% cacao sabor Nueve lunas,barra,1,75,50 grs
+1286,Barra de chocolate artesanal 60% cacao sabor Almendras,barra,1,75,50 grs
+1287,Barra de chocolate artesanal 60% cacao sabor Mezcal,barra,1,75,50 grs
+1288,Barra de chocolate artesanal 60% cacao sabor Cardamomo,barra,1,75,50 grs
+1289,Barra de chocolate artesanal 80% cacao sabor Nibs de cacao ,barra,1,85,50 grs
+1290,Barra de chocolate artesanal 80% cacao sabor Sal de mar,barra,1,85,50 grs
+1291,Barra de cacao jaguar,barra,1,90,50 grs
+1292,Tablillas para preparar chocolate Dulce,pz,1,70,250 grs
+1293,Tablillas para preparar chocolate Semiamargo,pz,1,80,250 grs
+1294,Tablillas para preparar chocolate  Chocolate amargo,pz,1,110,250 grs
+1295,Cacao garapiñado ,pz,1,95,150 grs
+1296,Mix de cacao (cacao fermentado y cacao jaguar),pz,1,110,200 grs
+1297,Barra de chocolate MAMA PACHA Vainilla y nibs de cacao,barra,1,85,70 grs
+1298,Barra de chocolate MAMA PACHA Mango,barra,1,85,70 grs
+1299,Barra de chocolate MAMA PACHA Mora azul,barra,1,85,70 grs
+1300,Barra de chocolate MAMA PACHA Soconusco,barra,1,85,70 grs
+1301,Barra de chocolate MAMA PACHA Almendras y sal de mar,barra,1,85,70 grs
+1302,Chocolate untable la perdicion ,bote,1,65,130 grs
+1303,Salchichas veganas 8pzs ,paq,1,120,350 grs
+1304,Albondigas de avena y okara  16pzs,paq,1,90,
+1305,Falafel 300 grs,paq,1,85,300 grs
+1306,"Hamburguesas de lentejas, amaranto y arroz integral",paq,1,90,
+1307,Chorizos veganos,pz,1,70,150 grs
+1308,Chorizo veganos Estilo Toluca,pz,1,70,150 grs
+1309,Queso vegano semiduro Curcuma,pz,1,70,200 grs
+1310,Queso vegano semiduro Pimenton,pz,1,70,200 grs
+1311,Queso untable de almendra o nuez de la india.,pz,1,85,250 grs
+1312,Queso botanero de almendra ,pz,1,88,250 grs
+1313,"Yogurt vegano de coco zahini natural, mango o zarzamora",pz,1,149,450 ml
+1314,Consome de verduras,pz,1,75,60 grs
+1315,Humus de garbanzo,pz,1,60,250 grs
+1316,Tallarines chile poblano,bolsa,1,35,100 grs
+13161,Tallarines de hierbas ,bolsa,1,35,100 grs
+13162,Tallarines de betabel,bolsa,1,35,100 grs
+13163,Tallarines de curcuma,bolsa,1,35,100 grs
+13164,Tallarines de espirulina,bolsa,1,35,100 grs
+13165,Tallarines de huitlacoche ,bolsa,1,35,100 grs
+13166,Tallarines de tomate ,bolsa,1,35,100 grs
+1317,Lasagna de espirulina 8 laminas ,paq,1,40,
+1318,Lasagna de curcuma 8 laminas ,paq,1,40,
+1319,Pechuga de pavo natural(jamon),pz,1,90,250 grs
+1320,Pechuga de pavo horneada(jamon),pz,1,95,250 grs
+1321,Pavo estilo italiano(jamon),pz,1,85,250 grs
+1322,Pierna de cerdo ahumada(jamon),pz,1,85,250 grs
+1323,Jamon serrano 100gr,pz,1,80,100 grs
+1324,Jamon serrano 190gr,pz,1,150,190 grs
+1325,Lomo con almendras(jamon),pz,1,85,250 grs
+1326,Roast beef (jamon),pz,1,105,250 grs
+1327,Jamon de conejo,pz,1,90,
+1328,Salami madurado,pz,1,95,
+1329,Salami natural,pz,1,90,
+1330,Salami pamplona,pz,1,90,
+1331,Tocino con grasa ,pz,1,80,250 grs
+1332,Tocino sin grasa,pz,1,80,250 grs
+1333,Queso manchego con jamon serrano,pz,1,90,250 grs
+1334,Queso manchego con arandanos ,pz,1,90,250 grs
+1335,Queso manchego con chile de arbol,pz,1,90,250 grs
+1336,Queso manchego con chipotle,pz,1,90,250 grs
+1337,Queso gouda,pz,1,90,250 grs
+1338,Provolone a las finas hierbas,pz,1,85,250 grs
+1339,Chorizo español,pz,1,80,500 grs
+1340,Chorizo argentino,pz,1,80,500 grs
+1341,Chistorra,pz,1,85,250 grs
+1342,Miel multifloral 300ml,bote,1,65,300 ml
+1343,Miel multifloral 500ml,bote,1,100,0.5 litro
+1344,Miel multifloral 1L,bote,1,190,
+1345,Miel melipona en frasco,ml,70,140,70 ml
+1346,Jalea real (estimulante del sistema inmunologico),pz,1,180,20 ml
+1347,Gotero de estracto de propoleo,pz,1,130,30 ml
+1348,Granos de polen ,pz,1,75,80 grs
+1349,Gomitas de propoleo y miel 130grs,bote,1,70,130 grs
+1350,Miel de agave 120ml,ml,120,90,120 ml
+1351,Miel de agave 300ml,ml,300,155,300 ml
+1352,Miel de agave 500ml,ml,500,230,500 ml
+1353,"Fortimiel (jengibre, moringa y curcuma)",ml,350,135,350 ml
+1354,Miel con nuez o cacao,ml,460,120,460 ml
+1355,Preparado de miel ,ml,250,110,250 ml
+1356,Ajonjoli,grs,250,35,250 grs
+1357,Ajonjoli negro,grs,250,35,250 grs
+1358,Trigo,kg,1,30,
+1359,Frijol negro criollo,kg,1,40,
+1360,Frijol blanco ,kg,1,48,
+1361,Amaranto reventado 250 grs,bolsa,1,35,250 grs
+1362,Cafe convencional 500 grs EOC,bolsa,1,120,500 grs
+1363,Cafe convencional 1 kg EOC,bolsa,1,210,1 kg
+1364,Cafe Natural de 500grs EOC,bolsa,1,250,500 grs
+1365,Cafe Honey 500grs EOC,bolsa,1,250,500 grs
+1366,Fruto de niebla cafe Talea de castro Bolsa 250grs,bolsa,1,70,
+1367,Fruto de niebla cafe Talea de castro Bolsa 500grs,bolsa,1,110,
+1368,Fruto de niebla cafe Talea de castro Bolsa 1kg,bolsa,1,200,
+1369,Punta cometa Bolsa 500 grs,bolsa,1,120,500 grs
+1370,Punta cometa Bolsa 1 kg,bolsa,1,210,1 kg
+1371,Harina de trigo,pz,1,50,
+1372,Harina de amaranto,bolsa,1,48,200 grs
+1373,"Harina de amaranto, avena y ajonjoli",bolsa,1,48,200 grs
+1374,"Harina de amaranto, avena y almendra",bolsa,1,48,200 grs
+1375,"Harina de amaranto, avena y ajonjoli negro",bolsa,1,48,200 grs
+1376,"Harina de amaranto, avena y chocolate artesanal (champurrado)",bolsa,1,48,200 grs
+1377,Harina para hotcakes de calabaza y arroz ,bolsa,1,60,200 grs
+1378,Semillas de hortalizas/sobre Albahaca limon,pz,1,38,
+1379,Semillas de hortalizas/sobre arugula,pz,1,38,
+1380,Semillas de hortalizas/sobre Acelga de colores,pz,1,38,
+1381,Semillas de hortalizas/sobre mostaza,pz,1,38,
+1382,Semillas de hortalizas/sobre cebolla morada,pz,1,38,
+1383,Semillas de hortalizas/sobre betabel,pz,1,38,
+1384,Semillas de hortalizas/sobre perejil,pz,1,38,
+1385,Semillas de hortalizas/sobre espinaca,pz,1,38,
+1386,Semillas de hortalizas/sobre zanahoria,pz,1,38,
+1387,Semillas de hortalizas/sobre Ejote verde,pz,1,38,
+1388,Semillas de hortalizas/sobre Lechuga,pz,1,38,
+1389,"Pasta rellena: Sorrentinos (orden x8) Espinacas, queso chiapas y nueces",paq,1,80,
+1390,"Pasta rellena: Sorrentinos (orden x8) Quelites, requeson y almendras",paq,1,80,
+1391,Pasta rellena: Sorrentinos (orden x8) Carne a la bolonesa,paq,1,80,
+1392,Pasta rellena: Ravioles(orden x9) Setas al ajillo,paq,1,80,
+1393,Pasta rellena: Ravioles(orden x9) Queso azul y sofrito de tomate,paq,1,80,
+1394,Pasta fresca: fettuccini,grs,125,40,125 grs
+1395,Pasta rellena + salsa de tomate + queso rallado Combo,paq,1,125,
+1396,Pasta rellena + pesto + queso rallado Combo,paq,1,145,
+1397,Fettucini + salsa de tomate + queso rallado Combo,paq,1,85,
+1398,Fettucini + pesto + queso rallado Combo,paq,1,97,
+1399,empanadas (orden x6) Carne estilo argentino,paq,1,150,
+1400,"empanadas (orden x6) elote tierno, bechamel y queso",paq,1,150,
+1401,empanadas (orden x6) salteado de espinacas con queso,paq,1,150,
+1402,Pizza (orden x2) Salsa de tomate y mozzarella,paq,1,125,
+1403,Jabon organico ,pz,1,40,100 grs
+1404,Jabon con avena coloidal para bebe,pz,1,40,
+1405,"Jabon hidratante leche de coco, avena y miel",pz,1,40,
+1406,Jabon cicatrizante de tepezcohuite,pz,1,60,
+1407,Jabon exfoliante carbon activado,pz,1,60,
+1408,Jabon de romero,pz,1,80,
+1409,Jabon de calendula,pz,1,90,
+1410,Tonico facial rosas y colageno piel normal-sensible,ml,120,120,120 ml
+1411,Tonico facial romero y arbol de te piel mixta-grasa,ml,120,100,120 ml
+1412,Desmaquillante Agua micelar con hidrosol de rosas,ml,60,50,60 ml
+1413,Crema facil ligera piel mixta-grasa,grs,30,80,30 grs
+1414,Crema facil antiedad colageno y aceido hialuronico,grs,30,100,30 grs
+1415,Serum Aclarante con vitamina C,ml,30,350,30 ml
+1416,Serum Botox antiedad de Acido Hialuronico,ml,30,350,30 ml
+1417,Mascarilla en gel de Aloe Vera,grs,30,70,30 grs
+1418,LABIOS Balsamo labial hidratante con miel,grs,5,45,5 grs
+1419,Cepillo coporal anticelulitis grande,pz,1,170,
+1420,Cepillo coporal anticelulitis chico,pz,1,100,
+1421,Sales de baño aromaticas de rosas,grs,100,100,100 grs
+1422,Gel antibacterial con dosificador ,ml,500,75,500 ml
+1423,Gel antibacterial 1L,litro,1,100,
+1424,Gel antibacterial 0.5L,ml,500,55,0.5 litro
+1425,Paquete 1kg Fresa + 200grs mora azul,paq,1,150,
+1426,Envio,servicio,1,35,
+1427,Frijol negro criollo molido,kg,1,80,500 grs
+1428,Paquete 250grs de Totopo + 500grs pasta de frijol + 1 queso fresco + 100ml salsa,paq,1,85,
+1429,Yogurt de coco vegano,litro,1,240,500 ml
+1430,Promo de pulpa 3x90,paq,1,90,
+1431,Pollo entero con piel,kg,1,140,1600 grs
+1432,Pollo entero sin piel,kg,1,150,1500 grs
+1433,Medio Pollo con piel partido en piezas,pz,1,145,800 grs
+1434,Molida de pollo ,kg,1,250,500 grs
+1435,Repelente Clavo,pz,1,55,40 ml
+1436,Repelente Geraneo,pz,1,55,40 ml
+1437,Calendula,pz,1,55,40 ml
+1438,velas de citronela chicas,pz,1,35,
+1439,aceite de oregano 10ml,pz,1,210,
+1440,Te chai,pz,1,85,
+1441,Extracto de vainilla natural,pz,1,125,
+2693,Pechuga de pollo,kg,1,170,
+2694,Pasta de frijol con hoja de aguacate,kg,1,80,500 grs
+2695,Pasta de frijol con hierba de conejo,kg,1,80,500 grs

@@ -46,8 +46,15 @@ public class tablaCSV {
   }
 
   void guardarComo(String nameOfFile) {
-
-    saveTable(this.tableCSV, nameOfFile+".csv");
+    try {
+      saveTable(this.tableCSV, nameOfFile+".csv");
+    }
+    catch(Exception e) {
+      println("ERROR :: El documento :" +nameOfFile+".CSV no se pudo guardar");
+      println(e);
+      saveTable(this.tableCSV,nameOfFile+"(1)"+".csv");
+      println("Se guardó otro documento en su lugar:: "+nameOfFile+"(1)"+".csv");
+    }
   }
 
   void ordenarTabla(int columnNumber) {

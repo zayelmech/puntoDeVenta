@@ -4,7 +4,7 @@ public class ProductLine {
   Textfield campo1, campo2, campo3, campo4, campo5;
   Button deleteProduct;
   CallbackListener cbDelete;
-
+  
   int nPedido=0;
   int hField=20;
   int xInicial=200;

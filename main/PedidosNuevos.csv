@@ -1,7 +1,159 @@
 Id,Producto,Unidad,Cantidad,Precio,Clientes,Pzs
-1015,"Mango ataulfo ",kg,2.5,40,aldo,0
-1016,Mango petacon,kg,0,35,fer,2
-1019,Sandia,kg,0,15,fer,1
-1274,Barra de cacao jaguar,barra,1,90,"User 217,aldo",45
-1281,Barra de chocolate MAMA PACHA Mango,barra,2,85,fer,0
-1431,Medio Pollo con piel partido en piezas,pz,1.0,145.0,User 239,0
+1003,Chabacano  rojo o amarillo,kg,1.75,38,"Bex,ClaudiaGuichard,Lauren",0
+1004,Rambutan,kg,1.3,60,"AdrianaG,Xicotencatl502",0
+1005,Tuna Verde,kg,0.5,35,"sandra,Gabi",6
+1007,Pera,kg,2,40,"Evelyne,michell,ClaudiaGuichard",0
+1010,Maracuya Tradicional,kg,2.0,55,"michell,Lauren,Gabi,Raquel",3.0
+1012,Fresa,kg,1.0,120,"ClaudiaGuichard,Raquel",0.0
+1014,Mix de frutos rojos,kg,0.25,320,IsabelR,0
+1016,Frambuesas 250grs,kg,1,300,"Catherine,Lorena,ClaudiaGuichard,Lauren",0
+1020,"Mango ataulfo ",kg,4.5,40,"Catherine,Emma,IsabelR,Lorena,ClaudiaGuichard,Pablo,sandra,Lauren,Gabi",11
+1022,Manzana criolla,kg,5.5,40,"Evelyne,Summer,IsabelR,Lorena,ClaudiaGuichard",3
+1023,Guayaba,kg,0.75,40,"Lorena,Pablo,Gabi",3
+1024,Sandia,kg,0,15,michell,1
+1025,Papaya,kg,0.0,25,"Evelyne,Emma,SraSalinas,IsabelR,ClaudiaGuichard,sandra,Lauren,Ursula,Gabi,Raquel",10.0
+1026,Limon,kg,4.75,30,"michell,IsabelR,ClaudiaGuichard,Xicotencatl502,Ursula,Raquel",0.0
+1027,Pomelo,pz,9,15,"michell,IsabelR,ClaudiaGuichard,Xicotencatl502",0
+1028,Platano tabasco,kg,7.5,30,"Evelyne,Summer,michell,Lorena,ClaudiaGuichard,sandra,Laia,Ursula",8
+1029,Platano morado o piña,kg,1,25,"Catherine,SraSalinas,Lauren",5
+1030,Platano macho,kg,6,25,"michell,Nicte,Bex,AdrianaG,ClaudiaGuichard,Laia",3
+1032,Pepino,kg,4,30,"Nicte,IsabelR,Lorena,Pablo,Laia,Lauren,Ursula,Angela",5
+1033,Piña miel,pz,10,35,"Summer,michell,EdnaFlores,IsabelR,AdrianaG,Elizabeth,ClaudiaGuichard,Laia,Lauren,Gabi",0
+1035,Melon,pz,1,35,Lauren,0
+1039,Elotes rojos 4 piezas,paq,1,25,Evelyne,0
+1040,Col morada,pz,1,50,Xicotencatl502,0
+1041,Col verde,pz,1,30,sandra,0
+1043,Hongo silvestre,kg,1.5,220,"Evelyne,IsabelR,Gabi,Angela",0
+1044,Tomate,kg,13.75,30,"Emma,Nicte,IsabelR,AdrianaG,ClaudiaGuichard,Pablo,sandra,Laia,Lauren,Ursula,Gabi,Raquel",0.0
+1045,Tomate Riñon,kg,2,40,"Evelyne,Laia,Angela",0
+1046,"Pimiento morron ",kg,1.5,55,"IsabelR,AdrianaG,Elizabeth,ClaudiaGuichard,Pablo,Xicotencatl502",7
+1047,Tomate cherry,kg,0.95000005,117,"IsabelR,Xicotencatl502,Gabi",0
+1049,Papa morada,kg,8.5,35,"Evelyne,Emma,IsabelR,AdrianaG,Pablo,Xicotencatl502,Laia,cate,Lauren,Angela",0
+1051,Haba en vaina,kg,0.25,40,AdrianaG,0
+1053,Chayote criollo,kg,1.5,45,"IsabelR,Elizabeth,ClaudiaGuichard",1
+1054,Nopalitos organicos,kg,2.35,67,"Emma,Bex,Elizabeth,sandra,Ursula,Gabi,Angela",0
+1055,Aguacate maduro,kg,4.5,65,"Evelyne,Emma,Summer,IsabelR,AdrianaG,ClaudiaGuichard,Xicotencatl502,Lauren,Ursula,Gabi",16
+1057,"Cebolla ",kg,4.5,35,"Evelyne,IsabelR,AdrianaG,ClaudiaGuichard,Xicotencatl502,Lauren",2
+1058,Ejote verde,kg,2.55,40,"Catherine,Elizabeth,ClaudiaGuichard,cate,Gabi",0
+1059,Brocoli,pz,6.0,20,"Evelyne,Emma,Nicte,IsabelR,cate,Raquel",0.0
+1060,Chile serrano,kg,0.25,60,ClaudiaGuichard,0
+1061,Berenjena,kg,1.0,55,"AdrianaG,ClaudiaGuichard,sandra,Raquel",5.0
+1062,"Hongo seta ",kg,3.05,160,"Emma,AdrianaG,ClaudiaGuichard,Pablo,cate,Lauren",0
+1063,Coliflor,pz,4,40,"Evelyne,AdrianaG,Ursula,Gabi",0
+1064,Esparragos,kg,1.0,300,"Evelyne,IsabelR,Lauren,Monse2,Raquel",0.0
+1066,Calabacita criolla,kg,4.5,50,"IsabelR,Pablo,sandra,Lauren,Monse1,Monse2",0
+1067,Calabacita Italiana,kg,3.5,30,"Emma,Elizabeth,ClaudiaGuichard,Raquel",0.0
+1068,Col de bruselas,kg,1,120,"Xicotencatl502,cate",0
+1069,Zanahoria,kg,5.0,35,"Evelyne,IsabelR,Pablo,sandra,Monse2,Raquel",0.0
+1071,Berros rollo,rollo,6,25,"AdrianaG,ClaudiaGuichard,Gabi,Mariana,Angela,Raquel",0
+1072,Mostaza rollo,rollo,1,25,Angela,0
+1074,Lechuga roja (unstock),pz,1,25,Evelyne,0
+1075,Lechuga,pz,7,20,"Emma,Pablo,Mariana",0
+1076,Rabano rollo de 10 piezas,rollo,1,15,sandra,0
+1077,Espinaca rollo,rollo,7.0,20,"Emma,michell,AdrianaG,ClaudiaGuichard,Ursula,Raquel",0.0
+1078,Acelga rollo,rollo,3.0,25,"Evelyne,AdrianaG,Raquel",0.0
+1080,"Kale o col rizada ",rollo,3,25,"AdrianaG,cate,Ursula",0
+1081,Betabel pieza mediana,pz,2,15,"michell,IsabelR",0
+1082,Perejil,rollo,1.5,20,"IsabelR,Gabi",0
+1083,Arugula,kg,0.8000001,250,"ClaudiaGuichard,Xicotencatl502,Lauren,Ursula,Tania,Angela,Raquel",0.0
+1092,Curcuma molida en frasco,pz,1,100,AdrianaG,0
+1093,Romero deshidratado  (rinde 1 litro),pz,1.0,30.0,Raquel,0
+1104,Brotes de girasol,paq,1,60,Catherine,0
+1109,"Mix de 5 brotes (alfalfa, lenteja, mostaza, girasol y chicharo)",paq,4.5,65,"Bex,IsabelR,ClaudiaGuichard",0
+1110,Masa Azul,kg,2,25,ClaudiaGuichard,0
+1111,Tortillas Azules,kg,27.25,25,"Blanca,SraSalinas,EdnaFlores,Nicte,IsabelR,AdrianaG,Lorena,Elizabeth,ClaudiaGuichard,Laia,Lauren,Gabi,Tania,Monse1,Monse2,Alma,ivan",0
+1112,Tortillas Rojas,kg,2,25,"Elizabeth,Laia",0
+1114,Tostadas de sabores,paq,4,25,EdnaFlores,0
+1115,"Totopo para chilaquiles ",bolsa,3,25,"Bex,Tania",0
+1117,Te limon,rollo,3,20,"Lorena,Elizabeth",0
+1120,Pulpa de mango congelada,kg,1,90,Bex,0
+1121,Pulpa de piña congelada,kg,1,90,"Evelyne,Bex",0
+1139,Pan de masa madre naturel integral o semillas,pz,3.0,50,"Mariana,Tania,Raquel",0.0
+1140,Pan vida dulce integral o semillas,pz,2,45,"michell,kane",0
+1145,Galletas de avena y chocolate,bolsa,1,35,AdrianaG,0
+1150,baguette frances,pz,2,30,"kane,Monse2",0
+1153,Pan de trigo integral: avena/linaza,pz,1,65,IsabelR,0
+1157,Pan sin gluten: avena y linaza,pz,1,90,RoxanaM,0
+1158,"Huevo natural docena ",pz,4.5,48,"Evelyne,Catherine,Lauren,Tania,Monse2",0
+1159,Conchitas de amaranto,paq,1,22,Gabi,0
+1160,Galletas sin gluten de ajonjoli,paq,1,22,RoxanaM,0
+1162,Galletas de avena,paq,1,22,Gabi,0
+1163,Alegrias redondas de chocolate,pz,4,18,Gabi,0
+1164,Cono de huevo,pz,5,120,"ClaudiaGuichard,Mariana",0
+1165,Queso fresco chico,pz,1,25,Lauren,0
+1166,"Quesillo ",kg,2,120,"Nicte,Lauren,Ursula",0
+1167,Queso panela,pz,2,60,"Evelyne,Tania",0
+1170,Requeson 250grs,kg,0.5,80,"IsabelR,Lauren",0
+1174,Crema 500g,kg,0.5,80,Laia,0
+1176,Mantequilla 250g,kg,0.25,200,Lauren,0
+1179,"Nata de leche de vaca ",kg,0.25,320,ClaudiaGuichard,0
+1180,Yogurt natural S/A,bote,2,100,"ClaudiaGuichard,Mariana",0
+1182,Carne de conejo molida,kg,1,260,"Evelyne,Gloria",0
+1184,Carne de borrego molida,kg,1.6,260,"Noemi,GuadalupeM",0
+1185,Carne de borrego,kg,1.5,160,"Bex,Lauren",0
+1189,Te Gripa,bolsa,1,70,IsabelR,0
+1190,Te Panza,bolsa,1,70,Evelyne,0
+1192,Yogurt Bove natural litro,litro,2,65,"Catherine,Xicotencatl502",0
+1193,Bove entera litro,litro,2,38,"Summer,Lauren",0
+1194,"Bove deslactosada ",litro,4,40,Pablo,0
+1196,Gud Almendra litro S/A,litro,1,52,Gabi,0
+1198,Gud Coco litro S/A,litro,1,52,Gabi,0
+1201,Mermelada YUBAN 210grs (Mango - maracuya),pz,1,75,IsabelR,0
+1209,Mermelada Tipico cultivando amor : manzana,pz,1,75,Summer,0
+1224,Mango o piña deshidratado natural o chile 30grs,pz,2,30,ClaudiaGuichard,0
+1225,Mango o piña deshidratado natural o chile 100grs,pz,2,100,"Lorena,Lorena",0
+1228,"Nuez en mitades ",pz,1,45,Summer,0
+1232,Cacahuate horneado,pz,2.5,25,ClaudiaGuichard,0
+1234,Garbanzos con chile,pz,1,25,ClaudiaGuichard,0
+1238,"Granola ",pz,2,60,"ClaudiaGuichard,Mariana",0
+1240,Alegria natural,barra,13,7,"Nicte,Elizabeth,Gabi",0
+1241,Churritos de amaranto,pz,4,19.5,"Lupe,ClaudiaGuichard",0
+1243,Cigarros artesanales paquete de 5 pzs (unstock),paq,1,45,michell,0
+1244,Sopa Instantanea,pz,1,65,Nicte,0
+1297,Barra de chocolate MAMA PACHA Vainilla y nibs de cacao,barra,1,85,Lauren,0
+1298,Barra de chocolate MAMA PACHA Mango,barra,1,85,Lauren,0
+1299,Barra de chocolate MAMA PACHA Mora azul,barra,1,85,Lauren,0
+1301,Barra de chocolate MAMA PACHA Almendras y sal de mar,barra,3,85,"Bex,Lorena,Lauren",0
+1305,Falafel 300 grs,paq,1,85,SraSalinas,0
+1306,"Hamburguesas de lentejas, amaranto y arroz integral",paq,1.0,90.0,Raquel,0
+1311,Queso untable de almendra o nuez de la india.,pz,1,85,SraSalinas,0
+1314,Consome de verduras,pz,2,75,"SraSalinas,Nicte",0
+1315,Humus de garbanzo,pz,1,60,Summer,0
+13161,"Tallarines de hierbas ",bolsa,2,35,SraSalinas,0
+1318,"Lasagna de curcuma 8 laminas ",paq,1,40,SraSalinas,0
+1319,Pechuga de pavo natural(jamon),pz,6.0,90,"Claudia,Emma,Raquel",0.0
+1320,Pechuga de pavo horneada(jamon),pz,3,95,"EdnaFlores,ClaudiaGuichard,Raquel",0
+1322,Pierna de cerdo ahumada(jamon),pz,2,85,"kane,Mariana",0
+1323,Jamon serrano 100gr,pz,5.5,80,"Claudia,Raquel",0
+1327,Jamon de conejo,pz,2,90,Claudia,0
+1328,Salami madurado,pz,2,95,"Blanca,Bex",0
+1331,"Tocino con grasa ",pz,3,80,"Lupe,ClaudiaGuichard,Mariana",0
+1332,Tocino sin grasa,pz,2,80,"Emma,Ursula",0
+1333,Queso manchego con jamon serrano,pz,1,90,kane,0
+1340,Chorizo argentino,pz,2,80,"Blanca,EdnaFlores",0
+1342,Miel multifloral 300ml,bote,2,65,"AdrianaG,Elizabeth",0
+1344,Miel multifloral 1L,bote,1,190,Monse1,0
+1348,"Granos de polen ",pz,1,75,Monse2,0
+1349,Gomitas de propoleo y miel 130grs,bote,2,70,"Evelyne,Elizabeth",0
+1366,Fruto de niebla cafe Talea de castro Bolsa 250grs,bolsa,1,70,Summer,0
+1370,Punta cometa Bolsa 1 kg,bolsa,1,210,Evelyne,0
+1374,"Harina de amaranto, avena y almendra",bolsa,1,48,Summer,0
+1391,Pasta rellena: Sorrentinos (orden x8) Carne a la bolonesa,paq,1.0,80.0,Raquel,0
+1399,empanadas (orden x6) Carne estilo argentino,paq,4.0,150,"Catherine,Nicte,GuadalupeM,Raquel",0.0
+1401,empanadas (orden x6) salteado de espinacas con queso,paq,1,150,Catherine,0
+1405,"Jabon hidratante leche de coco, avena y miel",pz,1,40,IsabelR,0
+1414,Crema facil antiedad colageno y aceido hialuronico,pz,1,100,Elizabeth,0
+1425,Paquete 1kg Fresa + 200grs mora azul,paq,4,150,"Bex,Lorena,Xicotencatl502,Monse2",0
+1426,Envio,servicio,7,45,"Catherine,EdnaFlores,Nicte,kane,Gabi,Mariana,GuadalupeM",0
+1427,Frijol negro criollo molido,kg,0.5,80,Lupe,0
+1428,Paquete 250grs de Totopo + 500grs pasta de frijol + 1 queso fresco + 100ml salsa,paq,6,85,"DraFatima,Nicte,Rocio,Laia,Ursula",0
+1431,Pollo entero con piel,kg,0,140,ClaudiaGuichard,1
+1433,Medio Pollo con piel partido en piezas,paq,2,145,"SraSalinas,Lauren,Lauren",0
+1434,"Molida de pollo ",kg,3.1,250,"Claudia,EdnaFlores,GuadalupeM,LaurenCC,Raquel",0.0
+2027,Pulpa de maracuya 4x,kg,2,90,Bex,0
+2206,chimichirri,pz,1,0,Nicte,0
+2618,Panque de jengibre,pz,1,35,Nicte,0
+2629,Chintextle 200grs,pz,1,85,Gabi,0
+2693,pechuga de pollo,kg,0,170,Evelyne,1
+2694,Pasta de frijol con hoja de aguacate,kg,0.5,80,Tania,0
+2695,Pasta de frijol con hierba de conejo,kg,1,80,"Gabi,Tania",0

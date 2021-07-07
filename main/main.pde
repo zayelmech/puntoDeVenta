@@ -41,21 +41,7 @@ ListaPedidos listaBase;
 //  table = loadTable("./dataB.csv", "header");
 
 void setup() {
-listaBase  = new ListaPedidos("PedidosNuevos.csv");
-  /*
-
-   String datosNuevos[][] ={
-   {"123", "mayonesa", "kg", "0.5", "45", "Usuario1"}, 
-   {"123", "Mayoneza", "kg", "1.2", "45", "Usuario2"}
-   };
-   
-   //println(datosNuevos[0]);
-   
-   listaBase.agregarProducto(datosNuevos[0]);//cambiar metodo
-   listaBase.agregarProducto(datosNuevos[1]);//cambiar metodo
-   listaBase.guardarComo("PedidosNuevos");
-   */
-
+  listaBase  = new ListaPedidos("PedidosNuevos.csv");
 
   cp5 = new ControlP5(this);
 
@@ -67,7 +53,7 @@ listaBase  = new ListaPedidos("PedidosNuevos.csv");
   Ticket.addColumn("Precio unitario");
   Ticket.addColumn("Total");
   Ticket.addColumn("Pzs");
-  
+
 
   try {
 
@@ -206,14 +192,16 @@ listaBase  = new ListaPedidos("PedidosNuevos.csv");
 
   //Flujo normal
   //plusMidKg, plusQuaKg,subMidKg,subQuaKg; 
-  productId=cp5.addTextfield("ID", width/2 -widthBuscar-120, 500, 150, 30)
-    .setFont(createFont("arial", 20))
+  productId=cp5.addTextfield("ID", width/2 -widthBuscar-40, 110, 100, 20)
+    .setFont(createFont("arial", 14))
     .setAutoClear(false)
     .setColor(color(#16557c))
     .setColorBackground(color(255))
     .setColorForeground(color(255))
-    .setColorCursor(color(#A0A0A0));
-  ;
+    .setColorCursor(color(#A0A0A0))
+    .hide()
+    ;
+  productId.getCaptionLabel().setFont(createFont("arial", 12));
 
   cliente =cp5.addTextfield("Cliente", width/2 -widthBuscar-120, 160, 150, 30)
     .setFont(createFont("arial", 20))
@@ -783,15 +771,20 @@ void echaleOtro() {
     if (productCantidad==0) {
       productName=productPzOption+"pzs "+productName;
     } 
-    
-    newRowJack.setString("Id", productId.getText());
+    String productID = productId.getText();
+    if (productID.isEmpty()) {
+      productID = str(2000 + int(random(0, 999)));
+    }
+
+    newRowJack.setString("Id", productID);
     newRowJack.setString("Producto", productName);
     newRowJack.setString("Unidad", productUnit);
     newRowJack.setFloat("Cantidad", productCantidad);
     newRowJack.setFloat("Precio unitario", productPrice);
     newRowJack.setFloat("Total", subtotal);
-    newRowJack.setInt("Pzs",productPzOption);
-    
+    newRowJack.setInt("Pzs", productPzOption);
+
+
     String reglonProducto[]={productName, productUnit, str(productCantidad), str(productPrice), str(subtotal) };
 
 
@@ -809,7 +802,7 @@ void echaleOtro() {
     int excedente=0;
     if (lineOfProduct.size()>20) {
       sliderArea.show();
-      excedente=lineOfProduct.size()-20;
+      excedente=lineOfProduct.size()-20;//
     }
     int alturaMax = sliderArea.getHeight();
     int alturaMin = 20;
@@ -839,6 +832,8 @@ void echaleOtro() {
 
 void guardandoTicket() {
 
+  sliderArea.hide();
+
   int s = second();  // Values from 0 - 59
   int m = minute();  // Values from 0 - 59
   int h = hour();    // Values from 0 - 23
@@ -849,37 +844,48 @@ void guardandoTicket() {
     nameClient ="User "+ int(random(1, 1000));
   }
   println("Agregando datos a la lista general");
-    
+
 
   for (TableRow rowX : Ticket.rows()) {
     //{"123", "mayonesa", "kg", "0.5", "45", "Usuario1","pzs"} Ejemplo
-    TableRow rowFromDB = table.findRow(rowX.getString("Id"),"ID");
+    TableRow rowFromDB;
+    String nombreReal = rowX.getString("Producto");
+    try {
+      rowFromDB = table.findRow(rowX.getString("Id"), "ID");
+      nombreReal =rowFromDB.getString("PRODUCTO");
+    }
+    catch(Exception e) {
+      println(e);
+    }
+
+
     String[] productoMas = {
       rowX.getString("Id"), 
-      rowFromDB.getString("PRODUCTO"), 
+      nombreReal, 
       rowX.getString("Unidad"), 
       rowX.getString("Cantidad"), 
       rowX.getString("Precio unitario"), 
-      nameClient,
-      rowX.getString("Pzs"),
-     
-  };
+      nameClient, 
+      rowX.getString("Pzs"), 
+
+    };
     listaBase.agregarProducto(productoMas);
   }
   //println(datosNuevos[0]);
 
 
-  
+
   listaBase.ordenarTabla(0);
   listaBase.guardarComo("PedidosNuevos");
 
 
   Table notaIndividual = Ticket;
-  
+  println("Numero de columnas en Ticket: " + Ticket.getColumnCount());
+
   notaIndividual.removeColumn("Id");
   notaIndividual.removeColumn("Pzs");
-  
-  saveTable(notaIndividual, "/order_"+numeroPedido+"_"+nameClient+"_Xub"+".csv");
+
+  saveTable(notaIndividual, "/Tickets/order_"+numeroPedido+"_"+nameClient+"_Xub"+".csv");
   numeroPedido++;
   println("Listo! csv guardada");
   println("Tamaño de objetos lineOfProduct = "+lineOfProduct.size());
@@ -898,7 +904,19 @@ void guardandoTicket() {
   producto =0;
   //notasArea.setText("");
 
+
+  Ticket = new Table();
+
+  Ticket.addColumn("Id");
+  Ticket.addColumn("Producto");
+  Ticket.addColumn("Unidad");
+  Ticket.addColumn("Cantidad");
+  Ticket.addColumn("Precio unitario");
+  Ticket.addColumn("Total");
+  Ticket.addColumn("Pzs");
+
   Ticket.clearRows();
+  println("Numero de columnas en Ticket: " + Ticket.getColumnCount());
 }
 void fromTxtToCsv() {
 
