@@ -1,20 +1,26 @@
 public class BuscadorCSV {
 
   private Table lista;
-  Textfield barraBusqueda;
-  CallbackListener cbBusqueda;
-  ControlListener enter;
+  private Textfield barraBusqueda;
+  private CallbackListener cbBusqueda;
+  private ControlListener enter;
+  private Button botonBuscar;
   private int posX;
   private int posY;
   private int largo;
   private int alto;
-
+  private int id;
+  private int columna;
+  private int buttonWidth =25;
+  
   ArrayList<BotonesDesplegables> productoEncontrado = new ArrayList<BotonesDesplegables>();
 
 
 
-  BuscadorCSV(Table listaC, String columna, int ID) {
+  BuscadorCSV(Table listaC,int columna, int ID) {
+    this.columna  = columna;
     this.lista = listaC;
+    this.id = ID;
     barraBusqueda = cp5.addTextfield("barOfSearch"+ID);
   }
 
@@ -23,22 +29,25 @@ public class BuscadorCSV {
     this.posY = posY;
     this.largo = largo;
     this.alto = alto;
-    
+
     cbBusqueda = new CallbackListener() {
-    public void controlEvent(CallbackEvent theEvent) {
-      println("Haciendo algo"+theEvent.getAction());
-      
-      switch(theEvent.getAction()) {
-        case(ControlP5.ACTIVE):
-        //println(theEvent.getController().getInfo());
-        println("Scroleando ando");
-        break;
-        case(ControlP5.ACTION_EXIT):
-        println("Hasta la protsima");
-        break;
+      public void controlEvent(CallbackEvent theEvent) {
+        println("EVENTO #"+theEvent.getAction());
+        
+        switch(theEvent.getAction()) {
+          case(ControlP5.ACTIVE):
+            //println("Scroleando ando");
+          break;
+          case(ControlP5.PRESSED):
+            buscarString(barraBusqueda.getText(), int(theEvent.getController().getValue()));
+            println(":: "+theEvent.getController().getValue());
+          break;
+          case(ControlP5.ACTION_EXIT):
+          println("Hasta la protsima");
+          break;
+        }
       }
-    }
-  };
+    };
 
     enter= new ControlListener() {
       public void controlEvent(ControlEvent theEvent) {
@@ -50,9 +59,9 @@ public class BuscadorCSV {
         }
       }
     };
-    
+
     barraBusqueda
-      .setSize(this.largo, this.alto)
+      .setSize(this.largo-buttonWidth, this.alto)
       .setPosition(this.posX, this.posY)
       .setFont(createFont("arial", 20))
       .setAutoClear(false)
@@ -61,23 +70,29 @@ public class BuscadorCSV {
       .setColorForeground(color(255))
       .setColorCursor(color(#A0A0A0))
       .addCallback(cbBusqueda)
-      .hide();
+      ;
+
+    botonBuscar=cp5.addButton("S"+this.id)
+      .setFont(createFont("arial", 18))
+      .setPosition(this.posX+barraBusqueda.getWidth(), this.posY)
+      .setSize(buttonWidth, barraBusqueda.getHeight())
+      .setValue(this.columna)
+      .onPress(cbBusqueda)
+      .setLabel("O")
+      ;
   }
 
-  public void buscarString(String wordsToFind) {
-  
+  private void buscarString(String wordsToFind, int whatColumn ) {
+    for (TableRow row : lista.matchRows(wordsToFind, whatColumn)) {
+      println("Coincidencia: "+ row.getString(whatColumn)); 
+    }
   }
-  
-  public boolean isFocus(){
+
+  public boolean isFocus() {
     return barraBusqueda.isFocus();
   }
-  
+
 
   public class BotonesDesplegables {
-
-
-    ArrayList<Button> BotonDesplegable = new ArrayList<Button>();
-    
-    
   }
 }

@@ -1,11 +1,14 @@
+
 /* 
  Code by: Abdiel Carreño 
  Github: zayelmech
  Web: www.imecatro.com
  version:1.0
  Año: 2021
+ Last update : 07/2021
  */
 
+import g4p_controls.*;
 import controlP5.*;
 import java.util.*;
 
@@ -25,6 +28,7 @@ int widthTextSmall=40;
 int separacion=20;
 int posYsearch=50;
 
+float totalAprox =0;
 
 String palabraAnterior;
 boolean buscarClicked=false;
@@ -63,13 +67,13 @@ void setup() {
   catch(Exception e) {
     println(e);
   }
-  BuscadorCSV buscadorClientes = new BuscadorCSV(clientesTable, "Nombre", 1);
+  BuscadorCSV buscadorClientes = new BuscadorCSV(clientesTable,1, 1);
 
   buscadorClientes.setParametros(20, 250, 150, 30);
 
   cbPrueba = new CallbackListener() {
     public void controlEvent(CallbackEvent theEvent) {
-      println("Haciendo algo"+theEvent.getAction());
+      //println("Haciendo algo"+theEvent.getAction());
 
       switch(theEvent.getAction()) {
         case(ControlP5.ACTION_WHEEL):
@@ -456,8 +460,9 @@ void setup() {
 int sombra=0;
 int mode=1;
 int timeOld=millis();
-float xCircle=0;
+float xCircle=205;
 float yCircle=0;
+boolean sentido =false;
 void draw() {
 
   sombra=sombra+mode;
@@ -511,15 +516,34 @@ void draw() {
   //textFont(arial)
   text("coded by imecatro.com ©", width/2 -100, height-15);
 
-  //random stars
+  //ball cos
   fill(sombra);//220
-  int timeNow =millis();
-
-  if ((timeNow - timeOld)>1000) {
-    xCircle=random(665)+200;
-    yCircle=random(400)+initialY+35;
-    timeOld= timeNow;
+    
+  int inc =2;
+  
+  if (xCircle>=860) {
+    sentido = true;
   }
+  if (xCircle<205) {
+    sentido= false;
+  }
+
+if(sentido==false){
+  xCircle+=inc;
+}
+else{
+    xCircle-=inc;
+}
+
+  yCircle =  428+initialY - abs(cos((xCircle/180)*PI)*50);
+  int radio = 50;
+
+  //yCircle = height/2 - sqrt(radio*radio - pow(xCircle-205,2));
+/*
+  if (xCircle >= 860 || xCircle<205) {
+    xCircle =205;
+  }
+*/
   circle(xCircle, yCircle, 15);
 
   if (!buscar.isFocus()) {
@@ -547,6 +571,8 @@ void draw() {
   fill(255);
   textSize(20);
   text("Description: " + productDescription, 40, height-50 );
+  textSize(16);
+  text("$ " + totalAprox, 810, height-80 );
 }
 //en draw
 
@@ -695,7 +721,7 @@ void keyPressed() {
   } else if (keyCode==BACKSPACE) {
     println("DELETE");//ENTER
   } else {
-    println("OTRA entrada"+key);
+    print(" "+key);
   }
 }
 void calcularSubtotal() {
@@ -773,7 +799,7 @@ void echaleOtro() {
     } 
     String productID = productId.getText();
     if (productID.isEmpty()) {
-      productID = str(2000 + int(random(0, 999)));
+      productID = str(7000 + int(random(0, 999)));
     }
 
     newRowJack.setString("Id", productID);
@@ -788,7 +814,7 @@ void echaleOtro() {
     String reglonProducto[]={productName, productUnit, str(productCantidad), str(productPrice), str(subtotal) };
 
 
-    println("Agregando... No."+producto+ " --" + productPzOption+"x"+productName +" | "+ productUnit +" | "+ productCantidad +" | "+productPrice +" | "+subtotal);
+    //println("Agregando... No."+producto+ " --" + productPzOption+"x"+productName +" | "+ productUnit +" | "+ productCantidad +" | "+productPrice +" | "+subtotal);
     println(reglonProducto);
 
     //String newProduct[] = {reglonProducto[0], reglonProducto[1], reglonProducto[2], reglonProducto[3], reglonProducto[4]};
@@ -800,15 +826,18 @@ void echaleOtro() {
      }
      */
     int excedente=0;
-    if (lineOfProduct.size()>20) {
+    if (lineOfProduct.size()>19) {
       sliderArea.show();
-      excedente=lineOfProduct.size()-20;//
+      excedente=lineOfProduct.size()-19;//
     }
     int alturaMax = sliderArea.getHeight();
     int alturaMin = 20;
-    int alturaActual=20;
+    int alturaActual =30;
     if (alturaMax-excedente*alturaMin >=alturaMin) {
-      alturaActual=alturaMax-excedente*alturaMin;
+      alturaActual=alturaMax-excedente*alturaMin ;
+    }
+    if (alturaActual<alturaMin) {
+      alturaActual=alturaMin;
     }
     sliderArea.setHandleSize(alturaActual);
     sliderArea.setRange(excedente, 0);
@@ -828,13 +857,17 @@ void echaleOtro() {
     outPrice.setText("");
     outSubtotal.setText("");
   }
+  totalAprox=0;
+  for (TableRow linea : Ticket.rows()) {
+    totalAprox+=linea.getFloat("Total");
+  }
 }
 
 void guardandoTicket() {
-
+  totalAprox=0;
   sliderArea.hide();
 
-  int s = second();  // Values from 0 - 59
+  //int s = second();  // Values from 0 - 59
   int m = minute();  // Values from 0 - 59
   int h = hour();    // Values from 0 - 23
   String nameClient = cliente.getText();
@@ -885,7 +918,7 @@ void guardandoTicket() {
   notaIndividual.removeColumn("Id");
   notaIndividual.removeColumn("Pzs");
 
-  saveTable(notaIndividual, "/Tickets/order_"+numeroPedido+"_"+nameClient+"_Xub"+".csv");
+  saveTable(notaIndividual, "/Tickets/order_"+numeroPedido+"_"+nameClient+"_Xub_"+h+"h"+m+"m"+".csv");
   numeroPedido++;
   println("Listo! csv guardada");
   println("Tamaño de objetos lineOfProduct = "+lineOfProduct.size());

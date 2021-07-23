@@ -4,7 +4,7 @@ public class ProductLine {
   Textfield campo1, campo2, campo3, campo4, campo5;
   Button deleteProduct;
   CallbackListener cbDelete;
-  
+
   int nPedido=0;
   int hField=20;
   int xInicial=200;
@@ -74,7 +74,7 @@ public class ProductLine {
           int lineToDelete= int(theEvent.getController().getValue());
 
           lineOfProduct.get(lineToDelete).removerLinea(lineToDelete);
-          
+
           break;
           case(ControlP5.ACTION_RELEASED):
           println("adios");
@@ -90,7 +90,8 @@ public class ProductLine {
       .setSize(25, hField)
       .setValue(nPedido)
       .setId(nPedido)
-      .onPress(cbDelete);
+      .onPress(cbDelete)
+      .setLabel("X");
 
     if (axisY>=595 || axisY<195  ) {
       campo1.hide();
@@ -112,16 +113,15 @@ public class ProductLine {
   public void actualizar(int nPedido, String[] atributos) {
 
 
-    
-    
-    
+
+
+
     campo1.setText(atributos[0]);
     campo2.setText(atributos[1]);
     campo3.setText(atributos[2]);
     campo4.setText(atributos[3]);
     campo5.setText(atributos[4]);
     deleteProduct.setValue(nPedido);
-    
   }
   void addEvent(int nPedido) {
 
@@ -161,14 +161,14 @@ public class ProductLine {
   public void removerLinea(int indice) {
 
     //println("Numero de filas en el Ticket"+ Ticket.lastRowIndex());
-    
+
     cp5.get(Textfield.class, "CamA"+Ticket.lastRowIndex()).remove();
     cp5.get(Textfield.class, "CamB"+Ticket.lastRowIndex()).remove();
     cp5.get(Textfield.class, "CamC"+Ticket.lastRowIndex()).remove();
     cp5.get(Textfield.class, "CamD"+Ticket.lastRowIndex()).remove();
     cp5.get(Textfield.class, "CamE"+Ticket.lastRowIndex()).remove();
     cp5.get(Button.class, "X"+Ticket.lastRowIndex()).remove();
-      
+
 
     if (indice>=0) {
       Ticket.removeRow(indice);
@@ -190,13 +190,14 @@ public class ProductLine {
   void actualizarTodos() {
     producto =0;
     lineOfProduct.clear();
+    totalAprox=0;
     for (TableRow row : Ticket.rows()) {
       remover(producto);      
       String reglonProducto[]={row.getString("Producto"), row.getString("Unidad"), row.getString("Cantidad"), row.getString("Precio unitario"), row.getString("Total") };
       lineOfProduct.add(new ProductLine(producto, reglonProducto));
-      
+      totalAprox+=row.getFloat("Total");
+
       producto++;
     }
-
   }
 }
