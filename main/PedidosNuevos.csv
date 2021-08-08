@@ -1,182 +1,242 @@
-Id,Producto,Unidad,Cantidad," Precio ",Clientes,Pzs
-1000,Durazno,kg,6.5,50,"brissa,Kathy,elizabeth,Lorena,MariaJaime,Ana,Goreti,IsabelR",0.0
-1001,Higo fresco,kg,4.65,120,"Kathy,FernandaM,MariaJaime,Kimberly,SummerL,Gabi,Ana,veronicaH,IsabelR",0.0
-1002,Nanche amarillo,kg,1.0,45.0,veronicaH,0
-1003,Guanabana,kg,0.0,50.0,Gabi,1
-1004,Maracuya Tradicional,kg,1.0,55.0,Goreti,0
-1006,Rambutan,kg,0.75,60,"elizabeth,Lorena",0.0
-1007,Tuna Verde,kg,1.0,35.0,MariaJaime,0
-1008,Pera,kg,3.5,40,"Sandra,FernandaM,Goreti",0.0
-1009,Frambuesas 200grs,kg,0.6,375,"brissa,Lorena,Bex",0.0
-1010,Fresa,kg,2.0,120.0,"FernandaM,Bex,Yara",0.0
-1011,Mora azul,kg,0.6,375,"Kathy,Bex,Valeri",0.0
-1012,Mix de frutos rojos,kg,1.0,320,"brissa,Kathy,FernandaM,IsabelR",0.0
-1013,"Mango ataulfo ",kg,6.0,40,"brissa,sandyRuiz,Sandra,Gabi,Goreti,Pablo,IsabelR,Monse1",6.0
-1014,Manzana criolla,kg,4.5,40.0,"MariaJaime,Mayra,Gabi,Goreti,Bex,IsabelR",0.0
-1016,Papaya,kg,0.0,25,"Sandra,Gabi,Lauren",3.0
-1017,Limon,kg,2.5,30,"Sandra,Gabi,Pablo,Lauren,Laia",0.0
-1018,Pomelo,pz,5.0,15,"elizabeth,Goreti",0.0
-1019,Platano tabasco,kg,4.5,30.0,"Gabi,Ana,Goreti,Pablo,Lauren",4.0
-1020,Platano macho,kg,1.0,25.0,Laia,0
-1021,Platano morado o piña,kg,2.0,30,"Sandra,IsabelR,IsabelERR",0.0
-1022,Pepino,kg,3.5,30,"elizabeth,Goreti,Pablo,Laia",2.0
-1023,Piña miel,pz,5.0,40,"EdnaF,MariaJaime,Gabi,Goreti,Laia",0.0
-1024,Melon,pz,2.0,35.0,"MariaJaime,Goreti",0.0
-1025,Guayaba,kg,1.5,40,"Sandra,Goreti",0.0
-1026,Pulpa de zarzamora congelada,kg,0.4,113.0,Bex,0
-1027,Pulpa de mango congelada,kg,0.5,90.0,Bex,0
-1028,Pulpa de piña congelada,kg,1.0,90,"xochil,Bex",0.0
-1029,Pulpa de maracuya congelada,kg,1.5,90.0,Bex,0
-1030,Pulpa de fresa congelada,kg,1.0,90,"brissa,Bex",0.0
-1031,Hongo silvestre,kg,0.25,220.0,IsabelR,0
-1032,Camote amarillo,kg,2.5,55,"sandyRuiz,Evelyne,IsabelR",1.0
-1033,Tomate,kg,10.5,30.0,"Charlynne,MariaJaime,Gabi,Ana,Goreti,Pablo,Valeri,IsabelR,Laia",0.0
-1035,Tomate cherry,kg,2.6,117,"Kathy,Lorena,MariaJaime,Evelyne,Kimberly,Gabi,GoretiERR,Monse1",0.0
-1036,Miltomate de milpa,kg,2,50,"brissa,Kathy",0
-1037,Miltomate (tomate verde),kg,1.5,35.0,"Goreti,Pablo,Monse1",0.0
-1038,Papa morada sin tierra chica,kg,6.5,35,"brissa,Kathy,Pablo,Bex,IsabelR,Laia,Yara",0.0
-1040,Chicharo en vaina,kg,3.3,40,"Kathy,Charlynne,Gabi,veronicaH,Pablo",0.0
-1042,Chayote criollo,kg,2.0,45,"elizabeth,MariaJaime,IsabelR",1.0
-1043,Nopalitos organicos,kg,1.8,67,"elizabeth,Charlynne,MariaJaime,Gabi,Goreti,Monse2",0.0
-1044,"Cebolla ",kg,2.0,35.0,"Pablo,Monse1",0.0
-1047,Aguacate,kg,4.0,65,"brissa,Kathy,coral,Lorena,SummerL,Gabi,Lauren,Valeri",12.0
-1048,Ejote verde,kg,1.5,40,"elizabeth,Kimberly,SummerL",0.0
-1049,Brocoli,pz,5.0,20.0,"Lorena,Goreti,Pablo",0.0
-1050,"Hongo seta ",kg,1.25,160,"coral,MariaJaime,Goreti,Monse2",0.0
-1052,Coliflor,pz,2.0,40.0,"Goreti,Pablo",0.0
-1053,Calabacita criolla,kg,5.5,50,"brissa,elizabeth,Lorena,Gabi,Pablo,Monse1,Monse2",2.0
-1054,Calabacita Italiana,kg,2.0,30.0,"MariaJaime,Goreti",0.0
-1055,Zanahoria,kg,4.75,35.0,"Charlynne,Gabi,Goreti,Pablo,IsabelR,Monse1",0.0
-1056,Esparragos,kg,1.4000001,300,"xochil,Kathy,FernandaM,MariaJaime,Gabi,IsabelR,Monse1",0.0
-1057,Berenjena,kg,2.0,55.0,"Charlynne,Bex,IsabelR",1.0
-1058,Col de bruselas,kg,0.3,120.0,Laia,0
-1059,"Pimiento morron ",kg,2.5,55,"Kathy,Charlynne,MariaJaime,Gabi",0.0
-1062,Lechuga,pz,2.0,20.0,Pablo,0
-1063,Rabanitos rollo,rollo,2.0,15.0,"Lorena,MariaJaime",0.0
-1064,Espinaca rollo,rollo,2.0,20.0,Ana,0
-1065,Acelga rollo,rollo,1.0,25.0,Gabi,0
-1066,Apio,pz,1.0,25.0,MariaJaime,0
-1067,"Kale o col rizada ",rollo,2.0,25.0,"Ana,Goreti",0.0
-1068,Betabel pieza mediana,pz,2.0,15.0,MariaJaime,0
-1070,Perejil,rollo,1.0,20.0,Lorena,0
-1071,Cilantro,rollo,1.0,25.0,Lorena,0
-1078,Epazote rollito,rollo,1,15,elizabeth,0
-1080,"Salvia rollo ",rollo,2.0,20.0,"Gabi,Goreti",0.0
-1082,Te limon,rollo,3.0,20,"elizabeth,Lorena",0.0
-1084,Brotes de girasol,paq,1.0,60.0,Monse1,0
-1086,Brotes de lenteja,paq,1.0,35.0,Ana,0
-1087,Brotes de alfalfa,paq,1.0,35.0,Yara,0
-1088,Brote de Mostaza,paq,1.0,35.0,Goreti,0
-1090,"Mix de 5 brotes (alfalfa, lenteja, mostaza, girasol y chicharo)",paq,1.0,65.0,Goreti,0
-1091,Jengibre fresco,kg,0.8,150,"xochil,Lorena,Valeri,Yara",0.0
-1093,Curcuma fresca,kg,0.4,200.0,"SummerL,Yara",0.0
-1095,Tortillas Azules,kg,17.75,25,"brissa,sandyRuiz,EdnaF,MariaJaime,Mayra,Gabi,Goreti,Pablo,Lauren,Valeri,IsabelR,Laia,Yara,Monse1,Monse2",0.0
-1096,Tortillas Rojas,kg,2.0,25,"elizabeth,Laia",0.0
-1097,Masa Azul,kg,2.0,25.0,Goreti,0
-1098,Tostadas de sabores,paq,5,25,"sandyRuiz,EdnaF",0
-1102,Pan vida dulce semillas,pz,1.0,45.0,Yara,0
-1103,Pan de masa madre naturel integral,pz,2.0,50,"coral,Bex",0.0
-1104,Pan de masa madre naturel semillas,pz,1.0,50.0,Goreti,0
-1108,baguette frances,pz,1,30,kane,0
-1113,Pan de centeno integral: arandanos y nueces,pz,2.0,75.0,"Charlynne,IsabelR",0.0
-1116,Hogaza clasica de harina de centeno y trigo,pz,2.0,80.0,"Charlynne,Monse1",0.0
-1124,Pan de trigo y nuez PAQ,paq,2.0,45,"EdnaF,Monse2",0.0
-1125,Conchitas de amaranto,pz,1,22,elizabeth,0
-1126,Galletas sin gluten de ajonjoli,paq,1.0,22.0,Gabi,0
-1130,Alegrias redondas de chocolate,pz,4.0,18.0,Gabi,0
-1132,Cono de huevo,paq,3.0,120.0,"MariaJaime,Kimberly,Goreti",0.0
-1134,Queso fresco chico,pz,2.0,25.0,"Ana,Goreti",0.0
-1135,"Quesillo ",kg,1.5,120.0,"Goreti,Pablo,Lauren,Laia",0.0
-1137,Requeson 250grs,kg,0.5,80.0,"Bex,BexERR",0.0
-1138,Mantequilla 250g,kg,0.75,200,"elizabeth,Laia",0.0
-1139,Crema 250g,kg,0.75,80.0,"Goreti,Laia",0.0
-1142,Yogurt Bove natural litro,litro,2.0,65,"Kathy,SummerL",0.0
-1143,Bove entera litro,litro,10.0,38.0,"MariaJaime,Evelyne,SummerL,Lauren",0.0
-1146,Gud Avena litro S/A,litro,2.0,49.0,Evelyne,0
-1147,Gud Coco litro S/A,litro,1.0,52.0,Bex,0
-1153,Yogurt de coco vegano,litro,1.0,240.0,"Evelyne,Bex",0.0
-1158,Azucar mascabada,kg,0.5,90,xochil,0
-1173,Mermelada Tipico cultivando amor : Membrillo,pz,2.0,75.0,"FernandaM,Monse1",0.0
-1179,Mermelada YUBAN 210grs (Zapote negro con Naranja),pz,1.0,75.0,SummerL,0
-1188,"Crema de cacahuate Fibonacci ",bote,1.0,115.0,Evelyne,0
-1193,Aciento de semillas 120 grs,pz,1,65,citlallyB,0
-1196,Medio Pollo con piel partido en piezas,pz,2.0,145.0,"Ana,Yara",0.0
-1197,"Molida de pollo ",kg,0.5,250,EdnaF,0
-1198,Pechuga de pollo,kg,0,170,elizabeth,1
-1202,Carne de borrego molida,kg,1.0,260.0,Lauren,0
-1204,Frijol negro criollo molido,kg,1.75,80.0,"Mayra,Ana,Goreti,IsabelR",0.0
-1205,Paquete de chilaquiles 250grs de Totopo + 500grs pasta de frijol + 1 queso fresco + 100ml salsa,paq,2,85,"Kathy,elizabeth",0
-1206,Pasta de mole coloradito,kg,0.375,220.0,"Ana,veronicaH",0.0
-1207,Pasta de mole negro,kg,0.125,240.0,Ana,0
-1208,Te Alegria,bolsa,2,70,"brissa,citlallyB",0
-1209,Te soñador,bolsa,1.0,70.0,Evelyne,0
-1212,Te trimentra,bolsa,1.0,70.0,Valeri,0
-1215,Chips de camote 50grs,pz,4.0,50,"brissa,Kimberly,Goreti",0.0
-1219,Piña deshidratada chile 30grs,pz,2.0,30.0,MariaJaime,0
-1224,Fresa deshidratada natural,pz,2,45,brissa,0
-1225,Barras de granola,barra,1.0,18.0,SummerL,0
-1226,Mazapan artesanal fibonacci,pz,5.0,15,"brissa,Goreti",0.0
-1227,Alegria natural,barra,6,7,elizabeth,0
-1228,"Nuez en mitades ",pz,2.0,45,"coral,FernandaM",0.0
-1229,Chicharo con sal,pz,2.0,35.0,MariaJaime,0
-1231,Cacahuate horneado,pz,4.0,25,"brissa,SummerL",0.0
-1232,Cacahuate con sal y limon,pz,2.0,25.0,Goreti,0
-1233,Garbanzos con chile,pz,1.0,25.0,Aida,0
-1234,Semilla de girasol,pz,1.0,35.0,Goreti,0
-1235,Churritos de amaranto,pz,2.0,19.5,Goreti,0
-1236,"Jengibre organico cristalizado ",pz,1.0,75.0,Goreti,0
-1238,Barra de chocolate MAMA PACHA Vainilla y nibs de cacao,barra,1.0,85.0,Lauren,0
-1239,Barra de chocolate MAMA PACHA Mango,barra,1.0,85.0,Lauren,0
-1240,Barra de chocolate MAMA PACHA Mora azul,barra,1.0,85.0,Lauren,0
-1241,Barra de chocolate MAMA PACHA Soconusco,barra,1.0,85.0,Lauren,0
-1242,Barra de chocolate MAMA PACHA Almendras y sal de mar,barra,4.0,85.0,"Evelyne,Bex,Lauren",0.0
-1248,Tablillas para preparar chocolate Dulce,pz,1.0,80.0,Goreti,0
-1277,Falafel 300 grs,paq,1,85,Kathy,0
-1278,"Hamburguesas de lentejas, amaranto y arroz integral",paq,1,90,elizabeth,0
-1286,Tallarines chile poblano,bolsa,1,35,sandyRuiz,0
-1294,Sopa Instantanea,pz,1,65,elizabeth,0
-1295,Semillas de albahaca limon,sobre,1.0,36.0,FernandaM,0
-1297,Semillas de acelga de colores,sobre,1.0,36.0,FernandaM,0
-1301,Semillas de perejil,sobre,1.0,36.0,Ana,0
-1308,Semillas de cilantro,sobre,1.0,28.0,Ana,0
-1309,Semillas de epazote,sobre,1.0,28.0,Ana,0
-1314,Bocashi bolsa de 5kg,bolsa,2.0,45,"elizabeth,FernandaM",0.0
-1315,Lombricomposta,bolsa,1.0,125.0,FernandaM,0
-1324,Miel multifloral 300ml,bote,1,65,elizabeth,0
-1326,Miel multifloral 1L,bote,1.0,190.0,Monse1,0
-1328,Gotero de estracto de propoleo,pz,1.0,130.0,Lauren,0
-1331,"Fortimiel (jengibre, moringa y curcuma)",pz,1.0,135.0,Charlynne,0
-1333,Frijol negro criollo,kg,2.0,40,"elizabeth,Goreti",0.0
-1336,Ajonjoli blanco,kg,0.25,140.0,Gabi,0
-1341,Harina de trigo,pz,1.0,50.0,Charlynne,0
-1350,Cigarros artesanales paquete de 5 pzs (unstock),paq,1.0,45.0,Goreti,0
-1351,Pechuga de pavo natural(jamon),pz,5.0,90.0,"MariaJaime,Mayra,Goreti,Aida",0.0
-1352,Pechuga de pavo horneada(jamon),pz,3.0,95,"brissa,EdnaF,SummerL",0.0
-1354,Pierna de cerdo ahumada(jamon),pz,4.0,85,"kane,citlallyB,FernandaM,Yara",0.0
-1355,Jamon serrano 100gr,pz,2.0,80.0,"FernandaM,veronicaH",0.0
-1357,Roast beef (jamon),pz,2.0,105.0,"FernandaM,veronicaH",0.0
-1358,Jamon de conejo,pz,1,90,coral,0
-1359,Salami madurado,pz,3.0,95.0,"FernandaM,Goreti,Bex",0.0
-1361,Salami pamplona,pz,1.0,90.0,FernandaM,0
-1362,"Tocino con grasa ",pz,1.25,80,"xochil,citlallyB",0
-1363,Tocino sin grasa,pz,2.0,80,"Sandra,MariaJaime",0.0
-1364,Queso manchego con jamon serrano,pz,2,90,"brissa,kane",0
-1368,Queso gouda,pz,2.0,90.0,"FernandaM,MariaJaime",0.0
-1369,Provolone a las finas hierbas,pz,1.0,85.0,FernandaM,0
-1370,Chorizo español,pz,2.0,80,"elizabeth,Aida",0.0
-1371,Chorizo argentino,pz,1,80,EdnaF,0
-1373,"Pasta rellena: Sorrentinos (orden x8) Espinacas, queso chiapas y nueces",paq,1.0,80.0,Valeri,0
-1375,Pasta rellena: Sorrentinos (orden x8) Carne a la bolonesa,paq,1.0,80.0,Goreti,0
-1376,Pasta rellena: Ravioles(orden x9) Setas al ajillo,paq,1.0,80.0,Goreti,0
-1384,"empanadas (orden x6) elote tierno, bechamel y queso",paq,1,150,brissa,0
-1385,empanadas (orden x6) salteado de espinacas con queso,paq,2,150,"brissa,Kathy",0
-3423,Lichi,kg,1.0,50.0,MariaJaime,0
-3427,Berros rollo,rollo,1.0,25.0,MariaJaime,0
-3431,Arugula,kg,0.1,250.0,MariaJaime,0
-3442,Alegrias de semillas,pz,4.0,18.0,Gabi,0
-3464,Mayonesa de limon / ajo o tocino,pz,1,45,coral,0
-3491,Envio,servicio,4.0,45,"kane,EdnaF,XUB,Gabi",0.0
-3496,Pasta de frijol con hierba de conejo,kg,0.5,80.0,Gabi,0
-7005," almendras",kg,0,0,coral,0
-7561,zega cola,pz,3.0,115,"citlallyB,Kimberly,Ana",0.0
-7732,chips de betabel,pz,1.0,0.0,Aida,0
+Id,Producto,Unidad,Cantidad,  Precio  ,Clientes,Pzs
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
